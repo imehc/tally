@@ -6,6 +6,7 @@ export default (appInfo: MidwayAppInfo) => {
     keys: appInfo.name + '_1680781185005_5324',
     egg: {
       port: 7001,
+      globalPrefix: '/api', // 全局路由前缀
     },
     security: {
       csrf: false,
@@ -16,6 +17,10 @@ export default (appInfo: MidwayAppInfo) => {
       mapping: {
         '.html': 'ejs', // 左边写成.html,会自动渲染.html文件
       },
+    },
+    jwt: {
+      secret: 'tally-secret', // 密钥
+      expiresIn: '2h', // 过期时间
     },
   } as MidwayConfig;
 };
