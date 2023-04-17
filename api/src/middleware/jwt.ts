@@ -7,6 +7,7 @@ import {
 } from '@midwayjs/core';
 import { JwtService } from '@midwayjs/jwt';
 import { Context } from 'egg';
+import { USERID } from '../const';
 
 @Middleware()
 export class JwtMiddleware implements IMiddleware<Context, NextFunction> {
@@ -41,6 +42,14 @@ export class JwtMiddleware implements IMiddleware<Context, NextFunction> {
         } catch (error) {
           throw new httpError.UnauthorizedError('token is not valid');
         }
+        const userId = this.jwtService.decode(token, {
+          complete: true,
+        }).payload.sub;
+        if (!userId || typeof userId === 'function' || isNaN(+userId)) {
+          throw new httpError.ServiceUnavailableError();
+        }
+        ctx.setAttr(USERID, +userId);
+
         await next();
       }
     };

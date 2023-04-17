@@ -1,6 +1,7 @@
 import { Controller, Post, Body, Inject } from '@midwayjs/decorator';
 import type { User } from '@prisma/client';
 import { AuthService } from '../service';
+import { UserLoginDTO } from '../dto';
 
 @Controller('/auth')
 export class AuthController {
@@ -13,10 +14,7 @@ export class AuthController {
   }
 
   @Post('/login')
-  async login(
-    @Body('username') username: User['username'],
-    @Body('password') password: User['password']
-  ) {
+  async login(@Body() { username, password }: UserLoginDTO) {
     return this.authService.login(username, password);
   }
 }

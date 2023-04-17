@@ -36,7 +36,7 @@ export class AuthService {
    * 注册
    */
   async register({ username, password, ...attr }: User) {
-    const user = await this.userService.findByUsername(username);
+    const user = await this.userService.findUserByUsername(username);
 
     if (user) {
       throw new httpError.BadRequestError('用户已存在');
@@ -50,7 +50,8 @@ export class AuthService {
         password: encryptedPassword,
         ...attr,
       });
-      throw result.id;
+      // TODO: 可以注册后签发token，避免再次输入用户名和密码，提升用户体验
+      return result.id;
     } catch (error) {
       throw new httpError.ServiceUnavailableError();
     }
@@ -60,7 +61,7 @@ export class AuthService {
    * 登录
    */
   async login(username: string, password: string) {
-    const user = await this.userService.findByUsername(username);
+    const user = await this.userService.findUserByUsername(username);
     if (!user) {
       throw new httpError.BadRequestError('用户不存在');
     }

@@ -8,13 +8,6 @@ export class HomeController {
 
   @Get('/')
   async home() {
-    // const posts = await prisma.post.findMany({
-    //   where: { published: true },
-    //   include: { author: true },
-    // });
-    console.log('------------------------------------------------');
-    // console.dir(allUsers, { depth: null });
-    console.log('------------------------------------------------');
     await this.ctx.render('index', { title: '哈哈哈哈' });
   }
 }
