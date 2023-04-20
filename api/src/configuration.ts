@@ -8,6 +8,7 @@ import * as validate from '@midwayjs/validate';
 import * as upload from '@midwayjs/upload';
 import * as staticFile from '@midwayjs/static-file';
 import * as crossDomain from '@midwayjs/cross-domain';
+import * as swagger from '@midwayjs/swagger';
 import { JwtMiddleware } from './middleware';
 import {
   DefaultErrorFilter,
@@ -17,7 +18,20 @@ import {
 } from './filter';
 
 @Configuration({
-  imports: [egg, view, jwt, validate, upload, staticFile, crossDomain],
+  imports: [
+    egg,
+    view,
+    jwt,
+    validate,
+    upload,
+    staticFile,
+    crossDomain,
+    {
+      // 只在 local 环境下启用
+      component: swagger,
+      enabledEnvironment: ['local'],
+    },
+  ],
   importConfigs: [join(__dirname, './config')],
 })
 export class ContainerLifeCycle implements ILifeCycle {
