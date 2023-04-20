@@ -18,7 +18,7 @@ model User {
   avatar    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  // bill      Bill[]
+  bill      Bill[]
 
   @@map(name: "user")
 }
@@ -26,14 +26,14 @@ model User {
 model Bill {
   id       Int      @id @default(autoincrement())
   payType  Int // 账单类型 1 为支出，2 为收入
-  amount   String   @db.VarChar(100) // 账单价格
+  amount   Float // 账单价格
   date     DateTime // 账单日期
   typeName String   @db.VarChar(100) // 账单标签名称，如餐饮、交通、日用
   remark   String   @db.VarChar(100) // 账单备注
-  // type     Type     @relation(fields: [typeId], references: [id])
-  // typeId   Int // 账单标签 id 如餐饮、交通、日用、学习
-  // user     User     @relation(fields: [userId], references: [id])
-  // userId   Int // 账单归属的用户
+  type     Type     @relation(fields: [typeId], references: [id])
+  typeId   Int // 账单标签 id 如餐饮、交通、日用、学习
+  user     User     @relation(fields: [userId], references: [id])
+  userId   Int // 账单归属的用户
 
   @@map("bill")
 }
@@ -43,7 +43,7 @@ model Type {
   name   String // 标签名称，如餐饮、交通、日用、学习、购物等
   type   Int    @default(1) // 标签类型，默认 1 为收入，2 为支出
   userId Int    @default(0) // 保留字段，设置该标签的用户归属，默认 0 为全部用户可见
-  // bill   Bill[]
+  bill   Bill[]
 
   @@map("type")
 }

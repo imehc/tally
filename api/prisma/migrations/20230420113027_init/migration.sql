@@ -15,7 +15,7 @@ CREATE TABLE "user" (
 CREATE TABLE "bill" (
     "id" SERIAL NOT NULL,
     "payType" INTEGER NOT NULL,
-    "amount" VARCHAR(100) NOT NULL,
+    "amount" INTEGER NOT NULL,
     "date" TIMESTAMP(3) NOT NULL,
     "typeName" VARCHAR(100) NOT NULL,
     "remark" VARCHAR(100) NOT NULL,
