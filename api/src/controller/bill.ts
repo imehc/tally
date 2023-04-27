@@ -16,6 +16,7 @@ import { USERID } from '../const';
 import { BillService } from '../service';
 import moment = require('moment');
 import { Bill } from '@prisma/client';
+import { response } from '../util';
 
 @Controller('/v1/bill/')
 export class BillController {
@@ -98,17 +99,17 @@ export class BillController {
     }, 0);
     // 返回数据
 
-    this.ctx.body = {
+    return response.send({
       code: 200,
-      msg: '请求成功',
+      message: '请求成功',
       data: {
         totalExpense, // 当月支出
         totalIncome, // 当月收入
-        // totalPage: Math.ceil(listMap.length / take), // 总分页
-        totalPage: listMap.length, // 总分页
+        totalPage: Math.ceil(listMap.length / take), // 总分页
+        // totalPage: listMap.length, // 总分页
         list: filterListMap || [], // 格式化后，并且经过分页处理的数据
       },
-    };
+    });
   }
 
   @Get('/:bid')
@@ -116,26 +117,25 @@ export class BillController {
     const userId = this.ctx.getAttr(USERID) as number;
     if (!bid || isNaN(Number(bid))) {
       this.ctx.status = HttpStatus.BAD_REQUEST;
-      this.ctx.body = {
+      return response.send({
         code: 400,
-        msg: 'id不合法',
-        data: null,
-      };
-      return;
+        message: 'id不合法',
+      });
     }
     const result = await this.service.getBill(userId, +bid);
     if (result) {
-      this.ctx.body = {
+      return response.send({
         code: 200,
-        msg: '请求成功',
+        message: '请求成功',
         data: result,
-      };
-      return;
+      });
     }
     this.ctx.status = HttpStatus.BAD_REQUEST;
-    this.ctx.body = {
-      msg: '请求失败,没有找到该账单',
-    };
+    return response.send({
+      code: 400,
+      message: '请求失败,没有找到该账单',
+      data: result,
+    });
   }
 
   @Put('/:bid')
@@ -143,35 +143,33 @@ export class BillController {
     const userId = this.ctx.getAttr(USERID) as number;
     if (!bid || isNaN(Number(bid))) {
       this.ctx.status = HttpStatus.BAD_REQUEST;
-      this.ctx.body = {
+      return response.send({
         code: 400,
-        msg: 'id不合法',
-        data: null,
-      };
-      return;
+        message: 'id不合法',
+      });
     }
     const id = (await this.service.getBill(userId, +bid))?.id;
     if (!id) {
       this.ctx.status = HttpStatus.BAD_REQUEST;
-      this.ctx.body = {
-        msg: '更新账单失败',
-      };
-      return;
+      return response.send({
+        code: 400,
+        message: '更新账单失败',
+      });
     }
 
     const result = await this.service.updateBill(+bid, bill);
     if (result) {
-      this.ctx.body = {
+      return response.send({
         code: 200,
-        msg: '更新成功',
+        message: '更新成功',
         data: result,
-      };
-      return;
+      });
     }
     this.ctx.status = HttpStatus.BAD_REQUEST;
-    this.ctx.body = {
-      msg: '更新账单失败',
-    };
+    return response.send({
+      code: 400,
+      message: '更新账单失败',
+    });
   }
 
   @Del('/:bid')
@@ -179,20 +177,18 @@ export class BillController {
     const userId = this.ctx.getAttr(USERID) as number;
     if (!bid || isNaN(Number(bid))) {
       this.ctx.status = HttpStatus.BAD_REQUEST;
-      this.ctx.body = {
+      return response.send({
         code: 400,
-        msg: 'id不合法',
-        data: null,
-      };
-      return;
+        message: 'id不合法',
+      });
     }
     const id = (await this.service.getBill(userId, +bid))?.id;
     if (!id) {
       this.ctx.status = HttpStatus.BAD_REQUEST;
-      this.ctx.body = {
-        msg: '删除账单失败',
-      };
-      return;
+      return response.send({
+        code: 400,
+        message: '删除账单失败',
+      });
     }
     const result = await this.service.delBill(+bid);
     if (result) {
@@ -258,14 +254,14 @@ export class BillController {
       item.number = Number(Number(item.number).toFixed(2));
       return item;
     });
-    this.ctx.body = {
+    return response.send({
       code: 200,
-      msg: '请求成功',
+      message: '请求成功',
       data: {
         total_expense: Number(total_expense).toFixed(2),
         total_income: Number(total_income).toFixed(2),
         total_data: total_data || [],
       },
-    };
+    });
   }
 }

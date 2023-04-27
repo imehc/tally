@@ -1,0 +1,564 @@
+openapi: 3.0.3
+info:
+  title: tally
+  description: tally账单api文档
+  version: 1.0.0
+  contact:
+    name: wiliin
+    email: wiliint@hotmail.com
+servers:
+  - url: "http://127.0.0.1:7001/apis"
+    description: 本地开发服务器
+tags:
+  - name: user
+    description: 用户
+  - name: oauth
+    description: 认证
+  - name: bill
+    description: 账单
+  - name: type
+    description: 标签类型
+components:
+  parameters:
+    limit:
+      name: limit
+      in: query
+      description: 限制结果集返回的条数
+      schema:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        default: 1000
+    skip:
+      name: skip
+      in: query
+      description: 控制查询时忽略的结果数量
+      schema:
+        type: integer
+        format: int32
+        minimum: 0
+        maximum: 1000
+        default: 0
+  responses:
+    Ok:
+      description: 请求已成功.
+    Created:
+      description: 请求已经被实现，而且有一个新的资源已经依据请求的需要而建立.
+    Accepted:
+      description: 服务器已接受请求，但尚未处理。
+    NoContent:
+      description: 服务器成功处理了请求，没有返回任何内容。
+    MovedPermanently:
+      description: 被请求的资源已永久移动到新位置.
+    Found:
+      description: 要求客户端执行临时重定向.
+    BadRequest:
+      description: 客户端错误
+    Unauthorized:
+      description: 未认证
+    Forbidden:
+      description: 已认证，但是没有对应的权限
+    NotFound:
+      description: 资源未找到
+    MethodNotAllowed:
+      description: 请求行中指定的请求方法不能被用于请求相应的资源
+    NotAcceptable:
+      description: 请求的资源的内容特性无法满足请求头中的条件，因而无法生成响应实体，该请求不可接受
+    Conflict:
+      description: 表示因为请求存在冲突无法处理该请求，例如多个同步更新之间的编辑冲突。
+  schemas:
+    OauthToken:
+      type: object
+      required:
+        - access_token
+        - token_type
+        - expires_in
+        - refresh_token
+      properties:
+        access_token:
+          type: string
+        token_type:
+          type: string
+          enum:
+            - Bearer
+        expires_in:
+          type: integer
+          format: int32
+        refresh_token:
+          type: string
+    Pagination:
+      type: object
+      required:
+        - limit
+        - skip
+        - total
+      properties:
+        limit:
+          type: integer
+          format: int32
+          example: 1000
+        skip:
+          type: integer
+          format: int32
+          example: 0
+        prev_skip:
+          type: integer
+          format: int32
+        next_skip:
+          type: integer
+          format: int32
+          example: 1000
+        total:
+          type: integer
+          format: int32
+          example: 6
+    PayType:
+      type: string
+      description: 标签/账单类型
+      enum:
+        - income
+        - expend
+      x-enum-descriptions:
+        - 收入
+        - 支出
+      x-enum-varnames:
+        - 1
+        - 2
+    LoginRequest:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          description: 用户名
+        password:
+          type: string
+          description: 密码
+    UserinfoRequest:
+      type: object
+      required:
+        - signature
+        - avatar
+      properties:
+        signature:
+          type: string
+          description: 个性签名
+        avatar:
+          type: string
+          description: 头像
+    BillTypeRequest:
+      type: object
+      required:
+        - name
+        - type
+      properties:
+        name:
+          type: string
+          description: 个性签名
+        type:
+          $ref: "#/components/schemas/PayType"
+    BillRequest:
+      type: object
+      required:
+        - payType
+        - amount
+        - date
+        - typeName
+        - typeId
+        - remark
+      properties:
+        payType:
+          $ref: "#/components/schemas/PayType"
+        amount:
+          type: integer
+          description: 账单价格
+        date:
+          type: string
+          format: date-time
+          description: 账单日期
+        typeName:
+          type: string
+          description: 账单标签名称，如餐饮、交通、日用
+        typeId:
+          type: integer
+          description: 账单标签id
+        remark:
+          type: string
+          description: 账单备注
+
+    BasicResponse:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          description: 状态码
+        message:
+          type: string
+          description: 状态信息
+    LoginResponse:
+      required:
+        - accessToken
+      properties:
+        accessToken:
+          type: string
+          description: token信息
+    UserinfoResponse:
+      required:
+        - id
+        - username
+        - signature
+        - avatar
+      properties:
+        id:
+          type: integer
+        username:
+          type: string
+        signature:
+          type: string
+        avatar:
+          type: string
+    BillResponse:
+      required:
+        - totalExpense
+        - totalIncome
+        - totalPage
+        - list
+      properties:
+        totalExpense:
+          type: integer
+        totalIncome:
+          type: integer
+        totalPage:
+          type: integer
+        list:
+          type: array
+          items:
+            required:
+              - id
+            allOf:
+              - $ref: "#/components/schemas/BillRequest"
+            properties:
+              id:
+                type: integer
+    BillStatisticResponse:
+      required:
+        - total_expense
+        - total_income
+        - total_data
+      properties:
+        total_expense:
+          type: integer
+        total_income:
+          type: integer
+        total_data:
+          type: array
+          items:
+            required:
+              - type_id
+              - type_name
+              - pay_type
+              - number
+            properties:
+              type_id:
+                type: integer
+              type_name:
+                type: string
+              pay_type:
+                $ref: "#/components/schemas/PayType"
+              number:
+                type: integer
+
+  securitySchemes:
+    BearerToken:
+      type: http
+      scheme: bearer
+paths:
+  /auth/register:
+    post:
+      summary: 注册
+      operationId: register
+      tags:
+        - user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              signature:
+                type: string
+                description: 个性签名
+              avatar:
+                type: string
+                description: 头像地址
+              $ref: "#/components/schemas/LoginRequest"
+      responses:
+        201:
+          description: 成功
+        422:
+          description: 失败
+  /auth/login:
+    post:
+      summary: 登录
+      operationId: login
+      tags:
+        - user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginRequest"
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - code
+                  - message
+                  - data
+                allOf:
+                  - $ref: "#/components/schemas/BasicResponse"
+                properties:
+                  data:
+                    $ref: "#/components/schemas/LoginResponse"
+  /v1/user/info:
+    get:
+      summary: 用户信息
+      operationId: userinfo
+      tags:
+        - user
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - code
+                  - message
+                  - data
+                allOf:
+                  - $ref: "#/components/schemas/BasicResponse"
+                properties:
+                  data:
+                    $ref: "#/components/schemas/UserinfoResponse"
+    post:
+      summary: 修改用户信息
+      operationId: edituserinfo
+      tags:
+        - user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserinfoRequest"
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - code
+                  - message
+                  - data
+                allOf:
+                  - $ref: "#/components/schemas/BasicResponse"
+                properties:
+                  data:
+                    $ref: "#/components/schemas/UserinfoResponse"
+  /v1/bill-type:
+    post:
+      summary: 添加标签类型
+      operationId: addBillType
+      tags:
+        - bill-type
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BillTypeRequest"
+      responses:
+        201:
+          description: 成功
+  /v1/bill:
+    get:
+      summary: 查询账单列表
+      operationId: getBillList
+      tags:
+        - bill
+      parameters:
+        - name: date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+        - name: skip
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: take
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: typeId
+          in: query
+          required: true
+          schema:
+            type: string
+            enum:
+              - 0
+              - 1
+              - 2
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - code
+                  - message
+                  - data
+                allOf:
+                  - $ref: "#/components/schemas/BasicResponse"
+                properties:
+                  data:
+                    $ref: "#/components/schemas/BillResponse"
+    post:
+      summary: 创建账单
+      operationId: createBill
+      tags:
+        - bill
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BillRequest"
+      responses:
+        201:
+          description: 成功
+  /v1/bill/{id}:
+    summary: 账单
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: 查询账单
+      operationId: getBill
+      tags:
+        - bill
+
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - code
+                  - message
+                  - data
+                allOf:
+                  - $ref: "#/components/schemas/BasicResponse"
+                properties:
+                  data:
+                    required:
+                      - id
+                    allOf:
+                      - $ref: "#/components/schemas/BillRequest"
+                    properties:
+                      id:
+                        type: integer
+    put:
+      summary: 更新账单
+      operationId: updateBill
+      tags:
+        - bill
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BillRequest"
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - code
+                  - message
+                  - data
+                allOf:
+                  - $ref: "#/components/schemas/BasicResponse"
+                properties:
+                  data:
+                    required:
+                      - id
+                    allOf:
+                      - $ref: "#/components/schemas/BillRequest"
+                    properties:
+                      id:
+                        type: integer
+    delete:
+      summary: 删除账单
+      operationId: deleteBill
+      tags:
+        - bill
+      responses:
+        204:
+          description: 删除成功
+  /v1/bill/detail:
+    get:
+      summary: 查询账单统计
+      operationId: getBillStatistic
+      tags:
+        - bill
+      parameters:
+        - name: date
+          in: query
+          required: true
+          schema:
+            type: string
+            format: date-time
+      responses:
+        200:
+          description: 成功
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - code
+                  - message
+                  - data
+                allOf:
+                  - $ref: "#/components/schemas/BasicResponse"
+                properties:
+                  data:
+                    $ref: "#/components/schemas/BillStatisticResponse"

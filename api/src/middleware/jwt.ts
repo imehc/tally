@@ -68,7 +68,7 @@ export class JwtMiddleware implements IMiddleware<Context, NextFunction> {
    * 配置匹配认证校验的路由地址
    */
   public match(ctx: Context): boolean {
-    const match = /^\/api\/v1/.test(ctx.path);
+    const match = /^\/apis\/v1/.test(ctx.path);
     return match;
   }
 }

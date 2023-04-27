@@ -2,7 +2,7 @@ import { Inject, Provide } from '@midwayjs/decorator';
 import { JwtService } from '@midwayjs/jwt';
 import type { User } from '@prisma/client';
 import { UserService } from '.';
-import { encryptWithSalt } from '../util';
+import { type IHttpResponse, encryptWithSalt, response } from '../util';
 import { httpError } from '@midwayjs/core';
 
 @Provide()
@@ -13,7 +13,7 @@ export class AuthService {
   /**
    * 生成jwt
    */
-  async certificate(entity: { id: number }) {
+  async certificate(entity: { id: number }): Promise<Partial<IHttpResponse>> {
     const payload = {
       sub: entity.id,
     };
@@ -22,7 +22,13 @@ export class AuthService {
       // 签发生成 token
       const accessToken = await this.jwtService.sign(payload);
       // TODO: 封装工具统一返回
-      return { accessToken };
+      return response.send({
+        code: 200,
+        message: '登录成功',
+        data: {
+          accessToken,
+        },
+      });
     } catch (error) {
       console.error(error);
       throw new httpError.ServiceUnavailableError();
@@ -39,22 +45,17 @@ export class AuthService {
     const user = await this.userService.findUserByUsername(username);
 
     if (user) {
-      throw new httpError.BadRequestError('用户已存在');
+      throw new httpError.UnprocessableEntityError('用户已存在');
     }
     // TODO: 这里使用唯一的用户名加盐，后续可以使用生成
     const encryptedPassword = encryptWithSalt(password, username);
 
-    try {
-      const result = await this.userService.create({
-        username,
-        password: encryptedPassword,
-        ...attr,
-      });
-      // TODO: 可以注册后签发token，避免再次输入用户名和密码，提升用户体验
-      return result.id;
-    } catch (error) {
-      throw new httpError.ServiceUnavailableError();
-    }
+    return await this.userService.create({
+      username,
+      password: encryptedPassword,
+      ...attr,
+    });
+    // TODO: 可以注册后签发token，避免再次输入用户名和密码，提升用户体验
   }
 
   /**
@@ -63,7 +64,7 @@ export class AuthService {
   async login(username: string, password: string) {
     const user = await this.userService.findUserByUsername(username);
     if (!user) {
-      throw new httpError.BadRequestError('用户不存在');
+      throw new httpError.UnprocessableEntityError('用户不存在');
     }
     if (encryptWithSalt(password, user.username) !== user.password) {
       throw new httpError.BadRequestError('账号或密码错误');

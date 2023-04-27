@@ -7,7 +7,7 @@ export default (appInfo: MidwayAppInfo) => {
     keys: appInfo.name + '_1680781185005_5324',
     egg: {
       port: 7001,
-      globalPrefix: '/api', // 全局路由前缀
+      globalPrefix: '/apis', // 全局路由前缀
     },
     security: {
       csrf: false,
