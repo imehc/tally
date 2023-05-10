@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View} from 'react-native';
+import {Button, Text} from 'react-native-paper';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '../../router';
 import styles from './styles';
-import {RootStackParamList} from '../../../App';
 
-type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+type Props = NativeStackScreenProps<RootStackParamList, 'Bill'>;
 
 export const HomeScreen: React.FC<Props> = ({navigation}) => {
   // const isDarkMode = useColorScheme() === 'dark';
@@ -20,11 +21,12 @@ export const HomeScreen: React.FC<Props> = ({navigation}) => {
     //   />
     <View style={styles.view}>
       <Text style={styles.text}>Home Screen</Text>
-      <Button title="Go to Mine" onPress={() => navigation.navigate('Mine')} />
-      <Button
-        title="Update the title"
-        onPress={() => navigation.setOptions({title: 'Updated!'})}
-      />
+      <Button mode="contained" onPress={() => navigation.navigate('Mine')}>
+        Go to Mine
+      </Button>
+      <Button onPress={() => navigation.setOptions({title: 'Updated!'})}>
+        Update the title
+      </Button>
     </View>
     // </SafeAreaView>
   );

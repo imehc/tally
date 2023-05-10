@@ -7,7 +7,7 @@ info:
     name: wiliin
     email: wiliint@hotmail.com
 servers:
-  - url: "http://127.0.0.1:7001/apis"
+  - url: "http://192.168.74.57:7001/apis"
     description: 本地开发服务器
 tags:
   - name: user
@@ -290,13 +290,18 @@ paths:
         content:
           application/json:
             schema:
-              signature:
-                type: string
-                description: 个性签名
-              avatar:
-                type: string
-                description: 头像地址
-              $ref: "#/components/schemas/LoginRequest"
+              type: object
+              required:
+                - "avatar"
+              allOf:
+                - $ref: "#/components/schemas/LoginRequest"
+              properties:
+                signature:
+                  type: string
+                  description: 个性签名
+                avatar:
+                  type: string
+                  description: 头像地址
       responses:
         201:
           description: 成功

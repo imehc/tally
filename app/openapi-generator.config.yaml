@@ -1,0 +1,7 @@
+disallowAdditionalPropertiesIfNotPresent: false
+nullSafeAdditionalProps: true
+supportsES6: true
+
+# 与typescript生成器兼容
+modelPropertyNaming: original
+paramNaming: original

@@ -1,45 +1,85 @@
-import React from 'react';
-import {HomeScreen, MineScreen} from './src/screen';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {StatusBar} from 'react-native';
+import React, {useCallback, useMemo, useState} from 'react';
+import {StatusBar, useColorScheme} from 'react-native';
+import {
+  NavigationContainer,
+  DarkTheme as NavigationDarkTheme,
+  DefaultTheme as NavigationDefaultTheme,
+} from '@react-navigation/native';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import {
+  MD3DarkTheme,
+  MD3LightTheme,
+  adaptNavigationTheme,
+  Provider as PaperProvider,
+} from 'react-native-paper';
+import merge from 'deepmerge';
+import Toast from 'react-native-toast-message';
+import {PreferencesContext} from './src/theme';
+import {Router} from './src/router';
+import {AuthContextProvider} from './src/provider';
 
-/**
- * 路由及其携带的参数
- */
-export type RootStackParamList = {
-  Home: undefined;
-  Mine: undefined;
-  Feed: {sort: 'latest' | 'top'} | undefined;
-};
+// Create a client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      onError: error => {
+        console.log('error response: ', error);
+        // TODO: 错误兜底拦截
+      },
+    },
+    mutations: {
+      onError: error => {
+        console.log('error response: ', error);
+        // TODO: 错误兜底拦截
+      },
+    },
+  },
+});
 
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const {LightTheme, DarkTheme} = adaptNavigationTheme({
+  reactNavigationLight: NavigationDefaultTheme,
+  reactNavigationDark: NavigationDarkTheme,
+});
+const CombinedDefaultTheme = merge(MD3LightTheme, LightTheme);
+const CombinedDarkTheme = merge(MD3DarkTheme, DarkTheme);
 
 const App: React.FC = (): JSX.Element => {
+  const isDarkMode = useColorScheme() === 'dark';
+  // TODO: 可以选择跟随系统还是自定义
+  const [isThemeDark, setIsThemeDark] = useState(isDarkMode);
+  const theme = useMemo(
+    () => (isThemeDark ? CombinedDarkTheme : CombinedDefaultTheme),
+    [isThemeDark],
+  );
+  const toggleTheme = useCallback(() => {
+    return setIsThemeDark(!isThemeDark);
+  }, [isThemeDark]);
+
+  const preferences = useMemo(
+    () => ({
+      toggleTheme,
+      isThemeDark,
+    }),
+    [toggleTheme, isThemeDark],
+  );
+
   return (
-    <React.Fragment>
-      <StatusBar barStyle="dark-content" backgroundColor={'lightblue'} />
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{
-              title: 'Home',
-              headerTitleAlign: 'center',
-              headerStyle: {
-                backgroundColor: 'lightblue',
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
-            }}
-          />
-          <Stack.Screen name="Mine" component={MineScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </React.Fragment>
+    <QueryClientProvider client={queryClient}>
+      <AuthContextProvider>
+        <StatusBar
+          barStyle={isThemeDark ? 'light-content' : 'dark-content'}
+          backgroundColor={theme.colors.background}
+        />
+        <PreferencesContext.Provider value={preferences}>
+          <PaperProvider theme={theme}>
+            <NavigationContainer theme={theme}>
+              <Router />
+            </NavigationContainer>
+          </PaperProvider>
+        </PreferencesContext.Provider>
+      </AuthContextProvider>
+      <Toast position="bottom" />
+    </QueryClientProvider>
   );
 };
 
