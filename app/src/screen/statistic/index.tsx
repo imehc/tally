@@ -9,7 +9,7 @@ import styles from './styles';
 type Props = NativeStackScreenProps<RootStackParamList, 'Statistic'>;
 
 export const StatisticScreen: React.FC<Props> = ({navigation}) => {
-  const {removeAccessToken} = useAuthContext();
+  const {removeAccessToken, accessToken} = useAuthContext();
   return (
     <Appbar.Header>
       <View style={styles.view}>
@@ -22,6 +22,7 @@ export const StatisticScreen: React.FC<Props> = ({navigation}) => {
         <Button mode="contained" onPress={() => removeAccessToken()}>
           退出登录
         </Button>
+        <Button mode="contained">{accessToken}</Button>
       </View>
     </Appbar.Header>
   );

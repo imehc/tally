@@ -7,6 +7,8 @@ import {
   TouchableRipple,
 } from 'react-native-paper';
 import {useForm, Controller} from 'react-hook-form';
+import * as yup from 'yup';
+import {yupResolver} from '@hookform/resolvers/yup';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
 import {type RootStackParamList} from '../../router';
 import {View} from 'react-native';
@@ -25,6 +27,23 @@ import {useAuthContext} from '../../provider';
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 type ToggleButtonType = 'login' | 'register';
+
+const schema = yup
+  .object({
+    username: yup
+      .string()
+      .min(4, '最少为4个字符')
+      .max(8, '最多为8个字符')
+      .matches(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头')
+      .required('请输入账号'),
+    password: yup
+      .string()
+      .min(4, '最少为4个字符')
+      .max(8, '最多为16个字符')
+      .matches(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头')
+      .required('请输入密码'),
+  })
+  .required();
 
 export const LoginScreen: React.FC<Props> = ({}) => {
   const defaultConfig = useConfiguration();
@@ -114,7 +133,13 @@ export const LoginScreen: React.FC<Props> = ({}) => {
     },
   );
 
-  const {control, handleSubmit} = useForm<LoginRequest>();
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm<LoginRequest>({
+    resolver: yupResolver(schema),
+  });
   const onSubmit = useCallback(
     (auth: LoginRequest) => {
       if (authMode === 'register') {
@@ -161,10 +186,12 @@ export const LoginScreen: React.FC<Props> = ({}) => {
               onChangeText={onChange}
               value={value}
               left={<TextInput.Icon icon="account" />}
+              error={!!errors.username}
             />
           )}
           name="username"
         />
+        <Text style={styles.helpText}>{errors.username?.message}</Text>
         <Controller
           control={control}
           rules={{required: true}}
@@ -178,10 +205,12 @@ export const LoginScreen: React.FC<Props> = ({}) => {
               secureTextEntry={notVisible}
               left={<TextInput.Icon icon="shield-sword" />}
               right={<TextInput.Icon icon="eye" onPress={setNotVisible} />}
+              error={!!errors.password}
             />
           )}
           name="password"
         />
+        <Text style={styles.helpText}>{errors.password?.message}</Text>
         <Button
           style={styles.input}
           mode="contained"

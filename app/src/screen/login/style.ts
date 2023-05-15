@@ -49,8 +49,13 @@ const styles = StyleSheet.create({
     paddingRight: 30,
   },
   input: {
-    marginTop: 30,
+    marginTop: 20,
     width: '100%',
+  },
+  helpText: {
+    fontSize: 16,
+    color: DefaultTheme.colors.error,
+    marginTop: 5,
   },
 });
 
