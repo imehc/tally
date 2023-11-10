@@ -1,30 +1,6 @@
-# my-midway-project
-
-## QuickStart
-
-<!-- add docs here for user -->
-
-see [midway docs][midway] for more detail.
-
-### Development
-
+# 连接数据库
+> 在该根目录下 `.env`文件下填写你对应的sql地址,示例地址如下
 ```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7001/
+DATABASE_URL="postgresql://postgres:2023@localhost:5432/tally-db?schema=public"
 ```
-
-### Deploy
-
-```bash
-$ npm start
-$ npm stop
-```
-
-### npm scripts
-
-- Use `npm run lint` to check code style.
-- Use `npm test` to run unit test.
-
-
-[midway]: https://midwayjs.org
+> 使用`docker`可参考[链接](https://www.jianshu.com/p/9bb7dfa8d27e)启动或配置数据库

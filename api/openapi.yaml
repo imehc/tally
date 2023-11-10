@@ -7,7 +7,7 @@ info:
     name: wiliin
     email: wiliint@hotmail.com
 servers:
-  - url: "http://192.168.74.57:7001/apis"
+  - url: "http://192.168.163.80:7001/apis"
     description: 本地开发服务器
 tags:
   - name: user
