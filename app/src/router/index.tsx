@@ -1,2 +1,1 @@
-export {type RootStackParamList} from './BottomNavigator';
-export {ScreenNavigator as Router} from './ScreenNavigator';
+export { ScreenNavigator as Router, type RootStackParamList } from './ScreenNavigator';

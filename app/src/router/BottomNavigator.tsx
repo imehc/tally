@@ -1,6 +1,6 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {HomeScreen, MineScreen, StatisticScreen} from '../screen';
 import {BottomNavigation} from 'react-native-paper';
 import {CommonActions} from '@react-navigation/native';
@@ -73,7 +73,7 @@ export const BottomNavigator: React.FC = () => {
           tabBarLabel: 'Bill',
           // eslint-disable-next-line react/no-unstable-nested-components
           tabBarIcon: ({color, size}) => {
-            return <Icon name="assignment" size={size} color={color} />;
+            return <Icon name="calendar-today" size={size} color={color} />;
           },
         }}
       />
@@ -84,7 +84,7 @@ export const BottomNavigator: React.FC = () => {
           tabBarLabel: 'STATISTIC',
           // eslint-disable-next-line react/no-unstable-nested-components
           tabBarIcon: ({color, size}) => {
-            return <Icon name="pie-chart" size={size} color={color} />;
+            return <Icon name="chart-line" size={size} color={color} />;
           },
         }}
       />
@@ -95,7 +95,7 @@ export const BottomNavigator: React.FC = () => {
           tabBarLabel: 'MINE',
           // eslint-disable-next-line react/no-unstable-nested-components
           tabBarIcon: ({color, size}) => {
-            return <Icon name="person" size={size} color={color} />;
+            return <Icon name="odnoklassniki" size={size} color={color} />;
           },
         }}
       />

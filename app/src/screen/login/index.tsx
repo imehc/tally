@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useReducer, useMemo} from 'react';
+import React, { useState, useCallback, useReducer, useMemo } from 'react';
 import {
   Avatar,
   Button,
@@ -6,23 +6,23 @@ import {
   TextInput,
   TouchableRipple,
 } from 'react-native-paper';
-import {useForm, Controller} from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup';
-import {type NativeStackScreenProps} from '@react-navigation/native-stack';
-import {type RootStackParamList} from '../../router';
-import {View} from 'react-native';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { type NativeStackScreenProps } from '@react-navigation/native-stack';
+import { type RootStackParamList } from '../../router';
+import { View } from 'react-native';
 import styles from './style';
-import {useConfiguration} from '../../client';
+import { useConfiguration } from '../../client';
 import {
   type LoginRequest,
   UserApi,
   RegisterRequest,
   ResponseError,
 } from '../../tally-api';
-import {useMutation} from '@tanstack/react-query';
+import { useMutation } from '@tanstack/react-query';
 import Toast from 'react-native-toast-message';
-import {useAuthContext} from '../../provider';
+import { useAuthContext } from '../../provider';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
@@ -45,13 +45,13 @@ const schema = yup
   })
   .required();
 
-export const LoginScreen: React.FC<Props> = ({}) => {
+export const LoginScreen: React.FC<Props> = ({ }) => {
   const defaultConfig = useConfiguration();
   const authApi = useMemo(() => {
     return new UserApi(defaultConfig);
   }, [defaultConfig]);
 
-  const {setAccessToken} = useAuthContext();
+  const { setAccessToken } = useAuthContext();
 
   const [authMode, setAuthMode] = useState<ToggleButtonType>('login');
   // 密码是否不可见
@@ -60,83 +60,77 @@ export const LoginScreen: React.FC<Props> = ({}) => {
     true,
   );
 
-  const {mutate: handleRegister} = useMutation(
-    ['register'],
-    async (value: RegisterRequest) => {
+  const { mutate: handleRegister } = useMutation({
+    mutationFn: async (value: RegisterRequest) => {
       // TODO: 头像不应该必传，这里暂时硬编码
       return await authApi.register({
         RegisterRequest: value,
+      })
+    },
+    onSuccess: () => {
+      setAuthMode('login');
+      Toast.show({
+        type: 'success',
+        text1: '注册成功',
+        text2: '请登录',
       });
     },
-    {
-      onSuccess: () => {
-        setAuthMode('login');
-        Toast.show({
-          type: 'success',
-          text1: '注册成功',
-          text2: '请登录',
-        });
-      },
-      onError: error => {
-        if (error instanceof ResponseError) {
-          if (error.response.status === 422) {
-            Toast.show({
-              type: 'error',
-              text1: '该用户已存在',
-              text2: '请重新输入',
-            });
-            return;
-          }
+    onError: (error) => {
+      if (error instanceof ResponseError) {
+        if (error.response.status === 422) {
           Toast.show({
             type: 'error',
-            text1: '输入不合法',
+            text1: '该用户已存在',
             text2: '请重新输入',
           });
           return;
         }
         Toast.show({
           type: 'error',
-          text1: '系统错误',
+          text1: '输入不合法',
+          text2: '请重新输入',
         });
-      },
+        return;
+      }
+      Toast.show({
+        type: 'error',
+        text1: '系统错误',
+      });
     },
-  );
+  });
 
-  const {mutate: handleLogin} = useMutation(
-    ['login'],
-    async (value: LoginRequest) => {
-      const res = await authApi.login({LoginRequest: value});
+  const { mutate: handleLogin } = useMutation({
+    mutationFn: async (value: LoginRequest) => {
+      const res = await authApi.login({ LoginRequest: value });
       return res.data;
     },
-    {
-      onSuccess: ({accessToken}) => {
-        setAccessToken(accessToken);
-        Toast.show({
-          type: 'success',
-          text1: '登录成功',
-        });
-      },
-      onError: error => {
-        if (error instanceof ResponseError) {
-          Toast.show({
-            type: 'error',
-            text1: '用户名或密码错误',
-            text2: '请重新输入',
-          });
-          return;
-        }
+    onSuccess: ({ accessToken }) => {
+      setAccessToken(accessToken);
+      Toast.show({
+        type: 'success',
+        text1: '登录成功',
+      });
+    },
+    onError: (error) => {
+      if (error instanceof ResponseError) {
         Toast.show({
           type: 'error',
-          text1: '系统错误',
+          text1: '用户名或密码错误',
+          text2: '请重新输入',
         });
-      },
-    },
-  );
+        return;
+      }
+      Toast.show({
+        type: 'error',
+        text1: '系统错误',
+      });
+    }
+  });
 
   const {
     control,
     handleSubmit,
-    formState: {errors},
+    formState: { errors },
   } = useForm<LoginRequest>({
     resolver: yupResolver(schema),
   });
@@ -158,7 +152,7 @@ export const LoginScreen: React.FC<Props> = ({}) => {
   return (
     <View style={styles.view}>
       <View style={styles.center}>
-        <Avatar.Image size={80} source={{uri: 'https://picsum.photos/700'}} />
+        <Avatar.Image size={80} source={{ uri: 'https://picsum.photos/700' }} />
       </View>
       <Text style={styles.desc}>欢迎来到记账本</Text>
       <View style={styles.center2}>
@@ -177,8 +171,8 @@ export const LoginScreen: React.FC<Props> = ({}) => {
       <View style={styles.main}>
         <Controller
           control={control}
-          rules={{required: true}}
-          render={({field: {onChange, onBlur, value}}) => (
+          rules={{ required: true }}
+          render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
               style={styles.input}
               placeholder="请输入账号"
@@ -194,8 +188,8 @@ export const LoginScreen: React.FC<Props> = ({}) => {
         <Text style={styles.helpText}>{errors.username?.message}</Text>
         <Controller
           control={control}
-          rules={{required: true}}
-          render={({field: {onChange, onBlur, value}}) => (
+          rules={{ required: true }}
+          render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
               style={styles.input}
               placeholder="请输入密码"
@@ -212,7 +206,8 @@ export const LoginScreen: React.FC<Props> = ({}) => {
         />
         <Text style={styles.helpText}>{errors.password?.message}</Text>
         <Button
-          style={styles.input}
+          style={styles.button}
+          contentStyle={{ height: 48 }}
           mode="contained"
           onPress={handleSubmit(onSubmit)}>
           {authMode === 'login' ? '登录' : '注册'}

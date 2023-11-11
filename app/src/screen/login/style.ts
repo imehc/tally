@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {DefaultTheme} from 'react-native-paper';
+import { StyleSheet } from 'react-native';
+import { DefaultTheme } from 'react-native-paper';
 
 const styles = StyleSheet.create({
   view: {
@@ -51,6 +51,9 @@ const styles = StyleSheet.create({
   input: {
     marginTop: 20,
     width: '100%',
+  },
+  button: {
+    marginTop: 12
   },
   helpText: {
     fontSize: 16,
