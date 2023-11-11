@@ -1,14 +1,35 @@
-import {StyleSheet} from 'react-native';
-import {DefaultTheme} from 'react-native-paper';
+import { StyleSheet } from 'react-native';
+import global from '../../theme/global';
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginBottom: 16,
+  },
   header: {
-    height: 120,
-    backgroundColor: DefaultTheme.colors.primary,
+    height: global.mainHeight,
+    backgroundColor: global.mainColor,
     justifyContent: 'space-evenly',
     alignItems: 'flex-start',
-    paddingLeft: 30,
-    paddingRight: 30,
+    paddingLeft: global.paddingLeft,
+    paddingRight: global.paddingRight,
+  },
+  subHeader: {
+    height: global.subHeight,
+    paddingLeft: global.paddingLeft,
+    paddingRight: global.paddingRight,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  subHeaderItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  content: {
+    flex: 1,
+    backgroundColor: global.secondBgColor
   },
   dataWrap: {
     flexDirection: 'row',
