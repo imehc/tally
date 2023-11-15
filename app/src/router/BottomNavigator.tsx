@@ -5,6 +5,7 @@ import {HomeScreen, MineScreen, StatisticScreen} from '../screen';
 import {BottomNavigation} from 'react-native-paper';
 import {CommonActions} from '@react-navigation/native';
 import {RootStackParamList} from './ScreenNavigator';
+import {Platform} from 'react-native';
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
@@ -14,6 +15,7 @@ const Tab = createBottomTabNavigator<RootStackParamList>();
 export const BottomNavigator: React.FC = () => {
   return (
     <Tab.Navigator
+      safeAreaInsets={{bottom: Platform.OS === 'ios' ? 0 : undefined}}
       screenOptions={{
         headerShown: false,
       }}
@@ -26,6 +28,7 @@ export const BottomNavigator: React.FC = () => {
             height: 32,
             justifyContent: 'center',
             alignItems: 'center',
+            marginBottom: Platform.OS === 'ios' ? 16 : undefined,
           }}
           navigationState={state}
           safeAreaInsets={insets}
