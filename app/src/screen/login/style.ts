@@ -1,11 +1,9 @@
-import { StyleSheet } from 'react-native';
-import { DefaultTheme } from 'react-native-paper';
+import {StyleSheet} from 'react-native';
+import {DefaultTheme} from 'react-native-paper';
 
 const styles = StyleSheet.create({
   view: {
     flex: 1,
-    paddingTop: '20%',
-    paddingBottom: '20%',
   },
   desc: {
     fontSize: 30,
@@ -16,6 +14,7 @@ const styles = StyleSheet.create({
   },
   center: {
     alignItems: 'center',
+    marginTop: '20%',
   },
   center2: {
     flexDirection: 'row',
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   button: {
-    marginTop: 12
+    marginTop: 12,
   },
   helpText: {
     fontSize: 16,

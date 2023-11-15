@@ -1,11 +1,11 @@
-import React, { useCallback, useMemo, useState } from 'react';
-import { StatusBar, useColorScheme } from 'react-native';
+import React, {useCallback, useMemo, useState} from 'react';
+import {StatusBar, useColorScheme} from 'react-native';
 import {
   NavigationContainer,
   DarkTheme as NavigationDarkTheme,
   DefaultTheme as NavigationDefaultTheme,
 } from '@react-navigation/native';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {
   MD3DarkTheme,
   MD3LightTheme,
@@ -14,18 +14,18 @@ import {
 } from 'react-native-paper';
 import merge from 'deepmerge';
 import Toast from 'react-native-toast-message';
-import { PreferencesContext } from './src/theme';
-import { Router } from './src/router';
-import { AuthContextProvider } from './src/provider';
+import {PreferencesContext} from './src/theme';
+import {Router} from './src/router';
+import {AuthContextProvider} from './src/provider';
 
 // Create a client
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      throwOnError: (error, query) => {
+      throwOnError: () => {
         //   console.log('error response: ', error);
         // TODO: 错误兜底拦截
-        return false
+        return false;
       },
     },
     mutations: {
@@ -37,7 +37,7 @@ const queryClient = new QueryClient({
   },
 });
 
-const { LightTheme, DarkTheme } = adaptNavigationTheme({
+const {LightTheme, DarkTheme} = adaptNavigationTheme({
   reactNavigationLight: NavigationDefaultTheme,
   reactNavigationDark: NavigationDarkTheme,
 });
