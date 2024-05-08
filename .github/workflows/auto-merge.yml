@@ -4,6 +4,52 @@ on:
   pull_request:
 
 jobs:
+  build-test-app-with-react-native:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+    - name: Install Dependencies
+      run: |
+        npm install -g yarn
+        yarn install # 安装依赖
+    - name: Run Tests
+      run: yarn test # 执行测试
+    - name: Build Android
+      run: |
+        npx react-native start &
+        sleep 5
+        npx react-native run-android --variant=release # Android打包
+    - name: Build iOS
+      run: |
+        npx pod-install
+        npx react-native run-ios --configuration Release # iOS打包
+
+  build-test-api-with-nest:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./api
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: 'pnpm'
+    - name: Install Dependencies (pnpm)
+      run: pnpm install
+    - name: Test React App
+      run: pnpm test
+    - name: Build React App
+      run: pnpm build
+      
   automerge:
     runs-on: ubuntu-latest
     permissions:
@@ -11,26 +57,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2 # 检出代码
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20' # 设置Node.js版本
-      - name: Install Dependencies
-        run: |
-          npm install -g yarn
-          yarn install # 安装依赖
-      - name: Run Tests
-        run: yarn test # 执行测试
-      - name: Build Android
-        run: |
-          npx react-native start &
-          sleep 5
-          npx react-native run-android --variant=release # Android打包
-      - name: Build iOS
-        run: |
-          npx pod-install
-          npx react-native run-ios --configuration Release # iOS打包
-          
       - uses: fastify/github-action-merge-dependabot@v3
       # 或
       # - uses: actions/checkout@v4
