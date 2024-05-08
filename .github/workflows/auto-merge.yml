@@ -1,0 +1,40 @@
+name: Auto Merge
+
+on:
+  pull_request:
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: actions/checkout@v2 # 检出代码
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # 设置Node.js版本
+      - name: Install Dependencies
+        run: |
+          npm install -g yarn
+          yarn install # 安装依赖
+      - name: Run Tests
+        run: yarn test # 执行测试
+      - name: Build Android
+        run: |
+          npx react-native start &
+          sleep 5
+          npx react-native run-android --variant=release # Android打包
+      - name: Build iOS
+        run: |
+          npx pod-install
+          npx react-native run-ios --configuration Release # iOS打包
+          
+      - uses: fastify/github-action-merge-dependabot@v3
+      # 或
+      # - uses: actions/checkout@v4
+      # - uses: ahmadnassri/action-dependabot-auto-merge@v2
+        with:
+          # target: minor
+          github-token: ${{ secrets.GITHUB_TOKEN }}
