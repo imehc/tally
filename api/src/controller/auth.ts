@@ -15,7 +15,7 @@ export class AuthController {
   ctx: Context;
 
   @Post('/register')
-  @Validate({ errorStatus: 422 })
+  // @Validate({ errorStatus: 422 })
   async register(@Body() body: User) {
     try {
       const userId = await this.authService.register(body);
