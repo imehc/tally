@@ -27,7 +27,7 @@
     "@midwayjs/egg-ts-helper": "^1.0.1",
     "@midwayjs/mock": "^3.0.0",
     "@types/jest": "^29.2.0",
-    "@types/node": "14",
+    "@types/node": "20",
     "cross-env": "^7.0.0",
     "egg-mock": "^3.26.0",
     "jest": "^29.2.2",
