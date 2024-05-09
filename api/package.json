@@ -19,6 +19,7 @@
     "@prisma/client": "^5.13.0",
     "crypto-js": "^4.2.0",
     "egg": "^3.23.0",
+    "egg-scripts": "^3.0.0",
     "mkdirp": "^3.0.1",
     "moment": "^2.30.1",
     "swagger-ui-dist": "^5.17.6"

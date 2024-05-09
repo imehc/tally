@@ -6,7 +6,7 @@ export default (appInfo: MidwayAppInfo) => {
     // use for cookie sign key, should change to your own and keep security
     keys: appInfo.name + '_1680781185005_5324',
     egg: {
-      port: 7001,
+      port: 6013,
       globalPrefix: '/apis', // 全局路由前缀
     },
     security: {

@@ -1,5 +1,4 @@
 import { App, Configuration, ILifeCycle } from '@midwayjs/core';
-import { Application } from 'egg';
 import { join } from 'path';
 import * as egg from '@midwayjs/web';
 import * as view from '@midwayjs/view-ejs';
@@ -36,7 +35,7 @@ import {
 })
 export class ContainerLifeCycle implements ILifeCycle {
   @App()
-  app: Application;
+  app: egg.Application;
 
   async onReady() {
     // 添加中间件
@@ -44,12 +43,12 @@ export class ContainerLifeCycle implements ILifeCycle {
       // 导入upload时 eslint 报错、暂时使用any替换
 
       JwtMiddleware,
-    ] as any);
+    ]);
     this.app.useFilter([
       DefaultErrorFilter,
       UnauthorizedErrorFilter,
       BadRequestErrorFilter,
       NotFoundErrorFilter,
-    ] as any);
+    ]);
   }
 }
