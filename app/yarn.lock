@@ -2444,17 +2444,17 @@
     deepmerge "^4.3.1"
     svgo "^3.0.2"
 
-"@tanstack/query-core@5.8.2":
-  version "5.8.2"
-  resolved "https://registry.npmmirror.com/@tanstack/query-core/-/query-core-5.8.2.tgz"
-  integrity sha512-tBTmTbBLxFQPCeKY5AcXdkTLtbQyYzak5yQohw4EKwEmFCFRqnViXjX8jkUd2pQN60Lf4RE2sD5UkzWqOw1ebw==
+"@tanstack/query-core@5.35.1":
+  version "5.35.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.35.1.tgz#a7e6cbf0f252475da19ba9cba6567e8fe683b2ee"
+  integrity sha512-0Dnpybqb8+ps6WgqBnqFEC+1F/xLvUosRAq+wiGisTgolOZzqZfkE2995dEXmhuzINiTM7/a6xSGznU0NIvBkw==
 
 "@tanstack/react-query@^5.8.1":
-  version "5.8.2"
-  resolved "https://registry.npmmirror.com/@tanstack/react-query/-/react-query-5.8.2.tgz"
-  integrity sha512-1QGZWaB0Do5CCZ2OEGlacXWeylqN3pTlJPViPqktjViygNtuacbCZWdQEVdD62cYC3ra80YOlKihKmXKKhZwLA==
+  version "5.35.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.35.1.tgz#3b7c710bb32c6c71e0cbe64029dded9b0cbd9a0f"
+  integrity sha512-i2T7m2ffQdNqlX3pO+uMsnQ0H4a59Ens2GxtlMsRiOvdSB4SfYmHb27MnvFV8rGmtWRaa4gPli0/rpDoSS5LbQ==
   dependencies:
-    "@tanstack/query-core" "5.8.2"
+    "@tanstack/query-core" "5.35.1"
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
