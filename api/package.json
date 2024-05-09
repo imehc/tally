@@ -17,7 +17,7 @@
     "@midwayjs/web": "^3.0.0",
     "@prisma/client": "^5.0.0",
     "crypto-js": "^4.1.1",
-    "egg": "^2.0.0",
+    "egg": "^3.0.0",
     "mkdirp": "^3.0.0",
     "moment": "^2.29.4",
     "swagger-ui-dist": "^5.0.0"
