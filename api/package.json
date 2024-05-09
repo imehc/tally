@@ -32,7 +32,7 @@
     "egg-mock": "^3.26.0",
     "jest": "^29.2.2",
     "mwts": "^1.0.5",
-    "npm-run-all2": "^5.0.0",
+    "npm-run-all2": "^6.0.0",
     "ts-jest": "^29.0.3",
     "typescript": "~5.4.0"
   },
