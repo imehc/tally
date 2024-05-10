@@ -24,8 +24,7 @@ export const ScreenNavigator: React.FC = () => {
   return (
     <Stack.Navigator
       // initialRouteName="Home"
-      // eslint-disable-next-line react/no-unstable-nested-components
-      screenOptions={{header: props => <NavigationBar {...props} />}}>
+      screenOptions={{header: NavigationBar}}>
       {accessToken ? (
         <React.Fragment>
           <Stack.Screen
