@@ -179,7 +179,8 @@ export const LoginScreen: React.FC<Props> = ({}) => {
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              left={<TextInput.Icon icon="account" />}
+              //issue: https://github.com/callstack/react-native-paper/pull/4385#issuecomment-2081106267
+              left={<TextInput.Icon icon="account" forceTextInputFocus />}
               error={!!errors.username}
             />
           )}
@@ -197,8 +198,14 @@ export const LoginScreen: React.FC<Props> = ({}) => {
               onChangeText={onChange}
               value={value}
               secureTextEntry={notVisible}
-              left={<TextInput.Icon icon="shield-sword" />}
-              right={<TextInput.Icon icon="eye" onPress={setNotVisible} />}
+              left={<TextInput.Icon icon="shield-sword" forceTextInputFocus />}
+              right={
+                <TextInput.Icon
+                  icon="eye"
+                  onPress={setNotVisible}
+                  forceTextInputFocus
+                />
+              }
               error={!!errors.password}
             />
           )}
