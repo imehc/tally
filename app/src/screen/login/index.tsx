@@ -7,8 +7,8 @@ import {
   TouchableRipple,
 } from 'react-native-paper';
 import {useForm, Controller} from 'react-hook-form';
-import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup';
+import {z} from 'zod';
+import {zodResolver} from '@hookform/resolvers/zod';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
 import {type RootStackParamList} from '../../router';
 import {View} from 'react-native';
@@ -28,20 +28,18 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 type ToggleButtonType = 'login' | 'register';
 
-const schema = yup
+const schema = z
   .object({
-    username: yup
-      .string()
+    username: z
+      .string({required_error: '请输入账号'})
       .min(4, '最少为4个字符')
       .max(8, '最多为8个字符')
-      .matches(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头')
-      .required('请输入账号'),
-    password: yup
-      .string()
+      .regex(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头'),
+    password: z
+      .string({required_error: '请输入密码'})
       .min(4, '最少为4个字符')
       .max(8, '最多为16个字符')
-      .matches(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头')
-      .required('请输入密码'),
+      .regex(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头'),
   })
   .required();
 
@@ -132,7 +130,7 @@ export const LoginScreen: React.FC<Props> = ({}) => {
     handleSubmit,
     formState: {errors},
   } = useForm<LoginRequest>({
-    resolver: yupResolver(schema),
+    resolver: zodResolver(schema),
   });
   const onSubmit = useCallback(
     (auth: LoginRequest) => {
