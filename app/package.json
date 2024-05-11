@@ -55,5 +55,6 @@
   "engines": {
     "node": ">=18",
     "npm": ">=8"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
