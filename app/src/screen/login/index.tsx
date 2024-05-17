@@ -177,7 +177,7 @@ export const LoginScreen: React.FC<Props> = ({}) => {
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              //issue: https://github.com/callstack/react-native-paper/pull/4385#issuecomment-2081106267
+              //TODO: issue: https://github.com/callstack/react-native-paper/pull/4385#issuecomment-2081106267
               left={<TextInput.Icon icon="account" forceTextInputFocus />}
               error={!!errors.username}
             />
