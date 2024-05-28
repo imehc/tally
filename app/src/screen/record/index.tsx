@@ -1,11 +1,11 @@
+import React from 'react';
+import {View} from 'react-native';
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
   withSpring,
 } from 'react-native-reanimated';
-import {View} from 'react-native';
-import React from 'react';
 import styles from './styles';
 
 export const RecordScreen: React.FC = () => {

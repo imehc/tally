@@ -2,13 +2,13 @@ import React from 'react';
 import {ScrollView, View} from 'react-native';
 import {Button, DefaultTheme, Text} from 'react-native-paper';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../router';
-import styles from './styles';
-import {useThemeContext} from '../../theme';
-import ShouruIcon from '../../assets/shouru.svg';
-import ZhichuIcon from '../../assets/zhichu.svg';
-import {BillCategory, BillItem, TallyStatusBar} from '../../components';
 import styled from 'styled-components/native';
+import {BillCategory, BillItem, TallyStatusBar} from '~/components';
+import {useThemeContext} from '~/theme';
+import {RootStackParamList} from '~/router';
+import ShouruIcon from '~/assets/shouru.svg';
+import ZhichuIcon from '~/assets/zhichu.svg';
+import styles from './styles';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Bill'>;
 

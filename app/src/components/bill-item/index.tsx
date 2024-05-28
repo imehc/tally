@@ -3,11 +3,11 @@ import {View} from 'react-native';
 import {DefaultTheme, Text} from 'react-native-paper';
 import {format} from 'date-fns';
 import styled from 'styled-components/native';
-import UnknowIcon from '../../assets/category/unknow.svg';
-import FoodIcon from '../../assets/category/food.svg';
-import PersionIcon from '../../assets/category/persion.svg';
-import ShopIcon from '../../assets/category/shop.svg';
-import TrafficIcon from '../../assets/category/traffic.svg';
+import UnknowIcon from '~/assets/category/unknow.svg';
+import FoodIcon from '~/assets/category/food.svg';
+import PersionIcon from '~/assets/category/persion.svg';
+import ShopIcon from '~/assets/category/shop.svg';
+import TrafficIcon from '~/assets/category/traffic.svg';
 
 export enum BillCategory {
   Food,

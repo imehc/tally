@@ -1,8 +1,8 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {SafeAreaView, View} from 'react-native';
 import {Text} from 'react-native-paper';
-import {RootStackParamList} from '../../router';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from '~/router';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Detail'>;
 

@@ -1,4 +1,5 @@
 import React, {useState, useCallback, useReducer, useMemo} from 'react';
+import {StyleSheet, View} from 'react-native';
 import {
   Avatar,
   Button,
@@ -10,19 +11,18 @@ import {useForm, Controller} from 'react-hook-form';
 import {z} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
-import {type RootStackParamList} from '../../router';
-import {StyleSheet, View} from 'react-native';
-import styles from './style';
-import {useConfiguration} from '../../client';
+import {useMutation} from '@tanstack/react-query';
+import Toast from 'react-native-toast-message';
 import {
   type LoginRequest,
   UserApi,
   RegisterRequest,
   ResponseError,
-} from '../../tally-api';
-import {useMutation} from '@tanstack/react-query';
-import Toast from 'react-native-toast-message';
-import {useAuthContext} from '../../provider';
+} from '~/tally-api';
+import {type RootStackParamList} from '~/router';
+import {useConfiguration} from '~/client';
+import {useAuthContext} from '~/provider';
+import styles from './style';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 

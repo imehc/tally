@@ -1,9 +1,9 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {DetailScreen, LoginScreen, RecordScreen} from '~/screen';
 import {BottomNavigator} from './BottomNavigator';
-import {DetailScreen, LoginScreen, RecordScreen} from '../screen';
-import {NavigationBar} from '../components';
-import {useAccessToken} from '../provider';
+import {NavigationBar} from '~/components';
+import {useAccessToken} from '~/provider';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -26,7 +26,7 @@ export const ScreenNavigator: React.FC = () => {
     <Stack.Navigator
       // initialRouteName="Home"
       screenOptions={{header: NavigationBar}}>
-      {accessToken ? (
+      {!accessToken ? (
         <React.Fragment>
           <Stack.Screen
             name="Home"

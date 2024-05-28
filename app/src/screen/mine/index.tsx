@@ -1,10 +1,10 @@
 import React from 'react';
 import {View} from 'react-native';
 import {TouchableRipple, Switch, Text, Button} from 'react-native-paper';
-import styles from './styles';
-import {useThemeContext} from '../../theme';
-import {RootStackParamList} from '../../router';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {useThemeContext} from '~/theme';
+import {RootStackParamList} from '~/router';
+import styles from './styles';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Mine'>;
 

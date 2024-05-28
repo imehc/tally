@@ -1,14 +1,14 @@
 import React from 'react';
+import {Platform} from 'react-native';
 import {
   type BottomTabNavigationOptions,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {HomeScreen, MineScreen, StatisticScreen} from '../screen';
 import {BottomNavigation} from 'react-native-paper';
 import {CommonActions} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {HomeScreen, MineScreen, StatisticScreen} from '~/screen';
 import {RootStackParamList} from './ScreenNavigator';
-import {Platform} from 'react-native';
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 

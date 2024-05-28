@@ -1,9 +1,9 @@
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {View} from 'react-native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {Button, Text, TouchableRipple} from 'react-native-paper';
-import {useAuthContext} from '../../provider';
-import {RootStackParamList} from '../../router';
+import {useAuthContext} from '~/provider';
+import {RootStackParamList} from '~/router';
 import styles from './styles';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Statistic'>;

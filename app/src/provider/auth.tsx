@@ -1,5 +1,5 @@
 import {createContext, useCallback, useContext, useMemo, useState} from 'react';
-import {useStorage} from '../hooks';
+import {useStorage} from '~/hooks';
 
 interface AuthContextProps {
   accessToken: string | undefined;
