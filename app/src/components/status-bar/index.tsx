@@ -19,13 +19,9 @@ export const TallyStatusBar: React.FC<StatusBarProps> = ({
   <View style={[styles.statusBar, {backgroundColor}]}>
     <LinearGradient
       colors={['#2b2b2b', 'transparent']}
-      style={[
-        {
-          // height: 50,
-          opacity: 1,
-        },
-        StyleSheet.absoluteFillObject,
-      ]}>
+      // 通过透明度观察状态栏变化
+      className="opacity-0"
+      style={[StyleSheet.absoluteFillObject]}>
       <SafeAreaView>
         <StatusBar
           animated

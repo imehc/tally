@@ -18,6 +18,7 @@ import {PreferencesContext} from './src/theme';
 import {Router} from './src/router';
 import {AuthContextProvider} from './src/provider';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import './global.css';
 
 // Create a client
 const queryClient = new QueryClient({
@@ -68,7 +69,7 @@ const App: React.FC = (): JSX.Element => {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthContextProvider>
-        <GestureHandlerRootView style={{flex: 1}}>
+        <GestureHandlerRootView className="flex-1">
           <StatusBar
             barStyle={isThemeDark ? 'light-content' : 'dark-content'}
             backgroundColor={theme.colors.background}

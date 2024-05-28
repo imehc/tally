@@ -26,7 +26,7 @@ export const ScreenNavigator: React.FC = () => {
     <Stack.Navigator
       // initialRouteName="Home"
       screenOptions={{header: NavigationBar}}>
-      {!accessToken ? (
+      {accessToken ? (
         <React.Fragment>
           <Stack.Screen
             name="Home"

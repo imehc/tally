@@ -11,7 +11,7 @@ import {z} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
 import {type RootStackParamList} from '../../router';
-import {View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import styles from './style';
 import {useConfiguration} from '../../client';
 import {
@@ -212,7 +212,7 @@ export const LoginScreen: React.FC<Props> = ({}) => {
         <Text style={styles.helpText}>{errors.password?.message}</Text>
         <Button
           style={styles.button}
-          contentStyle={{height: 48}}
+          contentStyle={contentStyle.h}
           mode="contained"
           onPress={handleSubmit(onSubmit)}>
           {authMode === 'login' ? '登录' : '注册'}
@@ -221,3 +221,9 @@ export const LoginScreen: React.FC<Props> = ({}) => {
     </View>
   );
 };
+
+const contentStyle = StyleSheet.create({
+  h: {
+    height: 48,
+  },
+});

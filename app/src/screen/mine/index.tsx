@@ -26,6 +26,8 @@ export const MineScreen: React.FC<Props> = ({navigation}) => {
         onPress={() => navigation.navigate('Record')}>
         测试手势系统
       </Button>
+      {/* issue: https://github.com/marklawlor/nativewind/issues/872 */}
+      <Text className="text-orange-600 bg-sky-500">Hello, World!</Text>
     </View>
   );
 };
