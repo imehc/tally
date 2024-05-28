@@ -1,4 +1,5 @@
 import React, {useState, useCallback, useReducer, useMemo} from 'react';
+import {StyleSheet, View} from 'react-native';
 import {
   Avatar,
   Button,
@@ -7,41 +8,38 @@ import {
   TouchableRipple,
 } from 'react-native-paper';
 import {useForm, Controller} from 'react-hook-form';
-import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup';
+import {z} from 'zod';
+import {zodResolver} from '@hookform/resolvers/zod';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
-import {type RootStackParamList} from '../../router';
-import {View} from 'react-native';
-import styles from './style';
-import {useConfiguration} from '../../client';
+import {useMutation} from '@tanstack/react-query';
+import Toast from 'react-native-toast-message';
 import {
   type LoginRequest,
   UserApi,
   RegisterRequest,
   ResponseError,
-} from '../../tally-api';
-import {useMutation} from '@tanstack/react-query';
-import Toast from 'react-native-toast-message';
-import {useAuthContext} from '../../provider';
+} from '~/tally-api';
+import {type RootStackParamList} from '~/router';
+import {useConfiguration} from '~/client';
+import {useAuthContext} from '~/provider';
+import styles from './style';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 type ToggleButtonType = 'login' | 'register';
 
-const schema = yup
+const schema = z
   .object({
-    username: yup
-      .string()
+    username: z
+      .string({required_error: '请输入账号'})
       .min(4, '最少为4个字符')
       .max(8, '最多为8个字符')
-      .matches(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头')
-      .required('请输入账号'),
-    password: yup
-      .string()
+      .regex(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头'),
+    password: z
+      .string({required_error: '请输入密码'})
       .min(4, '最少为4个字符')
       .max(8, '最多为16个字符')
-      .matches(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头')
-      .required('请输入密码'),
+      .regex(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头'),
   })
   .required();
 
@@ -132,7 +130,7 @@ export const LoginScreen: React.FC<Props> = ({}) => {
     handleSubmit,
     formState: {errors},
   } = useForm<LoginRequest>({
-    resolver: yupResolver(schema),
+    resolver: zodResolver(schema),
   });
   const onSubmit = useCallback(
     (auth: LoginRequest) => {
@@ -179,7 +177,8 @@ export const LoginScreen: React.FC<Props> = ({}) => {
               onBlur={onBlur}
               onChangeText={onChange}
               value={value}
-              left={<TextInput.Icon icon="account" />}
+              //TODO: issue: https://github.com/callstack/react-native-paper/pull/4385#issuecomment-2081106267
+              left={<TextInput.Icon icon="account" forceTextInputFocus />}
               error={!!errors.username}
             />
           )}
@@ -197,8 +196,14 @@ export const LoginScreen: React.FC<Props> = ({}) => {
               onChangeText={onChange}
               value={value}
               secureTextEntry={notVisible}
-              left={<TextInput.Icon icon="shield-sword" />}
-              right={<TextInput.Icon icon="eye" onPress={setNotVisible} />}
+              left={<TextInput.Icon icon="shield-sword" forceTextInputFocus />}
+              right={
+                <TextInput.Icon
+                  icon="eye"
+                  onPress={setNotVisible}
+                  forceTextInputFocus
+                />
+              }
               error={!!errors.password}
             />
           )}
@@ -207,7 +212,7 @@ export const LoginScreen: React.FC<Props> = ({}) => {
         <Text style={styles.helpText}>{errors.password?.message}</Text>
         <Button
           style={styles.button}
-          contentStyle={{height: 48}}
+          contentStyle={contentStyle.h}
           mode="contained"
           onPress={handleSubmit(onSubmit)}>
           {authMode === 'login' ? '登录' : '注册'}
@@ -216,3 +221,9 @@ export const LoginScreen: React.FC<Props> = ({}) => {
     </View>
   );
 };
+
+const contentStyle = StyleSheet.create({
+  h: {
+    height: 48,
+  },
+});

@@ -1,4 +1,4 @@
-import { DefaultTheme } from "react-native-paper";
+import {DefaultTheme} from 'react-native-paper';
 
 export default {
   mainHeight: 120,
@@ -9,4 +9,4 @@ export default {
   secondColor: DefaultTheme.colors.secondary,
   mainBgColor: DefaultTheme.colors.primaryContainer,
   secondBgColor: DefaultTheme.colors.secondaryContainer,
-}
+};

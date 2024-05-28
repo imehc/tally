@@ -17,6 +17,8 @@ import Toast from 'react-native-toast-message';
 import {PreferencesContext} from './src/theme';
 import {Router} from './src/router';
 import {AuthContextProvider} from './src/provider';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import './global.css';
 
 // Create a client
 const queryClient = new QueryClient({
@@ -67,17 +69,19 @@ const App: React.FC = (): JSX.Element => {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthContextProvider>
-        <StatusBar
-          barStyle={isThemeDark ? 'light-content' : 'dark-content'}
-          backgroundColor={theme.colors.background}
-        />
-        <PreferencesContext.Provider value={preferences}>
-          <PaperProvider theme={theme}>
-            <NavigationContainer theme={theme}>
-              <Router />
-            </NavigationContainer>
-          </PaperProvider>
-        </PreferencesContext.Provider>
+        <GestureHandlerRootView className="flex-1">
+          <StatusBar
+            barStyle={isThemeDark ? 'light-content' : 'dark-content'}
+            backgroundColor={theme.colors.background}
+          />
+          <PreferencesContext.Provider value={preferences}>
+            <PaperProvider theme={theme}>
+              <NavigationContainer theme={theme}>
+                <Router />
+              </NavigationContainer>
+            </PaperProvider>
+          </PreferencesContext.Provider>
+        </GestureHandlerRootView>
       </AuthContextProvider>
       <Toast position="top" />
     </QueryClientProvider>

@@ -1,11 +1,14 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {HomeScreen, MineScreen, StatisticScreen} from '../screen';
+import {Platform} from 'react-native';
+import {
+  type BottomTabNavigationOptions,
+  createBottomTabNavigator,
+} from '@react-navigation/bottom-tabs';
 import {BottomNavigation} from 'react-native-paper';
 import {CommonActions} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {HomeScreen, MineScreen, StatisticScreen} from '~/screen';
 import {RootStackParamList} from './ScreenNavigator';
-import {Platform} from 'react-native';
 
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
@@ -74,10 +77,8 @@ export const BottomNavigator: React.FC = () => {
         component={HomeScreen}
         options={{
           tabBarLabel: 'Bill',
-          // eslint-disable-next-line react/no-unstable-nested-components
-          tabBarIcon: ({color, size}) => {
-            return <Icon name="calendar-today" size={size} color={color} />;
-          },
+          tabBarIcon: props =>
+            renderTabBarIcon({...props, name: 'calendar-today'}),
         }}
       />
       <Tab.Screen
@@ -85,10 +86,7 @@ export const BottomNavigator: React.FC = () => {
         component={StatisticScreen}
         options={{
           tabBarLabel: 'STATISTIC',
-          // eslint-disable-next-line react/no-unstable-nested-components
-          tabBarIcon: ({color, size}) => {
-            return <Icon name="chart-line" size={size} color={color} />;
-          },
+          tabBarIcon: props => renderTabBarIcon({...props, name: 'chart-line'}),
         }}
       />
       <Tab.Screen
@@ -96,12 +94,16 @@ export const BottomNavigator: React.FC = () => {
         component={MineScreen}
         options={{
           tabBarLabel: 'MINE',
-          // eslint-disable-next-line react/no-unstable-nested-components
-          tabBarIcon: ({color, size}) => {
-            return <Icon name="odnoklassniki" size={size} color={color} />;
-          },
+          tabBarIcon: props =>
+            renderTabBarIcon({...props, name: 'odnoklassniki'}),
         }}
       />
     </Tab.Navigator>
   );
 };
+
+const renderTabBarIcon = (
+  props: Parameters<
+    NonNullable<BottomTabNavigationOptions['tabBarIcon']>
+  >[number] & {name: string},
+) => <Icon {...props} />;

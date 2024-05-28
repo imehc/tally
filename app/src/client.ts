@@ -16,3 +16,14 @@ export const useConfiguration = (
     return new Configuration({..._config, ...config});
   }, [_config, config]);
 };
+
+export const useApi = <T extends new (_?: Configuration) => any>(
+  Api: T,
+  conf?: ConfigurationParameters,
+): InstanceType<T> => {
+  const defaultConf = useConfiguration(conf);
+  return useMemo<InstanceType<T>>(
+    () => new Api(defaultConf),
+    [Api, defaultConf],
+  );
+};
