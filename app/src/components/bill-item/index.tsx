@@ -1,12 +1,13 @@
-import React, { useMemo } from "react";
-import { View } from "react-native";
-import { DefaultTheme, Text } from "react-native-paper";
-import { format } from "date-fns";
-import UnknowIcon from '../../assets/category/unknow.svg'
-import FoodIcon from '../../assets/category/food.svg'
-import PersionIcon from '../../assets/category/persion.svg'
-import ShopIcon from '../../assets/category/shop.svg'
-import TrafficIcon from '../../assets/category/traffic.svg'
+import React, {useMemo} from 'react';
+import {View} from 'react-native';
+import {DefaultTheme, Text} from 'react-native-paper';
+import {format} from 'date-fns';
+import styled from 'styled-components/native';
+import UnknowIcon from '~/assets/category/unknow.svg';
+import FoodIcon from '~/assets/category/food.svg';
+import PersionIcon from '~/assets/category/persion.svg';
+import ShopIcon from '~/assets/category/shop.svg';
+import TrafficIcon from '~/assets/category/traffic.svg';
 
 export enum BillCategory {
   Food,
@@ -18,11 +19,11 @@ export enum BillCategory {
 interface Props {
   category: BillCategory;
   time: Date;
-  paytType: 'disburse' | 'income';
-  price: number
+  payType: 'disburse' | 'income';
+  price: number;
 }
 
-export const BillItem: React.FC<Props> = ({ category, time, paytType, price }) => {
+export const BillItem: React.FC<Props> = ({category, time, payType, price}) => {
   const date = useMemo(() => {
     try {
       return format(time, 'HH:mm');
@@ -31,14 +32,14 @@ export const BillItem: React.FC<Props> = ({ category, time, paytType, price }) =
       console.error(error);
       return '-:-';
     }
-  }, [time])
+  }, [time]);
 
   const coin = useMemo(() => {
-    if (paytType === 'disburse') {
+    if (payType === 'disburse') {
       return '-' + price.toFixed(2);
     }
     return '+' + price.toFixed(2);
-  }, [paytType, price])
+  }, [payType, price]);
 
   const name = useMemo(() => {
     switch (category) {
@@ -53,51 +54,73 @@ export const BillItem: React.FC<Props> = ({ category, time, paytType, price }) =
       default:
         return '未知';
     }
-  }, [category])
+  }, [category]);
 
-  return <View
-    style={{
-      height: 80,
-      backgroundColor: DefaultTheme.colors.primaryContainer,
-      margin: 12,
-      marginBottom: 0,
-      borderRadius: 8,
-      paddingRight: 12,
-      paddingLeft: 12,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center'
-    }}>
-    <View
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-      }}
-    >
-      <View
-        style={{
-          justifyContent: 'space-evenly',
-          alignItems: 'flex-start',
-        }}
-      >
-        <View style={{ flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
-          {
-            category === BillCategory.Food ?
-              <FoodIcon width={20} height={30} color={DefaultTheme.colors.primary} /> :
-              category === BillCategory.Persion ?
-                <PersionIcon width={20} height={30} color={DefaultTheme.colors.primary} />
-                : category === BillCategory.Shop ?
-                  <ShopIcon width={20} height={30} color={DefaultTheme.colors.primary} />
-                  : category === BillCategory.Traffic ?
-                    <TrafficIcon width={20} height={30} color={DefaultTheme.colors.primary} />
-                    : <UnknowIcon width={20} height={30} color={DefaultTheme.colors.primary} />
-          }
-          <Text style={{ marginLeft: 8, fontSize: 16 }}>{name}</Text>
+  return (
+    <Container bg={DefaultTheme.colors.primaryContainer}>
+      <View className="flex-row items-center justify-around">
+        <View className="items-start justify-evenly">
+          <View className="flex-row items-center justify-start">
+            {category === BillCategory.Food ? (
+              <FoodIcon
+                width={20}
+                height={30}
+                color={DefaultTheme.colors.primary}
+              />
+            ) : category === BillCategory.Persion ? (
+              <PersionIcon
+                width={20}
+                height={30}
+                color={DefaultTheme.colors.primary}
+              />
+            ) : category === BillCategory.Shop ? (
+              <ShopIcon
+                width={20}
+                height={30}
+                color={DefaultTheme.colors.primary}
+              />
+            ) : category === BillCategory.Traffic ? (
+              <TrafficIcon
+                width={20}
+                height={30}
+                color={DefaultTheme.colors.primary}
+              />
+            ) : (
+              <UnknowIcon
+                width={20}
+                height={30}
+                color={DefaultTheme.colors.primary}
+              />
+            )}
+            <CategoryName>{name}</CategoryName>
+          </View>
+          <Text>{date}</Text>
         </View>
-        <Text>{date}</Text>
       </View>
-    </View>
-    <Text style={{ fontSize: 20, color: paytType === "disburse" ? 'green' : "red" }}>{coin}</Text>
-  </View>
-}
+      <Amount type={payType}>{coin}</Amount>
+    </Container>
+  );
+};
+
+const Container = styled.View<{bg: string}>`
+  height: 80px;
+  background-color: ${props => props.bg};
+  margin: 12px;
+  margin-bottom: 0;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-left: 12px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const CategoryName = styled.Text`
+  margin-left: 8px;
+  font-size: 16px;
+`;
+
+const Amount = styled.Text<{type: Props['payType']}>`
+  font-size: 20px;
+  color: ${props => (props.type === 'disburse' ? 'green' : 'red')};
+`;

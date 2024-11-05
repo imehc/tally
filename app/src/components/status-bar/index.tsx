@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   StatusBarProps,
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 /**
  * @link https://stackoverflow.com/questions/39297291/how-to-set-ios-status-bar-background-color-in-react-native
@@ -16,9 +17,21 @@ export const TallyStatusBar: React.FC<StatusBarProps> = ({
   ...props
 }) => (
   <View style={[styles.statusBar, {backgroundColor}]}>
-    <SafeAreaView>
-      <StatusBar translucent backgroundColor={backgroundColor} {...props} />
-    </SafeAreaView>
+    <LinearGradient
+      colors={['#2b2b2b', 'transparent']}
+      // 通过透明度观察状态栏变化
+      className="opacity-0"
+      style={[StyleSheet.absoluteFillObject]}>
+      <SafeAreaView>
+        <StatusBar
+          animated
+          translucent
+          backgroundColor="transparent"
+          // backgroundColor={backgroundColor}
+          {...props}
+        />
+      </SafeAreaView>
+    </LinearGradient>
   </View>
 );
 

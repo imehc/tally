@@ -1,9 +1,9 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {DetailScreen, LoginScreen, RecordScreen} from '~/screen';
 import {BottomNavigator} from './BottomNavigator';
-import {DetailScreen, LoginScreen} from '../screen';
-import {NavigationBar} from '../components';
-import {useAccessToken} from '../provider';
+import {NavigationBar} from '~/components';
+import {useAccessToken} from '~/provider';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -13,6 +13,7 @@ export type RootStackParamList = {
   Statistic: undefined;
   Mine: undefined;
   Detail: {id: string} | undefined;
+  Record: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -24,8 +25,7 @@ export const ScreenNavigator: React.FC = () => {
   return (
     <Stack.Navigator
       // initialRouteName="Home"
-      // eslint-disable-next-line react/no-unstable-nested-components
-      screenOptions={{header: props => <NavigationBar {...props} />}}>
+      screenOptions={{header: NavigationBar}}>
       {accessToken ? (
         <React.Fragment>
           <Stack.Screen
@@ -34,6 +34,7 @@ export const ScreenNavigator: React.FC = () => {
             options={{headerShown: false}}
           />
           <Stack.Screen name="Detail" component={DetailScreen} />
+          <Stack.Screen name="Record" component={RecordScreen} />
         </React.Fragment>
       ) : (
         <Stack.Screen

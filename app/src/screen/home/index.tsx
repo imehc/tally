@@ -2,12 +2,13 @@ import React from 'react';
 import {ScrollView, View} from 'react-native';
 import {Button, DefaultTheme, Text} from 'react-native-paper';
 import {type NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../../router';
+import styled from 'styled-components/native';
+import {BillCategory, BillItem, TallyStatusBar} from '~/components';
+import {useThemeContext} from '~/theme';
+import {RootStackParamList} from '~/router';
+import ShouruIcon from '~/assets/shouru.svg';
+import ZhichuIcon from '~/assets/zhichu.svg';
 import styles from './styles';
-import {useThemeContext} from '../../theme';
-import ShouruIcon from '../../assets/shouru.svg';
-import ZhichuIcon from '../../assets/zhichu.svg';
-import {BillCategory, BillItem, TallyStatusBar} from '../../components';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Bill'>;
 
@@ -44,7 +45,7 @@ export const HomeScreen: React.FC<Props> = ({}) => {
         </View>
       </View>
       <View style={styles.subHeader}>
-        <Text style={{fontSize: 24, fontWeight: 'bold'}}> 2021-06-11 </Text>
+        <DateStyled> 2021-06-11 </DateStyled>
         <View style={styles.subHeaderItem}>
           <View style={styles.subHeaderItem}>
             <ZhichuIcon
@@ -54,7 +55,7 @@ export const HomeScreen: React.FC<Props> = ({}) => {
             />
             <Text>￥81.00</Text>
           </View>
-          <View style={{...styles.subHeaderItem, marginLeft: 8}}>
+          <View style={styles.subHeaderItem} className="ml-2">
             <ShouruIcon
               width={30}
               height={30}
@@ -78,7 +79,7 @@ export const HomeScreen: React.FC<Props> = ({}) => {
                 : BillCategory.Persion
             }
             time={new Date()}
-            paytType={Math.random() < 0.5 ? 'disburse' : 'income'}
+            payType={Math.random() < 0.5 ? 'disburse' : 'income'}
             price={Math.random() * i + 6 + 1}
           />
         ))}
@@ -86,3 +87,8 @@ export const HomeScreen: React.FC<Props> = ({}) => {
     </View>
   );
 };
+
+const DateStyled = styled.Text`
+  font-size: 24px;
+  font-weight: bold;
+`;

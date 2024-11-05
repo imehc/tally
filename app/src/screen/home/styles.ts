@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 import global from '../../theme/global';
 
 const styles = StyleSheet.create({
@@ -25,11 +25,11 @@ const styles = StyleSheet.create({
   subHeaderItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   content: {
     flex: 1,
-    backgroundColor: global.secondBgColor
+    backgroundColor: global.secondBgColor,
   },
   dataWrap: {
     flexDirection: 'row',
