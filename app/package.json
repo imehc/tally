@@ -10,8 +10,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "gen:apis": "openapi-generator-cli generate -i ../api/openapi.yaml -g typescript-fetch -o ../app/src/tally-api -c ./openapi-generator.config.yaml",
-    "dev": "rnc-cli start"
+    "gen:apis": "openapi-generator-cli generate -i ../api/openapi.yaml -g typescript-fetch -o ../app/src/tally-api -c ./openapi-generator.config.yaml"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
