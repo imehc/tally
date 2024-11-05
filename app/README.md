@@ -13,7 +13,8 @@
 # 升级
 [地址](https://react-native-community.github.io/upgrade-helper)
 
-## 生成启动页面
+## 生成相关
+### 启动页面
 ``` bash
 yarn react-native generate-bootsplash src/assets/images/bootsplash_logo_original.jpg \
   --platforms=android,ios \
@@ -21,6 +22,10 @@ yarn react-native generate-bootsplash src/assets/images/bootsplash_logo_original
   --logo-width=100 \
   --assets-output=assets/bootsplash \
   --flavor=main  
+```
+### 应用图标
+``` bash
+npx rn-ml appicon -s src/assets/images/bootsplash_logo_original.jpg
 ```
 
 # 验证
