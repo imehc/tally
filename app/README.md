@@ -10,3 +10,7 @@
 
 # 升级
 [地址](https://react-native-community.github.io/upgrade-helper)
+
+# 验证
+- [x] Android Platform
+- [ ] IOS Platform
