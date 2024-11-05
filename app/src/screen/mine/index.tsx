@@ -1,6 +1,6 @@
 import React from 'react';
-import {View} from 'react-native';
-import {TouchableRipple, Switch, Text, Button} from 'react-native-paper';
+import {View, Text} from 'react-native';
+import {TouchableRipple, Switch, Button} from 'react-native-paper';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {useThemeContext} from '~/theme';
 import {RootStackParamList} from '~/router';
@@ -8,8 +8,8 @@ import styles from './styles';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Mine'>;
 
-export const MineScreen: React.FC<Props> = ({navigation}) => {
-  const {toggleTheme, isThemeDark} = useThemeContext();
+export const MineScreen: React.FC<Props> = ({ navigation }) => {
+  const { toggleTheme, isThemeDark } = useThemeContext();
   return (
     <View style={styles.view}>
       <Switch value={isThemeDark} onValueChange={toggleTheme} />
@@ -27,7 +27,7 @@ export const MineScreen: React.FC<Props> = ({navigation}) => {
         测试手势系统
       </Button>
       {/* issue: https://github.com/marklawlor/nativewind/issues/872 */}
-      <Text className="text-orange-600 bg-sky-500">Hello, World!</Text>
+      <Text className="text-pink-800 bg-sky-300">Hello, World!</Text>
     </View>
   );
 };

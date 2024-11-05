@@ -5,6 +5,7 @@ import {
   DarkTheme as NavigationDarkTheme,
   DefaultTheme as NavigationDefaultTheme,
 } from '@react-navigation/native';
+import {hide} from 'react-native-bootsplash';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import {
   MD3DarkTheme,
@@ -69,14 +70,14 @@ const App: React.FC = (): JSX.Element => {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthContextProvider>
-        <GestureHandlerRootView className="flex-1">
+        <GestureHandlerRootView>
           <StatusBar
             barStyle={isThemeDark ? 'light-content' : 'dark-content'}
             backgroundColor={theme.colors.background}
           />
           <PreferencesContext.Provider value={preferences}>
             <PaperProvider theme={theme}>
-              <NavigationContainer theme={theme}>
+              <NavigationContainer theme={theme} onReady={()=> hide()}>
                 <Router />
               </NavigationContainer>
             </PaperProvider>
