@@ -7,3 +7,6 @@
 
 # 仓库
 [地址](https://reactnative.directory/)
+
+# 升级
+[地址](https://react-native-community.github.io/upgrade-helper)

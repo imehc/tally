@@ -1,11 +1,16 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
-  "compilerOptions":{
+  "compilerOptions": {
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-    },
+      "~/*": [
+        "./src/*"
+      ]
+    }
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*",
+    "nativewind-env.d.ts"
+  ]
 }

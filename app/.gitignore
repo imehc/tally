@@ -75,3 +75,6 @@ yarn-error.log
 
 # generate openapi
 /src/tally-api
+
+# tailwind
+nativewind-env.d.ts
