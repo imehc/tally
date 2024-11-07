@@ -10,6 +10,7 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Mine'>;
 
 export const MineScreen: React.FC<Props> = ({ navigation }) => {
   const { toggleTheme, isThemeDark } = useThemeContext();
+
   return (
     <View style={styles.view}>
       <Switch value={isThemeDark} onValueChange={toggleTheme} />
@@ -23,7 +24,7 @@ export const MineScreen: React.FC<Props> = ({ navigation }) => {
       <Button icon="camera">Press me</Button>
       <Button
         icon="apple-keyboard-option"
-        onPress={() => navigation.navigate('Record')}>
+        onPress={() => navigation.push('Record')}>
         测试手势系统
       </Button>
       {/* issue: https://github.com/marklawlor/nativewind/issues/872 */}

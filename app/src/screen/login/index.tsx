@@ -38,8 +38,8 @@ const schema = z
     password: z
       .string({required_error: '请输入密码'})
       .min(4, '最少为4个字符')
-      .max(8, '最多为16个字符')
-      .regex(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头'),
+      .max(8, '最多为16个字符'),
+      // .regex(/^[a-zA-Z][a-zA-Z0-9]*$/, '只能为英文或数字且不能以数字开头'),
   })
   .required();
 

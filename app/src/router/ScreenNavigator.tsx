@@ -20,7 +20,6 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export const ScreenNavigator: React.FC = () => {
   const accessToken = useAccessToken();
-  accessToken;
 
   return (
     <Stack.Navigator

@@ -4,6 +4,7 @@ import {
   NavigationContainer,
   DarkTheme as NavigationDarkTheme,
   DefaultTheme as NavigationDefaultTheme,
+  Theme,
 } from '@react-navigation/native';
 import {hide} from 'react-native-bootsplash';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
@@ -52,7 +53,7 @@ const App: React.FC = (): JSX.Element => {
   // TODO: 可以选择跟随系统还是自定义
   const [isThemeDark, setIsThemeDark] = useState(isDarkMode);
   const theme = useMemo(
-    () => (isThemeDark ? CombinedDarkTheme : CombinedDefaultTheme),
+    () => (isThemeDark ? CombinedDarkTheme : CombinedDefaultTheme) as unknown as Theme,
     [isThemeDark],
   );
   const toggleTheme = useCallback(() => {
