@@ -9,6 +9,11 @@
 
 [v0.76控制台报错](https://github.com/callstack/react-native-paper/issues/4401#issuecomment-2332537632)
 
+> 本地模拟器调试时需要确保模拟器能够访问端口,可以使用以下命令尝试
+``` shell
+adb forward tcp:6100 tcp:6013
+```
+
 # 仓库
 [地址](https://reactnative.directory/)
 
