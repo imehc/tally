@@ -29,6 +29,11 @@ yarn react-native generate-bootsplash src/assets/images/bootsplash_logo_original
 ``` bash
 npx rn-ml appicon -s src/assets/images/bootsplash_logo_original.jpg
 ```
+# 打包
+## 安卓
+[地址](https://reactnative.cn/docs/signed-apk-android)
+## iOS
+[地址](https://reactnative.cn/docs/publishing-to-app-store)
 
 # 验证
 - [x] Android Platform

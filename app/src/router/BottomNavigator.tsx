@@ -22,7 +22,7 @@ export const BottomNavigator: React.FC = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="Home"
+      // initialRouteName="Home"
       // eslint-disable-next-line react/no-unstable-nested-components
       tabBar={({navigation, state, descriptors, insets}) => (
         <BottomNavigation.Bar

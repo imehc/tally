@@ -14,7 +14,7 @@ export const StatisticScreen: React.FC<Props> = ({navigation}) => {
     <View style={styles.view}>
       <Text>Hello StatisticScreen</Text>
       <TouchableRipple
-        onPress={() => navigation.navigate('Detail', {id: '12aaa345'})}
+        onPress={() => navigation.push('Detail', {id: '12aaa345'})}
         rippleColor="rgba(0, 0, 0, .32)">
         <Button>go to details</Button>
       </TouchableRipple>
