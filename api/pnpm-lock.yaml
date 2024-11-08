@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@midwayjs/bootstrap':
         specifier: ^3.18.2
-        version: 3.18.2
+        version: 3.19.0
       '@midwayjs/core':
         specifier: ^3.18.0
         version: 3.18.0
@@ -419,8 +419,12 @@ packages:
     resolution: {integrity: sha512-mZ9VyCKlX5oR5L9G0/Jsoex+LOIpqg2gsHrr6iYRMirMaRD3S5pHDvWhSrpHPuLqyoxsAHBdszSTkpWaQAy2rg==}
     engines: {node: '>=12.17.0'}
 
-  '@midwayjs/bootstrap@3.18.2':
-    resolution: {integrity: sha512-DWMZ3Hl/iHUsuWESPkZHKdMyoPzgG9IHjjpiHeEHjnCYc1lgBSpRbD5ZSVK3wzvyn0yHqaWFIgsS3EB/6dDJPg==}
+  '@midwayjs/async-hooks-context-manager@3.19.0':
+    resolution: {integrity: sha512-jPVBR2wweN8F1bBx6gZhm70+drA0bo3TQBRsfTCIt0MJv3lTzsn/agRi1YgcQ+BXQnLDaGEUiTVTV4J2Ak/Rqw==}
+    engines: {node: '>=12.17.0'}
+
+  '@midwayjs/bootstrap@3.19.0':
+    resolution: {integrity: sha512-rDbWvVVPsmbA+Xm5tCmr8aRKbeiZUas9AzsOTyN4hgtADuNnkw60m4qKxNabOAcFnEbiCFz7E3SzwiF6A/N60A==}
     engines: {node: '>=12.11.0'}
 
   '@midwayjs/cli-plugin-build@2.1.0':
@@ -4598,9 +4602,11 @@ snapshots:
 
   '@midwayjs/async-hooks-context-manager@3.18.0': {}
 
-  '@midwayjs/bootstrap@3.18.2':
+  '@midwayjs/async-hooks-context-manager@3.19.0': {}
+
+  '@midwayjs/bootstrap@3.19.0':
     dependencies:
-      '@midwayjs/async-hooks-context-manager': 3.18.0
+      '@midwayjs/async-hooks-context-manager': 3.19.0
       '@midwayjs/event-bus': 1.10.0
 
   '@midwayjs/cli-plugin-build@2.1.0':
