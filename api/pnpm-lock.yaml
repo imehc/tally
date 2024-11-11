@@ -15,8 +15,8 @@ importers:
         specifier: ^3.18.0
         version: 3.18.0
       '@midwayjs/cross-domain':
-        specifier: ^3.18.2
-        version: 3.18.2
+        specifier: ^3.19.0
+        version: 3.19.0
       '@midwayjs/decorator':
         specifier: ^3.18.0
         version: 3.18.0
@@ -458,8 +458,8 @@ packages:
     resolution: {integrity: sha512-zvA5wC9XpnYwe3N06jEcmrMU3IIipyy6FIy5GMER43iYCTZa/J81tfMr7KttDTaW/FF9thx/jJNPqBiUiF6udQ==}
     engines: {node: '>=12'}
 
-  '@midwayjs/cross-domain@3.18.2':
-    resolution: {integrity: sha512-B1UpuYMYqWn7LcXfn6tyjF3JCd1hVALCl84bewc+K6Mbt3Hdg57Utct9Lj8J8EoExB3F+AfxHSh0W4FHrw9KSg==}
+  '@midwayjs/cross-domain@3.19.0':
+    resolution: {integrity: sha512-l+Pma5AZJZrb8HJ2YDks7m1FQNFDPSJ3Rs6XivA15eQXjdB7WVG39fdvhLyVfb5p4rzg2g3s/xoTB/9PuDG1gg==}
     engines: {node: '>=12'}
 
   '@midwayjs/debugger@1.0.9':
@@ -4700,7 +4700,7 @@ snapshots:
       picomatch: 2.3.1
       reflect-metadata: 0.2.2
 
-  '@midwayjs/cross-domain@3.18.2':
+  '@midwayjs/cross-domain@3.19.0':
     dependencies:
       vary: 1.1.2
 
@@ -6553,7 +6553,7 @@ snapshots:
       dezalgo: 1.0.4
       hexoid: 1.0.0
       once: 1.4.0
-      qs: 6.12.1
+      qs: 6.13.0
 
   formstream@1.2.0:
     dependencies:
@@ -6662,7 +6662,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.0.1
+      minimatch: 5.1.6
       once: 1.4.0
 
   global-dirs@3.0.1:
@@ -9085,7 +9085,7 @@ snapshots:
       require-directory: 2.1.1
       string-width: 4.2.3
       y18n: 5.0.8
-      yargs-parser: 20.2.4
+      yargs-parser: 20.2.9
 
   yargs@17.7.2:
     dependencies:
