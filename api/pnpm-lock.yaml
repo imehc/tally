@@ -18,8 +18,8 @@ importers:
         specifier: ^3.19.0
         version: 3.19.0
       '@midwayjs/decorator':
-        specifier: ^3.18.0
-        version: 3.18.0
+        specifier: ^3.19.0
+        version: 3.19.0
       '@midwayjs/jwt':
         specifier: ^3.18.2
         version: 3.18.2
@@ -462,6 +462,10 @@ packages:
     resolution: {integrity: sha512-qFoaFeN8c0UcfJKwmXoFmFxhMVMIT+MwUcTt1A9r/7lGmuqTukUICv5dxhTFffIr6YJHhSMOXEK5u9FV/NxGGA==}
     engines: {node: '>=12'}
 
+  '@midwayjs/core@3.19.0':
+    resolution: {integrity: sha512-qFoaFeN8c0UcfJKwmXoFmFxhMVMIT+MwUcTt1A9r/7lGmuqTukUICv5dxhTFffIr6YJHhSMOXEK5u9FV/NxGGA==}
+    engines: {node: '>=12'}
+
   '@midwayjs/cross-domain@3.19.0':
     resolution: {integrity: sha512-l+Pma5AZJZrb8HJ2YDks7m1FQNFDPSJ3Rs6XivA15eQXjdB7WVG39fdvhLyVfb5p4rzg2g3s/xoTB/9PuDG1gg==}
     engines: {node: '>=12'}
@@ -470,8 +474,8 @@ packages:
     resolution: {integrity: sha512-weDe6otEd75wxndIYRt5eKkhrI/e14leVn1ctwE1nXrxt0EVGda/ZTfMDB3TkF3ogwYJYoDQxUBiA9TUY5qgQQ==}
     engines: {node: '>=10.3.0'}
 
-  '@midwayjs/decorator@3.18.0':
-    resolution: {integrity: sha512-DuynrB/VNwL505h5p4UiYcwBUlQYB9YYjwJOeV3hSWWm1Gn1GL6Ao1JnjsKp8hhwguaYQK7+TYh+f3tKjTzxaQ==}
+  '@midwayjs/decorator@3.19.0':
+    resolution: {integrity: sha512-PFA5Nqmsy/wHUzaiDNOmc19QdLTW2POWIvozKWJ6v2fQQmA1ko8ud0A9B3EPnoueE3rSCEInPGI9qhX/05Mx9w==}
     engines: {node: '>=12'}
 
   '@midwayjs/egg-ts-helper@1.2.1':
@@ -4706,6 +4710,13 @@ snapshots:
       picomatch: 2.3.1
       reflect-metadata: 0.2.2
 
+  '@midwayjs/core@3.19.0':
+    dependencies:
+      '@midwayjs/glob': 1.1.1
+      class-transformer: 0.5.1
+      picomatch: 2.3.1
+      reflect-metadata: 0.2.2
+
   '@midwayjs/cross-domain@3.19.0':
     dependencies:
       vary: 1.1.2
@@ -4719,7 +4730,7 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  '@midwayjs/decorator@3.18.0':
+  '@midwayjs/decorator@3.19.0':
     dependencies:
       '@midwayjs/core': 3.19.0
 
