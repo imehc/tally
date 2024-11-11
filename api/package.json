@@ -11,7 +11,7 @@
     "@midwayjs/jwt": "^3.18.2",
     "@midwayjs/logger": "^3.4.2",
     "@midwayjs/static-file": "^3.18.2",
-    "@midwayjs/swagger": "^3.18.2",
+    "@midwayjs/swagger": "^3.19.0",
     "@midwayjs/upload": "^3.18.2",
     "@midwayjs/validate": "^3.18.2",
     "@midwayjs/view-ejs": "^3.18.2",
