@@ -12,8 +12,8 @@ importers:
         specifier: ^3.18.2
         version: 3.18.2
       '@midwayjs/core':
-        specifier: ^3.18.0
-        version: 3.18.0
+        specifier: ^3.19.0
+        version: 3.19.0
       '@midwayjs/cross-domain':
         specifier: ^3.19.0
         version: 3.19.0
@@ -458,8 +458,8 @@ packages:
     resolution: {integrity: sha512-N9GxcfDt65FzsmM3aQV3R50tEobqGkfKKrJl6COTrrzHBw1KPQtKQDNICoBAylgvdqofoTW6f/7npMrTXCpMhg==}
     engines: {node: '>= 10'}
 
-  '@midwayjs/core@3.18.0':
-    resolution: {integrity: sha512-zvA5wC9XpnYwe3N06jEcmrMU3IIipyy6FIy5GMER43iYCTZa/J81tfMr7KttDTaW/FF9thx/jJNPqBiUiF6udQ==}
+  '@midwayjs/core@3.19.0':
+    resolution: {integrity: sha512-qFoaFeN8c0UcfJKwmXoFmFxhMVMIT+MwUcTt1A9r/7lGmuqTukUICv5dxhTFffIr6YJHhSMOXEK5u9FV/NxGGA==}
     engines: {node: '>=12'}
 
   '@midwayjs/cross-domain@3.19.0':
@@ -4699,7 +4699,7 @@ snapshots:
       minimist: 1.2.8
       p-limit: 3.1.0
 
-  '@midwayjs/core@3.18.0':
+  '@midwayjs/core@3.19.0':
     dependencies:
       '@midwayjs/glob': 1.1.1
       class-transformer: 0.5.1
@@ -4721,7 +4721,7 @@ snapshots:
 
   '@midwayjs/decorator@3.18.0':
     dependencies:
-      '@midwayjs/core': 3.18.0
+      '@midwayjs/core': 3.19.0
 
   '@midwayjs/egg-ts-helper@1.2.1':
     dependencies:
@@ -4810,7 +4810,7 @@ snapshots:
   '@midwayjs/web@3.18.2':
     dependencies:
       '@eggjs/router': 2.0.1
-      '@midwayjs/core': 3.18.0
+      '@midwayjs/core': 3.19.0
       egg: 2.37.0
       egg-cluster: 1.27.1
       find-up: 5.0.0
