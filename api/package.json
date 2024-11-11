@@ -10,7 +10,7 @@
     "@midwayjs/decorator": "^3.18.0",
     "@midwayjs/jwt": "^3.18.2",
     "@midwayjs/logger": "^3.4.2",
-    "@midwayjs/static-file": "^3.18.2",
+    "@midwayjs/static-file": "^3.19.0",
     "@midwayjs/swagger": "^3.18.2",
     "@midwayjs/upload": "^3.18.2",
     "@midwayjs/validate": "^3.18.2",
