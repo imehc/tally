@@ -39,8 +39,8 @@ importers:
         specifier: ^3.18.2
         version: 3.18.2
       '@midwayjs/view-ejs':
-        specifier: ^3.18.2
-        version: 3.18.2
+        specifier: ^3.19.0
+        version: 3.19.0
       '@midwayjs/web':
         specifier: ^3.18.2
         version: 3.18.2
@@ -527,12 +527,12 @@ packages:
   '@midwayjs/version@3.16.1':
     resolution: {integrity: sha512-I6gah+dZeHNpo5Y6iijWdC3Bo27YsZ0rcfKwvGFIu/GKF+lYnMKZoXTtQTaGmNFFqEx56RGJgmT2b1YUBuZ2eA==}
 
-  '@midwayjs/view-ejs@3.18.2':
-    resolution: {integrity: sha512-w/AIm/Grd0kx4Kd5dcAiWv4ZWd1Z83Wt/4j3lgjDZJhTbnWwQJ4zPb6diW1EkAR5KFunVQUO3b+/g6BRwW+LfQ==}
+  '@midwayjs/view-ejs@3.19.0':
+    resolution: {integrity: sha512-yG95dGscvKIiP1u/qLiAB0GB34OfBQQbLXDHxVKnAC8ojPwe9ueyqB3mYKV+49GBuW/9jNQ8MenyI0ohi6Ycug==}
     engines: {node: '>=12'}
 
-  '@midwayjs/view@3.18.2':
-    resolution: {integrity: sha512-a1udiT6BiyxHiNn3ndptXbr0NKuJqUcqVPo8iIzoUqJg8hOqvOstdg8GolrSz7h/LJfCFHZKKjMAydUoE4ORCQ==}
+  '@midwayjs/view@3.19.0':
+    resolution: {integrity: sha512-sy6s+zFq8gYxO+OmZ8smj5gwc+WA18q4nSAZykt8wpFgx2eRJhY8E97cD3bNcuGpy4fIyIsF6Y2Q0GVdJgV9IA==}
     engines: {node: '>=12'}
 
   '@midwayjs/web@3.18.2':
@@ -4794,12 +4794,12 @@ snapshots:
 
   '@midwayjs/version@3.16.1': {}
 
-  '@midwayjs/view-ejs@3.18.2':
+  '@midwayjs/view-ejs@3.19.0':
     dependencies:
-      '@midwayjs/view': 3.18.2
+      '@midwayjs/view': 3.19.0
       ejs: 3.1.10
 
-  '@midwayjs/view@3.18.2': {}
+  '@midwayjs/view@3.19.0': {}
 
   '@midwayjs/web@3.18.2':
     dependencies:
@@ -6553,7 +6553,7 @@ snapshots:
       dezalgo: 1.0.4
       hexoid: 1.0.0
       once: 1.4.0
-      qs: 6.12.1
+      qs: 6.13.0
 
   formstream@1.2.0:
     dependencies:
@@ -6662,7 +6662,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.0.1
+      minimatch: 5.1.6
       once: 1.4.0
 
   global-dirs@3.0.1:
@@ -9085,7 +9085,7 @@ snapshots:
       require-directory: 2.1.1
       string-width: 4.2.3
       y18n: 5.0.8
-      yargs-parser: 20.2.4
+      yargs-parser: 20.2.9
 
   yargs@17.7.2:
     dependencies:
