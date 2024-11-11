@@ -21,8 +21,8 @@ importers:
         specifier: ^3.18.0
         version: 3.18.0
       '@midwayjs/jwt':
-        specifier: ^3.18.2
-        version: 3.18.2
+        specifier: ^3.19.0
+        version: 3.19.0
       '@midwayjs/logger':
         specifier: ^3.4.2
         version: 3.4.2
@@ -489,8 +489,8 @@ packages:
     resolution: {integrity: sha512-8EX46AxZ3uy7M/MgEwn5C0o1vqdOnVaQgb2TeCgCpenPzrB7ogcRgBWqDFXMSpND/qoIkq6mTSPESvI3iOoa3g==}
     engines: {node: '>=12'}
 
-  '@midwayjs/jwt@3.18.2':
-    resolution: {integrity: sha512-aHdrdVsLU8ptuzp+53wUAZU5yMIF0jDh4sByKwr0ZmXGGYqxH8o+4/UHNmrPGIE5NoOZY0fa06mEKiwZGNvCCg==}
+  '@midwayjs/jwt@3.19.0':
+    resolution: {integrity: sha512-TYDuveg1zZzkYqG6TRzoB2nLZF4Q1+wBvGEUhUZ91E7IB75ACct0jsPJdPzMjaiKojvTGAqZlqxMyqISrbQfeQ==}
     engines: {node: '>=12'}
 
   '@midwayjs/locate@1.8.1':
@@ -4738,7 +4738,7 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  '@midwayjs/jwt@3.18.2':
+  '@midwayjs/jwt@3.19.0':
     dependencies:
       '@types/jsonwebtoken': 9.0.7
       jsonwebtoken: 9.0.2
@@ -4758,7 +4758,7 @@ snapshots:
       find-root: 1.1.0
       ms: 2.1.3
       queue: 6.0.2
-      semver: 7.6.1
+      semver: 7.6.3
       supports-color: 8.1.1
 
   '@midwayjs/mock@3.19.0':
@@ -5095,7 +5095,7 @@ snapshots:
       debug: 4.3.4(supports-color@8.1.1)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.6.1
+      semver: 7.6.3
       tsutils: 3.21.0(typescript@5.6.3)
     optionalDependencies:
       typescript: 5.6.3
@@ -5112,7 +5112,7 @@ snapshots:
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.6.3)
       eslint: 7.32.0
       eslint-scope: 5.1.1
-      semver: 7.6.1
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -7288,7 +7288,7 @@ snapshots:
       jest-util: 29.7.0
       natural-compare: 1.4.0
       pretty-format: 29.7.0
-      semver: 7.6.1
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
 
@@ -7406,7 +7406,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 7.6.1
+      semver: 7.6.3
 
   jwa@1.4.1:
     dependencies:
@@ -7873,7 +7873,7 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.11.0
-      semver: 7.6.1
+      semver: 7.6.3
       validate-npm-package-license: 3.0.4
 
   normalize-path@3.0.0: {}

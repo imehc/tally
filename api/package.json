@@ -8,7 +8,7 @@
     "@midwayjs/core": "^3.19.0",
     "@midwayjs/cross-domain": "^3.19.0",
     "@midwayjs/decorator": "^3.18.0",
-    "@midwayjs/jwt": "^3.18.2",
+    "@midwayjs/jwt": "^3.19.0",
     "@midwayjs/logger": "^3.4.2",
     "@midwayjs/static-file": "^3.19.0",
     "@midwayjs/swagger": "^3.18.2",
