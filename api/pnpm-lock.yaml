@@ -68,13 +68,13 @@ importers:
     devDependencies:
       '@midwayjs/cli':
         specifier: ^2.1.1
-        version: 2.1.1(@midwayjs/mock@3.18.2)(@types/node@22.9.0)(typescript@5.6.3)
+        version: 2.1.1(@midwayjs/mock@3.19.0)(@types/node@22.9.0)(typescript@5.6.3)
       '@midwayjs/egg-ts-helper':
         specifier: ^1.2.1
         version: 1.2.1
       '@midwayjs/mock':
-        specifier: ^3.18.2
-        version: 3.18.2
+        specifier: ^3.19.0
+        version: 3.19.0
       '@types/jest':
         specifier: ^29.5.14
         version: 29.5.14
@@ -419,6 +419,10 @@ packages:
     resolution: {integrity: sha512-mZ9VyCKlX5oR5L9G0/Jsoex+LOIpqg2gsHrr6iYRMirMaRD3S5pHDvWhSrpHPuLqyoxsAHBdszSTkpWaQAy2rg==}
     engines: {node: '>=12.17.0'}
 
+  '@midwayjs/async-hooks-context-manager@3.19.0':
+    resolution: {integrity: sha512-jPVBR2wweN8F1bBx6gZhm70+drA0bo3TQBRsfTCIt0MJv3lTzsn/agRi1YgcQ+BXQnLDaGEUiTVTV4J2Ak/Rqw==}
+    engines: {node: '>=12.17.0'}
+
   '@midwayjs/bootstrap@3.18.2':
     resolution: {integrity: sha512-DWMZ3Hl/iHUsuWESPkZHKdMyoPzgG9IHjjpiHeEHjnCYc1lgBSpRbD5ZSVK3wzvyn0yHqaWFIgsS3EB/6dDJPg==}
     engines: {node: '>=12.11.0'}
@@ -501,8 +505,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     hasBin: true
 
-  '@midwayjs/mock@3.18.2':
-    resolution: {integrity: sha512-wK6VH7hvoKRCVTghS+1/+KZVDfRmYmMKGw/TXY49oWYscU6h8O1YOVPJZXLVPDpem2O/KHggcysR2O3JpKyINQ==}
+  '@midwayjs/mock@3.19.0':
+    resolution: {integrity: sha512-vy3zzKUe8pq8dTksem6VD12cJYQi8CYAz5UvnMntmg68CnBhkva6XzV34GkxOxC+kVd2ryojZuFtRW3/9aJimA==}
     engines: {node: '>=12'}
 
   '@midwayjs/serverless-spec-builder@2.1.0':
@@ -4598,6 +4602,8 @@ snapshots:
 
   '@midwayjs/async-hooks-context-manager@3.18.0': {}
 
+  '@midwayjs/async-hooks-context-manager@3.19.0': {}
+
   '@midwayjs/bootstrap@3.18.2':
     dependencies:
       '@midwayjs/async-hooks-context-manager': 3.18.0
@@ -4627,11 +4633,11 @@ snapshots:
       '@midwayjs/serverless-spec-builder': 2.1.0
       fs-extra: 8.1.0
 
-  '@midwayjs/cli-plugin-dev@2.1.1(@midwayjs/mock@3.18.2)':
+  '@midwayjs/cli-plugin-dev@2.1.1(@midwayjs/mock@3.19.0)':
     dependencies:
       '@midwayjs/command-core': 2.1.0
       '@midwayjs/debugger': 1.0.9
-      '@midwayjs/mock': 3.18.2
+      '@midwayjs/mock': 3.19.0
       chalk: 4.1.2
       chokidar: 3.5.3
       detect-port: 1.5.1
@@ -4661,12 +4667,12 @@ snapshots:
       - '@swc/wasm'
       - '@types/node'
 
-  '@midwayjs/cli@2.1.1(@midwayjs/mock@3.18.2)(@types/node@22.9.0)(typescript@5.6.3)':
+  '@midwayjs/cli@2.1.1(@midwayjs/mock@3.19.0)(@types/node@22.9.0)(typescript@5.6.3)':
     dependencies:
       '@midwayjs/cli-plugin-build': 2.1.0
       '@midwayjs/cli-plugin-check': 2.1.0
       '@midwayjs/cli-plugin-clean': 2.1.0
-      '@midwayjs/cli-plugin-dev': 2.1.1(@midwayjs/mock@3.18.2)
+      '@midwayjs/cli-plugin-dev': 2.1.1(@midwayjs/mock@3.19.0)
       '@midwayjs/cli-plugin-test': 2.1.0(@types/node@22.9.0)
       '@midwayjs/command-core': 2.1.0
       enquirer: 2.4.1
@@ -4755,9 +4761,9 @@ snapshots:
       semver: 7.6.1
       supports-color: 8.1.1
 
-  '@midwayjs/mock@3.18.2':
+  '@midwayjs/mock@3.19.0':
     dependencies:
-      '@midwayjs/async-hooks-context-manager': 3.18.0
+      '@midwayjs/async-hooks-context-manager': 3.19.0
       '@types/superagent': 4.1.14
       '@types/supertest': 2.0.16
       js-yaml: 4.1.0
@@ -6553,7 +6559,7 @@ snapshots:
       dezalgo: 1.0.4
       hexoid: 1.0.0
       once: 1.4.0
-      qs: 6.12.1
+      qs: 6.13.0
 
   formstream@1.2.0:
     dependencies:
@@ -6662,7 +6668,7 @@ snapshots:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 5.0.1
+      minimatch: 5.1.6
       once: 1.4.0
 
   global-dirs@3.0.1:
@@ -6995,7 +7001,7 @@ snapshots:
       '@babel/parser': 7.24.5
       '@istanbuljs/schema': 0.1.3
       istanbul-lib-coverage: 3.2.2
-      semver: 7.6.1
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
 
@@ -7610,7 +7616,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.6.1
+      semver: 7.6.3
 
   make-error@1.3.6: {}
 
@@ -8570,8 +8576,8 @@ snapshots:
       formidable: 2.1.2
       methods: 1.1.2
       mime: 2.6.0
-      qs: 6.12.1
-      semver: 7.6.1
+      qs: 6.13.0
+      semver: 7.6.3
     transitivePeerDependencies:
       - supports-color
 
@@ -9085,7 +9091,7 @@ snapshots:
       require-directory: 2.1.1
       string-width: 4.2.3
       y18n: 5.0.8
-      yargs-parser: 20.2.4
+      yargs-parser: 20.2.9
 
   yargs@17.7.2:
     dependencies:
