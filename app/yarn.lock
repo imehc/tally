@@ -2297,20 +2297,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-platform-android@npm:15.1.0":
-  version: 15.1.0
-  resolution: "@react-native-community/cli-platform-android@npm:15.1.0"
-  dependencies:
-    "@react-native-community/cli-tools": "npm:15.1.0"
-    chalk: "npm:^4.1.2"
-    execa: "npm:^5.0.0"
-    fast-glob: "npm:^3.3.2"
-    fast-xml-parser: "npm:^4.4.1"
-    logkitty: "npm:^0.7.1"
-  checksum: 10c0/40531bc8ea9a61785c1cc9ea194ae67ab13d91ab39e7e02feb3a8f7cd8ac84261a511eb536cb0ce31c61c51c4b3c969d11e5f25f17a6e1813e4667562ca16dee
-  languageName: node
-  linkType: hard
-
 "@react-native-community/cli-platform-android@npm:15.1.2":
   version: 15.1.2
   resolution: "@react-native-community/cli-platform-android@npm:15.1.2"
@@ -2360,25 +2346,6 @@ __metadata:
     serve-static: "npm:^1.13.1"
     ws: "npm:^6.2.3"
   checksum: 10c0/acc7a6b19cc59289133f3bd3686ea8267bddafa082befd5260ea22cc9f496e192ba53fb48f563d154ca45bd15dfbea2d08e17db95eb140895a44d6a8d1dca1ef
-  languageName: node
-  linkType: hard
-
-"@react-native-community/cli-tools@npm:15.1.0":
-  version: 15.1.0
-  resolution: "@react-native-community/cli-tools@npm:15.1.0"
-  dependencies:
-    appdirsjs: "npm:^1.2.4"
-    chalk: "npm:^4.1.2"
-    execa: "npm:^5.0.0"
-    find-up: "npm:^5.0.0"
-    mime: "npm:^2.4.1"
-    open: "npm:^6.2.0"
-    ora: "npm:^5.4.1"
-    prompts: "npm:^2.4.2"
-    semver: "npm:^7.5.2"
-    shell-quote: "npm:^1.7.3"
-    sudo-prompt: "npm:^9.0.0"
-  checksum: 10c0/2ef177d02a6d833b69a7d46b75e280293803f809294deddb95ae1adfe5589ed233e058e7292ac0857c4ec79d28a60aea568c7c0844e61d1e91c50335b052a5c0
   languageName: node
   linkType: hard
 
@@ -10962,7 +10929,7 @@ __metadata:
     "@babel/runtime": "npm:^7.26.0"
     "@hookform/resolvers": "npm:^3.9.1"
     "@react-native-community/cli": "npm:15.1.2"
-    "@react-native-community/cli-platform-android": "npm:15.1.0"
+    "@react-native-community/cli-platform-android": "npm:15.1.2"
     "@react-native-community/cli-platform-ios": "npm:15.1.2"
     "@react-native/babel-preset": "npm:0.76.1"
     "@react-native/eslint-config": "npm:0.76.1"
