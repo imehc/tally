@@ -2226,7 +2226,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-config-android@npm:15.1.2":
+"@react-native-community/cli-config-android@npm:15.1.2, @react-native-community/cli-config-android@npm:^15.0.0":
   version: 15.1.2
   resolution: "@react-native-community/cli-config-android@npm:15.1.2"
   dependencies:
@@ -2238,7 +2238,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-config-apple@npm:15.1.2":
+"@react-native-community/cli-config-apple@npm:15.1.2, @react-native-community/cli-config-apple@npm:^15.0.0":
   version: 15.1.2
   resolution: "@react-native-community/cli-config-apple@npm:15.1.2"
   dependencies:
@@ -2349,7 +2349,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-tools@npm:15.1.2":
+"@react-native-community/cli-tools@npm:15.1.2, @react-native-community/cli-tools@npm:^15.0.0":
   version: 15.1.2
   resolution: "@react-native-community/cli-tools@npm:15.1.2"
   dependencies:
@@ -4419,7 +4419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^12.0.0":
+"commander@npm:^12.0.0, commander@npm:^12.1.0":
   version: 12.1.0
   resolution: "commander@npm:12.1.0"
   checksum: 10c0/6e1996680c083b3b897bfc1cfe1c58dfbcd9842fd43e1aaf8a795fbc237f65efcc860a3ef457b318e73f29a4f4a28f6403c3d653d021d960e4632dd45bde54a9
@@ -9003,7 +9003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picocolors@npm:^1.0.0, picocolors@npm:^1.1.0":
+"picocolors@npm:^1.0.0, picocolors@npm:^1.1.0, picocolors@npm:^1.1.1":
   version: 1.1.1
   resolution: "picocolors@npm:1.1.1"
   checksum: 10c0/e2e3e8170ab9d7c7421969adaa7e1b31434f789afb9b3f115f6b96d91945041ac3ceb02e9ec6fe6510ff036bcc0bf91e69a1772edc0b707e12b19c0f2d6bcf58
@@ -9419,15 +9419,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-bootsplash@npm:^6.2.6":
-  version: 6.2.6
-  resolution: "react-native-bootsplash@npm:6.2.6"
+"react-native-bootsplash@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "react-native-bootsplash@npm:6.3.0"
   dependencies:
     "@expo/config-plugins": "npm:^8.0.4"
+    "@react-native-community/cli-config-android": "npm:^15.0.0"
+    "@react-native-community/cli-config-apple": "npm:^15.0.0"
+    "@react-native-community/cli-tools": "npm:^15.0.0"
+    commander: "npm:^12.1.0"
     detect-indent: "npm:^6.1.0"
     fs-extra: "npm:^11.2.0"
     node-html-parser: "npm:^6.1.13"
-    picocolors: "npm:^1.1.0"
+    picocolors: "npm:^1.1.1"
     prettier: "npm:^3.3.3"
     react-native-is-edge-to-edge: "npm:^1.1.6"
     sharp: "npm:^0.32.6"
@@ -9436,7 +9440,9 @@ __metadata:
   peerDependencies:
     react: ">=18.1.0"
     react-native: ">=0.70.0"
-  checksum: 10c0/79d8988196cb38d7d250f2ccb62eba70793414add8255ef2b22fdbfb103a3f95f423dbb281e6f7346759f95508a6e239cf91f8ba22f3b8be1d345e29946d7b95
+  bin:
+    react-native-bootsplash: cli.js
+  checksum: 10c0/77afb7d5fce6502f65f8b872cd3d7c872a163c473d02b3c85bb73f2ee032ba5a0c52eb5b8a5a75e343645011dcebf623fa83df23eada558794e0b3cfd645eb4b
   languageName: node
   linkType: hard
 
@@ -10953,7 +10959,7 @@ __metadata:
     react: "npm:18.3.1"
     react-hook-form: "npm:^7.53.2"
     react-native: "npm:0.76.1"
-    react-native-bootsplash: "npm:^6.2.6"
+    react-native-bootsplash: "npm:^6.3.0"
     react-native-gesture-handler: "npm:^2.20.2"
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^3.1.0"
