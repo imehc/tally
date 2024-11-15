@@ -2668,6 +2668,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native/js-polyfills@npm:0.76.2":
+  version: 0.76.2
+  resolution: "@react-native/js-polyfills@npm:0.76.2"
+  checksum: 10c0/45d109a2f3485d53a61283a9ec6f37973fb6c8fdb4e33ffa3f7468fe48cc81d12b79444c794d9f9ae1d20603881264b4f4bc7be03b6443fdabd99adc630d0f3b
+  languageName: node
+  linkType: hard
+
 "@react-native/metro-babel-transformer@npm:0.76.1":
   version: 0.76.1
   resolution: "@react-native/metro-babel-transformer@npm:0.76.1"
@@ -2682,15 +2689,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/metro-config@npm:0.76.1":
-  version: 0.76.1
-  resolution: "@react-native/metro-config@npm:0.76.1"
+"@react-native/metro-babel-transformer@npm:0.76.2":
+  version: 0.76.2
+  resolution: "@react-native/metro-babel-transformer@npm:0.76.2"
   dependencies:
-    "@react-native/js-polyfills": "npm:0.76.1"
-    "@react-native/metro-babel-transformer": "npm:0.76.1"
+    "@babel/core": "npm:^7.25.2"
+    "@react-native/babel-preset": "npm:0.76.2"
+    hermes-parser: "npm:0.23.1"
+    nullthrows: "npm:^1.1.1"
+  peerDependencies:
+    "@babel/core": "*"
+  checksum: 10c0/abe8a9f8b903c7eb2ee18152737e034a58462a7286b2a2cb25b742b1d46de47890d9b02bc5ed4129c988812127c6875b078e7df71eb44fc1b706c50db793006d
+  languageName: node
+  linkType: hard
+
+"@react-native/metro-config@npm:0.76.2":
+  version: 0.76.2
+  resolution: "@react-native/metro-config@npm:0.76.2"
+  dependencies:
+    "@react-native/js-polyfills": "npm:0.76.2"
+    "@react-native/metro-babel-transformer": "npm:0.76.2"
     metro-config: "npm:^0.81.0"
     metro-runtime: "npm:^0.81.0"
-  checksum: 10c0/6649196478425a6c754ec97f56f811706de2e44eb23a0b4da4ecb98ac4bfed350fcf37afc6afdf1c7850120863329cf2be00c708330c77a7f01a28c7816968b9
+  checksum: 10c0/5740bc0ae4a937893d83e5fddbcdbfa792c5bdc747533051a26ff207118503f314104b782cb609c949aeda0d8be048905d6041ab19e8b86ed4e4dbab4907756d
   languageName: node
   linkType: hard
 
@@ -11064,7 +11085,7 @@ __metadata:
     "@react-native-community/cli-platform-ios": "npm:15.1.2"
     "@react-native/babel-preset": "npm:0.76.2"
     "@react-native/eslint-config": "npm:0.76.1"
-    "@react-native/metro-config": "npm:0.76.1"
+    "@react-native/metro-config": "npm:0.76.2"
     "@react-native/typescript-config": "npm:0.76.1"
     "@react-navigation/bottom-tabs": "npm:^7.0.3"
     "@react-navigation/native": "npm:^7.0.2"
