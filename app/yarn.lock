@@ -2644,11 +2644,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/bottom-tabs@npm:^7.0.4":
-  version: 7.0.4
-  resolution: "@react-navigation/bottom-tabs@npm:7.0.4"
+"@react-navigation/bottom-tabs@npm:^7.0.5":
+  version: 7.0.5
+  resolution: "@react-navigation/bottom-tabs@npm:7.0.5"
   dependencies:
-    "@react-navigation/elements": "npm:^2.0.3"
+    "@react-navigation/elements": "npm:^2.0.4"
     color: "npm:^4.2.3"
   peerDependencies:
     "@react-navigation/native": ^7.0.3
@@ -2656,7 +2656,7 @@ __metadata:
     react-native: "*"
     react-native-safe-area-context: ">= 4.0.0"
     react-native-screens: ">= 4.0.0"
-  checksum: 10c0/caa9ef9ef4f10f6ae8b4fb2eb77a138723b7585ae6b37f821cc44974c85d9fa93f303703feddec79bc77d5d95eeec2afc8dcee2fe975a594513c60e6c6dbda9b
+  checksum: 10c0/3c0b88b82d973de594c567f82378fdb28d759366359a005bc7a51829e1ae20e9744b4ecaf9c5ac40dbaa28d113ad40e4e6f80b51a386f69d79da45434e8a311f
   languageName: node
   linkType: hard
 
@@ -2674,24 +2674,6 @@ __metadata:
   peerDependencies:
     react: "*"
   checksum: 10c0/2e834fddbf3318ad01157c0c7d8e3b6aaaf318ff0093c8b5dca92ec8eed368dec96db164a95d60cea729c50aba1df6c0b5ddb405cc1d79a480f81ba4352118ff
-  languageName: node
-  linkType: hard
-
-"@react-navigation/elements@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "@react-navigation/elements@npm:2.0.3"
-  dependencies:
-    color: "npm:^4.2.3"
-  peerDependencies:
-    "@react-native-masked-view/masked-view": ">= 0.2.0"
-    "@react-navigation/native": ^7.0.3
-    react: ">= 18.2.0"
-    react-native: "*"
-    react-native-safe-area-context: ">= 4.0.0"
-  peerDependenciesMeta:
-    "@react-native-masked-view/masked-view":
-      optional: true
-  checksum: 10c0/f3c048a4af34f221acf05252231d388a85233c59a85cc4ae8188b3cdd42b070a0b49bef17318fd4d90414e73877cc1a7f4f5e81280ee955be54e0926eca8af14
   languageName: node
   linkType: hard
 
@@ -10995,7 +10977,7 @@ __metadata:
     "@react-native/eslint-config": "npm:0.76.2"
     "@react-native/metro-config": "npm:0.76.2"
     "@react-native/typescript-config": "npm:0.76.2"
-    "@react-navigation/bottom-tabs": "npm:^7.0.4"
+    "@react-navigation/bottom-tabs": "npm:^7.0.5"
     "@react-navigation/native": "npm:^7.0.3"
     "@react-navigation/native-stack": "npm:^7.0.4"
     "@tanstack/react-query": "npm:^5.60.5"
