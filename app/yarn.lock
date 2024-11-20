@@ -9681,15 +9681,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-view-shot@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "react-native-view-shot@npm:4.0.0"
+"react-native-view-shot@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "react-native-view-shot@npm:4.0.2"
   dependencies:
     html2canvas: "npm:^1.4.1"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/d803a0820a144e4a968ead7aa0f9c1d787bee0591c2783522505edf3f2e7f77d1b466d9259989e9c30c6da92d3a9ac67126fae16996579d64ba89732e4f88cb9
+  checksum: 10c0/842e9587a19c4e33328ec19f839bfd557b8c89df6f980e593d3aae25edad834f18146fdde51612e7be6ad349c30f441a7d852726b6c69e1fdd59f14cc215f500
   languageName: node
   linkType: hard
 
@@ -11008,7 +11008,7 @@ __metadata:
     react-native-svg-transformer: "npm:^1.5.0"
     react-native-toast-message: "npm:^2.2.1"
     react-native-vector-icons: "npm:^10.2.0"
-    react-native-view-shot: "npm:^4.0.0"
+    react-native-view-shot: "npm:^4.0.2"
     react-test-renderer: "npm:18.3.1"
     styled-components: "npm:^6.1.13"
     tailwindcss: "npm:^3.4.15"
