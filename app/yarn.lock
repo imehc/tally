@@ -2659,11 +2659,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/core@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "@react-navigation/core@npm:7.1.1"
+"@react-navigation/core@npm:^7.1.2":
+  version: 7.1.2
+  resolution: "@react-navigation/core@npm:7.1.2"
   dependencies:
-    "@react-navigation/routers": "npm:^7.1.0"
+    "@react-navigation/routers": "npm:^7.1.1"
     escape-string-regexp: "npm:^4.0.0"
     nanoid: "npm:3.3.7"
     query-string: "npm:^7.1.3"
@@ -2672,7 +2672,7 @@ __metadata:
     use-sync-external-store: "npm:^1.2.2"
   peerDependencies:
     react: ">= 18.2.0"
-  checksum: 10c0/8fa698cee6698024cc2fd5e9c646b6cdc64697944914aa529d7834550e5e0b8ecc7d8c40fa04d8def1b57cae386166991a5bda020cf9efe83eca1f36293ad8f8
+  checksum: 10c0/0c0916ca2b3e2b2ac5d04d6afedf83c713c9b2c95b21c088210d6d5e628863db40708ebb238d203fa4ccfe923cbbfff7c850754ae539e7703fdaec1f181d6070
   languageName: node
   linkType: hard
 
@@ -2710,11 +2710,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native@npm:^7.0.8":
-  version: 7.0.8
-  resolution: "@react-navigation/native@npm:7.0.8"
+"@react-navigation/native@npm:^7.0.9":
+  version: 7.0.9
+  resolution: "@react-navigation/native@npm:7.0.9"
   dependencies:
-    "@react-navigation/core": "npm:^7.1.1"
+    "@react-navigation/core": "npm:^7.1.2"
     escape-string-regexp: "npm:^4.0.0"
     fast-deep-equal: "npm:^3.1.3"
     nanoid: "npm:3.3.7"
@@ -2722,16 +2722,16 @@ __metadata:
   peerDependencies:
     react: ">= 18.2.0"
     react-native: "*"
-  checksum: 10c0/cb708f086b68faf7bafcaeb9257a9b52644d3e4fecd1e79a569dc63c08012d8a1295180607c1e33013d4540d11624af1a5d31e80a1d9960653187f92bf1c2bd3
+  checksum: 10c0/12ec0d490110b47b7403827782e38614e30a8d633bbb5488ebb3546cb463aa02edee04d123331d0970aab71ba4e03efcdc8dabd20ff99e8787bbd5613c8e41ea
   languageName: node
   linkType: hard
 
-"@react-navigation/routers@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "@react-navigation/routers@npm:7.1.0"
+"@react-navigation/routers@npm:^7.1.1":
+  version: 7.1.1
+  resolution: "@react-navigation/routers@npm:7.1.1"
   dependencies:
     nanoid: "npm:3.3.7"
-  checksum: 10c0/0814759e501cd4af5d7f7bd7898e5c7903db773ba446c90c386198007eea4e80f9c2440c579e3ded3ceada4f73a6ac5a5d6eb7fc15ab53f7e0ec4b875d286111
+  checksum: 10c0/8069918c0436c294a98b408f3602cd72d0b1a0fab5b829bcdf0deb906290722d441e5ff354b184b74559f0827aff0dabfba4cb4a1c228c6a5feccbaeaebcaa0f
   languageName: node
   linkType: hard
 
@@ -10972,7 +10972,7 @@ __metadata:
     "@react-native/metro-config": "npm:0.76.3"
     "@react-native/typescript-config": "npm:0.76.3"
     "@react-navigation/bottom-tabs": "npm:^7.0.12"
-    "@react-navigation/native": "npm:^7.0.8"
+    "@react-navigation/native": "npm:^7.0.9"
     "@react-navigation/native-stack": "npm:^7.1.8"
     "@tanstack/react-query": "npm:^5.61.5"
     "@types/react": "npm:^18.3.12"
