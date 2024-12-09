@@ -2594,13 +2594,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/eslint-config@npm:0.76.3":
-  version: 0.76.3
-  resolution: "@react-native/eslint-config@npm:0.76.3"
+"@react-native/eslint-config@npm:0.76.4":
+  version: 0.76.4
+  resolution: "@react-native/eslint-config@npm:0.76.4"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/eslint-parser": "npm:^7.25.1"
-    "@react-native/eslint-plugin": "npm:0.76.3"
+    "@react-native/eslint-plugin": "npm:0.76.4"
     "@typescript-eslint/eslint-plugin": "npm:^7.1.1"
     "@typescript-eslint/parser": "npm:^7.1.1"
     eslint-config-prettier: "npm:^8.5.0"
@@ -2610,18 +2610,17 @@ __metadata:
     eslint-plugin-react: "npm:^7.30.1"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-native: "npm:^4.0.0"
-    hermes-eslint: "npm:^0.23.1"
   peerDependencies:
     eslint: ">=8"
     prettier: ">=2"
-  checksum: 10c0/b790b253865a708d0ecd918aacc77019b72fda1d43f999ace4fd29b89a92557253e3d01b971e1344917748747d443e695a42868f9507955b7d3b12b6821cdcee
+  checksum: 10c0/83a70578d7beb49bc512b081267ca2a11723ef421e42a3de9217ba8c1a92dc97d9698cd16b1ab825028d34cbfb4d879efc12b932ce01de6b2cc41c3321f73385
   languageName: node
   linkType: hard
 
-"@react-native/eslint-plugin@npm:0.76.3":
-  version: 0.76.3
-  resolution: "@react-native/eslint-plugin@npm:0.76.3"
-  checksum: 10c0/de0c4f50c0f3478fa638729847fb9ccc87fbdc0854d1bc746ae3ff9cc658f041b8e6d2311401a39ebaa26e3c409bb5686d0dec2222059688c29b93f3ccf29818
+"@react-native/eslint-plugin@npm:0.76.4":
+  version: 0.76.4
+  resolution: "@react-native/eslint-plugin@npm:0.76.4"
+  checksum: 10c0/be840948100ed1beb336877c7957bf15e114468674646084ca63cfb9e4e7e0b4ee8e5c6a50c5e06cd7f605dea397a24069a3273722bf67c3fdd84f769ef47653
   languageName: node
   linkType: hard
 
@@ -6289,17 +6288,6 @@ __metadata:
   bin:
     he: bin/he
   checksum: 10c0/a27d478befe3c8192f006cdd0639a66798979dfa6e2125c6ac582a19a5ebfec62ad83e8382e6036170d873f46e4536a7e795bf8b95bf7c247f4cc0825ccc8c17
-  languageName: node
-  linkType: hard
-
-"hermes-eslint@npm:^0.23.1":
-  version: 0.23.1
-  resolution: "hermes-eslint@npm:0.23.1"
-  dependencies:
-    esrecurse: "npm:^4.3.0"
-    hermes-estree: "npm:0.23.1"
-    hermes-parser: "npm:0.23.1"
-  checksum: 10c0/2657e4916ea085fe8d3c52f7e8454e0c8652a483b8933b3e21f3ccd22bc0672ab5cfc1a528f74edefef29bc589a1690aebc237a92e4c9744448db0ac63c59722
   languageName: node
   linkType: hard
 
@@ -11013,7 +11001,7 @@ __metadata:
     "@react-native-community/cli-platform-android": "npm:15.1.2"
     "@react-native-community/cli-platform-ios": "npm:16.0.0"
     "@react-native/babel-preset": "npm:0.76.3"
-    "@react-native/eslint-config": "npm:0.76.3"
+    "@react-native/eslint-config": "npm:0.76.4"
     "@react-native/metro-config": "npm:0.76.3"
     "@react-native/typescript-config": "npm:0.76.3"
     "@react-navigation/bottom-tabs": "npm:^7.1.3"
