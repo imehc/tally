@@ -2736,19 +2736,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native-stack@npm:^7.1.14":
-  version: 7.1.14
-  resolution: "@react-navigation/native-stack@npm:7.1.14"
+"@react-navigation/elements@npm:^2.2.5":
+  version: 2.2.5
+  resolution: "@react-navigation/elements@npm:2.2.5"
   dependencies:
-    "@react-navigation/elements": "npm:^2.2.4"
+    color: "npm:^4.2.3"
+  peerDependencies:
+    "@react-native-masked-view/masked-view": ">= 0.2.0"
+    "@react-navigation/native": ^7.0.14
+    react: ">= 18.2.0"
+    react-native: "*"
+    react-native-safe-area-context: ">= 4.0.0"
+  peerDependenciesMeta:
+    "@react-native-masked-view/masked-view":
+      optional: true
+  checksum: 10c0/b80f4e29916360489fd5399d9344dfc64a1fdf77796ba189f5b19324766998fd9723d08ac548b935585feb4643465b07bfcd9a3b453e7693d338c552f97c18c4
+  languageName: node
+  linkType: hard
+
+"@react-navigation/native-stack@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "@react-navigation/native-stack@npm:7.2.0"
+  dependencies:
+    "@react-navigation/elements": "npm:^2.2.5"
     warn-once: "npm:^0.1.1"
   peerDependencies:
-    "@react-navigation/native": ^7.0.13
+    "@react-navigation/native": ^7.0.14
     react: ">= 18.2.0"
     react-native: "*"
     react-native-safe-area-context: ">= 4.0.0"
     react-native-screens: ">= 4.0.0"
-  checksum: 10c0/84fc748a2e6b826e45544c0e222665778a1cb9b78f9a958fd2896eac1cee707cacda1fbe663591f41e5d78f81ac5859465c08415137c19cca6081c79f614b5ae
+  checksum: 10c0/2f4af18dbb33f7b0c866102f3f475878900d211ad164de3e5d4875361dbb892700bd85ceb8fa79c6c00075d03b0f11d4b313708d9bb84241dc44b063ab2a68c8
   languageName: node
   linkType: hard
 
@@ -11003,7 +11021,7 @@ __metadata:
     "@react-native/typescript-config": "npm:0.76.5"
     "@react-navigation/bottom-tabs": "npm:^7.1.3"
     "@react-navigation/native": "npm:^7.0.13"
-    "@react-navigation/native-stack": "npm:^7.1.14"
+    "@react-navigation/native-stack": "npm:^7.2.0"
     "@tanstack/react-query": "npm:^5.62.7"
     "@types/react": "npm:^19.0.1"
     "@types/react-native-vector-icons": "npm:^6.4.18"
