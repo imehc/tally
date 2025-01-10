@@ -5806,6 +5806,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-font@npm:^13.0.2":
+  version: 13.0.2
+  resolution: "expo-font@npm:13.0.2"
+  dependencies:
+    fontfaceobserver: "npm:^2.1.0"
+  peerDependencies:
+    expo: "*"
+    react: "*"
+  checksum: 10c0/d4bf597bc6d03d40cd1fc029080f25c9b0cf1e48669d3e40747540bb3e20a303c2a7a027344df502a556e19d3ec8572db311bfe67e101a5526dcc29b18759bac
+  languageName: node
+  linkType: hard
+
 "exponential-backoff@npm:^3.1.1":
   version: 3.1.1
   resolution: "exponential-backoff@npm:3.1.1"
@@ -6000,6 +6012,13 @@ __metadata:
   version: 0.251.1
   resolution: "flow-parser@npm:0.251.1"
   checksum: 10c0/e52b9ae6251317e3255f804aeaa55079622e88dc2e5ff620d4974a35c19a5eb27f5781e74e8e133a05ffa4e05b60614b0668f49cb06d88d54e58b08748e5909f
+  languageName: node
+  linkType: hard
+
+"fontfaceobserver@npm:^2.1.0":
+  version: 2.3.0
+  resolution: "fontfaceobserver@npm:2.3.0"
+  checksum: 10c0/9b539d5021757d3ed73c355bdb839296d6654de473a992aa98993ef46d951f0361545323de68f6d70c5334d7e3e9f409c1ae7a03c168b00cb0f6c5dea6c77bfa
   languageName: node
   linkType: hard
 
@@ -9704,19 +9723,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-paper@npm:^5.12.5":
-  version: 5.12.5
-  resolution: "react-native-paper@npm:5.12.5"
+"react-native-paper@npm:^5.13.0":
+  version: 5.13.0
+  resolution: "react-native-paper@npm:5.13.0"
   dependencies:
     "@callstack/react-theme-provider": "npm:^3.0.9"
     color: "npm:^3.1.2"
+    expo-font: "npm:^13.0.2"
     use-latest-callback: "npm:^0.1.5"
   peerDependencies:
     react: "*"
     react-native: "*"
     react-native-safe-area-context: "*"
     react-native-vector-icons: "*"
-  checksum: 10c0/feeeedae6fcd9684be04a8a9e9f568776d1680efa190cf0594d72fd91724985bbef2847e06e474ee6221dd1e236701e69c28f1e47f41cc0be8c99656ecf3f58c
+  checksum: 10c0/3ec407ad218f8448f161a4d4b811fc0240f36cc8efdef7c23574c667890f45e8603f0ac27b1a42f52fa0321eedefb62fc640f230b63083bcc1b9fb64316f35ff
   languageName: node
   linkType: hard
 
@@ -11135,7 +11155,7 @@ __metadata:
     react-native-gesture-handler: "npm:^2.21.2"
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^3.2.0"
-    react-native-paper: "npm:^5.12.5"
+    react-native-paper: "npm:^5.13.0"
     react-native-permissions: "npm:^5.2.2"
     react-native-reanimated: "npm:^3.16.6"
     react-native-safe-area-context: "npm:^5.1.0"
