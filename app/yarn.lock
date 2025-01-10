@@ -11129,7 +11129,7 @@ __metadata:
     "@react-native-community/cli": "npm:16.0.2"
     "@react-native-community/cli-platform-android": "npm:16.0.2"
     "@react-native-community/cli-platform-ios": "npm:16.0.2"
-    "@react-native/babel-preset": "npm:0.76.5"
+    "@react-native/babel-preset": "npm:0.76.6"
     "@react-native/eslint-config": "npm:0.76.5"
     "@react-native/metro-config": "npm:0.76.6"
     "@react-native/typescript-config": "npm:0.76.5"
