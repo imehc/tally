@@ -3081,14 +3081,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-query@npm:^5.65.0":
-  version: 5.65.0
-  resolution: "@tanstack/react-query@npm:5.65.0"
+"@tanstack/react-query@npm:^5.65.1":
+  version: 5.65.1
+  resolution: "@tanstack/react-query@npm:5.65.1"
   dependencies:
     "@tanstack/query-core": "npm:5.65.0"
   peerDependencies:
     react: ^18 || ^19
-  checksum: 10c0/cebf15ea78474ab0e3c8fac513f2af4c8e0000c00856239917d8dce1a009053b1a871560ba39501f986e99930dcedde1558af20481a6b5b62d398f75893f87c0
+  checksum: 10c0/0b0ed414c59ee1d7a5a8e72d2e2f2513f7367b59ee33d5663b114fcf5108438786b9bbbd12173ae7f8124538f313cd4dff942c7080b60d26d011c18918b1d563
   languageName: node
   linkType: hard
 
@@ -10774,7 +10774,7 @@ __metadata:
     "@react-navigation/bottom-tabs": "npm:^7.2.0"
     "@react-navigation/native": "npm:^7.0.14"
     "@react-navigation/native-stack": "npm:^7.2.0"
-    "@tanstack/react-query": "npm:^5.65.0"
+    "@tanstack/react-query": "npm:^5.65.1"
     "@types/react": "npm:^19.0.8"
     "@types/react-native-vector-icons": "npm:^6.4.18"
     "@types/react-test-renderer": "npm:^19.0.0"
