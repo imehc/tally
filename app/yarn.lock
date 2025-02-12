@@ -9531,9 +9531,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:^2.23.0":
-  version: 2.23.0
-  resolution: "react-native-gesture-handler@npm:2.23.0"
+"react-native-gesture-handler@npm:^2.23.1":
+  version: 2.23.1
+  resolution: "react-native-gesture-handler@npm:2.23.1"
   dependencies:
     "@egjs/hammerjs": "npm:^2.0.17"
     hoist-non-react-statics: "npm:^3.3.0"
@@ -9541,7 +9541,7 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/b4bfa9f71990fb5f75225b63878f668a9c6cee29cea6636482b64708432fb46b8c969c570022728fb130bf4e6ce306719dae200d1cb4050fdd2690e34b7b2a78
+  checksum: 10c0/02ad664662a529836aaae2f6bce5943ccd3193d33641e6328d1306e6cb82eb5d859c5f9975c557f6e6daf1ffb7e7f6cd8432dac70a727110bff887e554673c7c
   languageName: node
   linkType: hard
 
@@ -10930,7 +10930,7 @@ __metadata:
     react-hook-form: "npm:^7.54.2"
     react-native: "npm:0.77.0"
     react-native-bootsplash: "npm:^6.3.3"
-    react-native-gesture-handler: "npm:^2.23.0"
+    react-native-gesture-handler: "npm:^2.23.1"
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^3.2.0"
     react-native-paper: "npm:^5.13.1"
