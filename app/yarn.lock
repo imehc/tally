@@ -9709,9 +9709,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-permissions@npm:^5.2.5":
-  version: 5.2.5
-  resolution: "react-native-permissions@npm:5.2.5"
+"react-native-permissions@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "react-native-permissions@npm:5.2.6"
   peerDependencies:
     react: ">=18.1.0"
     react-native: ">=0.70.0"
@@ -9719,7 +9719,7 @@ __metadata:
   peerDependenciesMeta:
     react-native-windows:
       optional: true
-  checksum: 10c0/ef7c78d39884e285cd568d7c0edc4aa3cf59b9ff31722f3fcfc80d0852552700d71660c159b2137e296472834e3dd109a38ca43554fdf59c82d80433287cffb4
+  checksum: 10c0/02c72bc6c8b051f3f635e32cc75ba9effad8c36c532cdb6542e3751794e5db1670afe7b0df7c0c3dbdca8dd37d998af10f4d32fb1d7fc069f46755c5660b5aee
   languageName: node
   linkType: hard
 
@@ -11050,7 +11050,7 @@ __metadata:
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^3.2.0"
     react-native-paper: "npm:^5.13.1"
-    react-native-permissions: "npm:^5.2.5"
+    react-native-permissions: "npm:^5.2.6"
     react-native-reanimated: "npm:^3.17.1"
     react-native-safe-area-context: "npm:^5.3.0"
     react-native-screens: "npm:^4.9.1"
