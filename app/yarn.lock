@@ -2275,13 +2275,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/config-plugins@npm:^8.0.0 || ^9.0.0":
-  version: 9.0.10
-  resolution: "@expo/config-plugins@npm:9.0.10"
+"@expo/config-plugins@npm:^9.0.0 || ^10.0.0":
+  version: 10.0.2
+  resolution: "@expo/config-plugins@npm:10.0.2"
   dependencies:
-    "@expo/config-types": "npm:^52.0.0"
-    "@expo/json-file": "npm:~9.0.0"
-    "@expo/plist": "npm:^0.2.0"
+    "@expo/config-types": "npm:^53.0.3"
+    "@expo/json-file": "npm:~9.1.4"
+    "@expo/plist": "npm:^0.3.4"
     "@expo/sdk-runtime-versions": "npm:^1.0.0"
     chalk: "npm:^4.1.2"
     debug: "npm:^4.3.5"
@@ -2293,36 +2293,35 @@ __metadata:
     slugify: "npm:^1.6.6"
     xcode: "npm:^3.0.1"
     xml2js: "npm:0.6.0"
-  checksum: 10c0/64763e24dde2400ef72211091633f3a52cabd55d57dfd0c38453623cfc6c8703696973b4dc34bb4d8d7eeb1b2add3b59439f770c2b8950a25c0fa90026954c75
+  checksum: 10c0/4049c2c6dc2589ce0dc840ef971bcdd4215ca74e5057fc92c07004a877c9198dc78bd07b91d3ba908242e70e683faa6fb516f07ec42c2328cbe8e661a65591d0
   languageName: node
   linkType: hard
 
-"@expo/config-types@npm:^52.0.0":
-  version: 52.0.1
-  resolution: "@expo/config-types@npm:52.0.1"
-  checksum: 10c0/f06287eb20d599fbc422bf58dc97a803d8f9242699ce43188b90bfd92d54da27f83ca1225bf1ec61a5c30e74c57e47e7bfba2ef3cada38983622657658fafe4e
+"@expo/config-types@npm:^53.0.3":
+  version: 53.0.4
+  resolution: "@expo/config-types@npm:53.0.4"
+  checksum: 10c0/e50e584af3bc0cf885333d84b10032aa8a0c3f3b254ed4aaeb3aa3e02dea74ba694f5cb7cf49fe7b7b924cecf337be09e0e5db24cf5802aca51eaae51054f1c4
   languageName: node
   linkType: hard
 
-"@expo/json-file@npm:~9.0.0":
-  version: 9.0.0
-  resolution: "@expo/json-file@npm:9.0.0"
+"@expo/json-file@npm:~9.1.4":
+  version: 9.1.4
+  resolution: "@expo/json-file@npm:9.1.4"
   dependencies:
     "@babel/code-frame": "npm:~7.10.4"
     json5: "npm:^2.2.3"
-    write-file-atomic: "npm:^2.3.0"
-  checksum: 10c0/1ae75cc118f2902f0efc1a1240a31e6bc38200d68c9d42ba2c2fd0a87290c31cd57c9feae77789a16accc8dc0756eedc39cd456c21dd5be3b13f1e2eff3db152
+  checksum: 10c0/43c68ba5316dc9b2e79a0a15fbfca60430f64181ae1d47f9627fd1f5b2f27b090a829125168290cbab8af72f0421bab941dbd855217fec4787bde921e6962a05
   languageName: node
   linkType: hard
 
-"@expo/plist@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "@expo/plist@npm:0.2.0"
+"@expo/plist@npm:^0.3.4":
+  version: 0.3.4
+  resolution: "@expo/plist@npm:0.3.4"
   dependencies:
-    "@xmldom/xmldom": "npm:~0.7.7"
+    "@xmldom/xmldom": "npm:^0.8.8"
     base64-js: "npm:^1.2.3"
-    xmlbuilder: "npm:^14.0.0"
-  checksum: 10c0/317f12dd2106cd83883746f0dcd81c165b47088a6c90076cdecfb2e85ebf946fae1a2080ba57df5598e85d7e54adba17cf1bafd3f005d04ac964a46fdb42c75f
+    xmlbuilder: "npm:^15.1.1"
+  checksum: 10c0/e382c6ebd998353fecd9508807e51f80f4db48a86457c70e5709436aa772ea9580bc258b6c8ca8930a578b164d87673a6676f47ce0afbe2c9b6bb83d51b9f2b4
   languageName: node
   linkType: hard
 
@@ -3948,13 +3947,6 @@ __metadata:
   version: 0.8.10
   resolution: "@xmldom/xmldom@npm:0.8.10"
   checksum: 10c0/c7647c442502720182b0d65b17d45d2d95317c1c8c497626fe524bda79b4fb768a9aa4fae2da919f308e7abcff7d67c058b102a9d641097e9a57f0b80187851f
-  languageName: node
-  linkType: hard
-
-"@xmldom/xmldom@npm:~0.7.7":
-  version: 0.7.13
-  resolution: "@xmldom/xmldom@npm:0.7.13"
-  checksum: 10c0/cb02e4e8d986acf18578a5f25d1bce5e18d08718f40d8a0cdd922a4c112c8e00daf94de4e43f9556ed147c696b135f2ab81fa9a2a8a0416f60af15d156b60e40
   languageName: node
   linkType: hard
 
@@ -6938,7 +6930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.11, graceful-fs@npm:^4.1.3, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
+"graceful-fs@npm:^4.1.3, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0, graceful-fs@npm:^4.2.4, graceful-fs@npm:^4.2.6, graceful-fs@npm:^4.2.9":
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10c0/386d011a553e02bc594ac2ca0bd6d9e4c22d7fa8cfbfc448a6d148c59ea881b092db9dbe3547ae4b88e55f1b01f7c4a2ecc53b310c042793e63aa44cf6c257f2
@@ -10079,11 +10071,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-bootsplash@npm:^6.3.7":
-  version: 6.3.7
-  resolution: "react-native-bootsplash@npm:6.3.7"
+"react-native-bootsplash@npm:^6.3.8":
+  version: 6.3.8
+  resolution: "react-native-bootsplash@npm:6.3.8"
   dependencies:
-    "@expo/config-plugins": "npm:^8.0.0 || ^9.0.0"
+    "@expo/config-plugins": "npm:^9.0.0 || ^10.0.0"
     "@react-native-community/cli-config-android": "npm:^18.0.0"
     "@react-native-community/cli-config-apple": "npm:^18.0.0"
     "@react-native-community/cli-tools": "npm:^18.0.0"
@@ -10102,7 +10094,7 @@ __metadata:
     react-native: "*"
   bin:
     react-native-bootsplash: cli.js
-  checksum: 10c0/e74b73fcb6ff5821e2d50f251de00f48d08fcd9209b67727f6875d865dccce20bbff7dd4c39e2fc132bdcbabcf7e3e316dbfd1889af613ceb2279caf9cd65a57
+  checksum: 10c0/63c60d0e13a9599cf7812c21befc281f12394f690d9ceff10cdd2b08c698714a4ff386be99a4cd63c67a6158210422fb14681cdde5cdf8c67d49da822e2b77f2
   languageName: node
   linkType: hard
 
@@ -11563,7 +11555,7 @@ __metadata:
     react: "npm:19.1.0"
     react-hook-form: "npm:^7.56.3"
     react-native: "npm:0.79.2"
-    react-native-bootsplash: "npm:^6.3.7"
+    react-native-bootsplash: "npm:^6.3.8"
     react-native-gesture-handler: "npm:^2.25.0"
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^3.2.0"
@@ -12256,17 +12248,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"write-file-atomic@npm:^2.3.0":
-  version: 2.4.3
-  resolution: "write-file-atomic@npm:2.4.3"
-  dependencies:
-    graceful-fs: "npm:^4.1.11"
-    imurmurhash: "npm:^0.1.4"
-    signal-exit: "npm:^3.0.2"
-  checksum: 10c0/8cb4bba0c1ab814a9b127844da0db4fb8c5e06ddbe6317b8b319377c73b283673036c8b9360120062898508b9428d81611cf7fa97584504a00bc179b2a580b92
-  languageName: node
-  linkType: hard
-
 "write-file-atomic@npm:^4.0.2":
   version: 4.0.2
   resolution: "write-file-atomic@npm:4.0.2"
@@ -12334,13 +12315,6 @@ __metadata:
     sax: "npm:>=0.6.0"
     xmlbuilder: "npm:~11.0.0"
   checksum: 10c0/db1ad659210eda4b77929aa692271308ec7e04830112161b8c707f3bcc7138947409c8461ae5c8bcb36b378d62594a8d1cb78770ff5c3dc46a68c67a0838b486
-  languageName: node
-  linkType: hard
-
-"xmlbuilder@npm:^14.0.0":
-  version: 14.0.0
-  resolution: "xmlbuilder@npm:14.0.0"
-  checksum: 10c0/3a99d1642b0a25a24f24bc5a32f37d299886e01e004654e34d13877e7648956f000708568456fedb7423e1dc2fbfe6520298699a3fbabc681d989be4a41c1509
   languageName: node
   linkType: hard
 
