@@ -39,7 +39,7 @@
     "react-native-view-shot": "^4.0.3",
     "styled-components": "^6.1.18",
     "tailwindcss": "^4.1.8",
-    "zod": "^3.25.58"
+    "zod": "^3.25.62"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",
