@@ -11934,7 +11934,7 @@ __metadata:
     styled-components: "npm:^6.1.19"
     tailwindcss: "npm:^4.1.11"
     typescript: "npm:5.8.3"
-    zod: "npm:^3.25.67"
+    zod: "npm:^3.25.70"
   languageName: unknown
   linkType: soft
 
@@ -12879,9 +12879,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.25.67":
-  version: 3.25.67
-  resolution: "zod@npm:3.25.67"
-  checksum: 10c0/80a0cab3033272c4ab9312198081f0c4ea88e9673c059aa36dc32024906363729db54bdb78f3dc9d5529bd1601f74974d5a56c0a23e40c6f04a9270c9ff22336
+"zod@npm:^3.25.70":
+  version: 3.25.70
+  resolution: "zod@npm:3.25.70"
+  checksum: 10c0/00defcc0d5e923f708b9e46721e0ec1fbc9d01a1854bdb7dd91caf526acd4d01fff7e3a82282fe13f90f39e91c6511810e0e55abd383aaee171ca257aeee8ea1
   languageName: node
   linkType: hard
