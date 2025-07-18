@@ -10754,7 +10754,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-is-edge-to-edge@npm:1.1.7, react-native-is-edge-to-edge@npm:^1.1.7":
+"react-native-is-edge-to-edge@npm:1.1.7":
   version: 1.1.7
   resolution: "react-native-is-edge-to-edge@npm:1.1.7"
   peerDependencies:
@@ -10857,17 +10857,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-screens@npm:^4.12.0":
-  version: 4.12.0
-  resolution: "react-native-screens@npm:4.12.0"
+"react-native-screens@npm:^4.13.1":
+  version: 4.13.1
+  resolution: "react-native-screens@npm:4.13.1"
   dependencies:
     react-freeze: "npm:^1.0.0"
-    react-native-is-edge-to-edge: "npm:^1.1.7"
+    react-native-is-edge-to-edge: "npm:^1.2.1"
     warn-once: "npm:^0.1.0"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/2e9663dec787e4d537f84eeccacd1aa7a6ff5c924eac9eb8663c394e5b988c8ebc711d8d1fbdaebe0f03be27cb1282bfaa9b9379564085136c5e63b2dbea380e
+  checksum: 10c0/7168228da8fe54fce59a31a15ace5b83d91e2cf205d5be4e6306cc749151cee50162bd0c74e163f38d25bf957153a5ea9e6d91cf9ef6aac8a0c0d5b4ba0d93af
   languageName: node
   linkType: hard
 
@@ -12129,7 +12129,7 @@ __metadata:
     react-native-permissions: "npm:^5.4.1"
     react-native-reanimated: "npm:^3.18.0"
     react-native-safe-area-context: "npm:^5.5.2"
-    react-native-screens: "npm:^4.12.0"
+    react-native-screens: "npm:^4.13.1"
     react-native-svg: "npm:^15.12.0"
     react-native-svg-transformer: "npm:^1.5.1"
     react-native-toast-message: "npm:^2.3.3"
