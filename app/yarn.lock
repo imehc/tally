@@ -12141,7 +12141,7 @@ __metadata:
     "@react-native-community/cli": "npm:19.1.1"
     "@react-native-community/cli-platform-android": "npm:18.0.0"
     "@react-native-community/cli-platform-ios": "npm:18.0.0"
-    "@react-native/babel-preset": "npm:0.80.1"
+    "@react-native/babel-preset": "npm:0.80.2"
     "@react-native/eslint-config": "npm:0.80.1"
     "@react-native/metro-config": "npm:0.80.2"
     "@react-native/typescript-config": "npm:0.80.1"
