@@ -10785,9 +10785,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "react-native-reanimated@npm:4.0.1"
+"react-native-reanimated@npm:^4.0.2":
+  version: 4.0.2
+  resolution: "react-native-reanimated@npm:4.0.2"
   dependencies:
     react-native-is-edge-to-edge: "npm:^1.2.1"
     semver: "npm:7.7.2"
@@ -10795,8 +10795,8 @@ __metadata:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-    react-native-worklets: ">=0.3.0"
-  checksum: 10c0/bbf9d715f0305a586181b34fab6cb81ca3f2f737314efb02c7ce4bbbced54da388c2ccc6730450fa6be8fce4083ff29fe990a9a9accf6e4f9f7d4f9cc2a742ab
+    react-native-worklets: ">=0.4.0"
+  checksum: 10c0/422aa8308c586dd37d53760860aa963ef5f569d9fce3c03a3ce3d5592e5c93d6bd399567f616b2db2c3156712d9bc3c99d4380f454b8ed9dceedb525dd171ee9
   languageName: node
   linkType: hard
 
@@ -12080,7 +12080,7 @@ __metadata:
     react-native-mmkv: "npm:^3.3.0"
     react-native-paper: "npm:^5.14.5"
     react-native-permissions: "npm:^5.4.2"
-    react-native-reanimated: "npm:^4.0.1"
+    react-native-reanimated: "npm:^4.0.2"
     react-native-safe-area-context: "npm:^5.6.0"
     react-native-screens: "npm:^4.13.1"
     react-native-svg: "npm:^15.12.1"
