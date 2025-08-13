@@ -50,7 +50,7 @@
     "@react-native-community/cli-platform-ios": "20.0.0",
     "@react-native/babel-preset": "0.80.2",
     "@react-native/eslint-config": "0.80.2",
-    "@react-native/metro-config": "0.80.2",
+    "@react-native/metro-config": "0.81.0",
     "@react-native/typescript-config": "0.80.2",
     "@types/react": "^19.1.9",
     "@types/react-native-vector-icons": "^6.4.18",
