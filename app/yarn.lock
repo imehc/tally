@@ -3236,18 +3236,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-config-android@npm:18.0.0, @react-native-community/cli-config-android@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "@react-native-community/cli-config-android@npm:18.0.0"
-  dependencies:
-    "@react-native-community/cli-tools": "npm:18.0.0"
-    chalk: "npm:^4.1.2"
-    fast-glob: "npm:^3.3.2"
-    fast-xml-parser: "npm:^4.4.1"
-  checksum: 10c0/6ee174be01b9a7415d07c77d6ecd99b9e5fcb8239ae19e4da1133dcbc68f558e37f247fa7bc8e93d343cfd4e670b055fed2e2caf0f1fde1a49bd26af40d97d6c
-  languageName: node
-  linkType: hard
-
 "@react-native-community/cli-config-android@npm:20.0.0":
   version: 20.0.0
   resolution: "@react-native-community/cli-config-android@npm:20.0.0"
@@ -3257,6 +3245,18 @@ __metadata:
     fast-glob: "npm:^3.3.2"
     fast-xml-parser: "npm:^4.4.1"
   checksum: 10c0/79298ecde495e0587585e8d67431e9543ac83392a06e5c8fb736853d199f0aae014858b1d3db81ce3decf58c2172c95c78eeb27e0f2be2b8a5ad43b96331d0ce
+  languageName: node
+  linkType: hard
+
+"@react-native-community/cli-config-android@npm:^18.0.0":
+  version: 18.0.0
+  resolution: "@react-native-community/cli-config-android@npm:18.0.0"
+  dependencies:
+    "@react-native-community/cli-tools": "npm:18.0.0"
+    chalk: "npm:^4.1.2"
+    fast-glob: "npm:^3.3.2"
+    fast-xml-parser: "npm:^4.4.1"
+  checksum: 10c0/6ee174be01b9a7415d07c77d6ecd99b9e5fcb8239ae19e4da1133dcbc68f558e37f247fa7bc8e93d343cfd4e670b055fed2e2caf0f1fde1a49bd26af40d97d6c
   languageName: node
   linkType: hard
 
@@ -3318,19 +3318,6 @@ __metadata:
     wcwidth: "npm:^1.0.1"
     yaml: "npm:^2.2.1"
   checksum: 10c0/843a7e8e5969154ed171616c3c556389d7debc30035bb6a9d6392876d22ef84d390d02673032bb8c8ac164380a97fe9f62971476aacb06ba3a3b849358e4cb99
-  languageName: node
-  linkType: hard
-
-"@react-native-community/cli-platform-android@npm:18.0.0":
-  version: 18.0.0
-  resolution: "@react-native-community/cli-platform-android@npm:18.0.0"
-  dependencies:
-    "@react-native-community/cli-config-android": "npm:18.0.0"
-    "@react-native-community/cli-tools": "npm:18.0.0"
-    chalk: "npm:^4.1.2"
-    execa: "npm:^5.0.0"
-    logkitty: "npm:^0.7.1"
-  checksum: 10c0/248ba197745415b9d5912efbdf20fdebb88ceed6c50fac1644205f7f827c267f5b816edb678a4c45fb4b985fa87f257c47402bd7c7d84037be25c8c700a2b439
   languageName: node
   linkType: hard
 
@@ -12333,7 +12320,7 @@ __metadata:
     "@babel/runtime": "npm:^7.28.2"
     "@hookform/resolvers": "npm:^5.2.1"
     "@react-native-community/cli": "npm:20.0.0"
-    "@react-native-community/cli-platform-android": "npm:18.0.0"
+    "@react-native-community/cli-platform-android": "npm:20.0.0"
     "@react-native-community/cli-platform-ios": "npm:20.0.0"
     "@react-native/babel-preset": "npm:0.80.2"
     "@react-native/eslint-config": "npm:0.80.2"
