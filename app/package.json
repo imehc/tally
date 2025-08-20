@@ -42,7 +42,7 @@
     "zod": "^4.0.17"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.0",
+    "@babel/core": "^7.28.3",
     "@babel/preset-env": "^7.28.3",
     "@babel/runtime": "^7.28.3",
     "@react-native-community/cli": "20.0.0",
