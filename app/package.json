@@ -57,7 +57,7 @@
     "@types/react-test-renderer": "^19.1.0",
     "babel-jest": "^30.0.5",
     "babel-plugin-module-resolver": "^5.0.2",
-    "eslint": "^9.33.0",
+    "eslint": "^9.34.0",
     "jest": "^30.0.5",
     "prettier": "3.6.2",
     "react-native-svg-transformer": "^1.5.1",
