@@ -3398,18 +3398,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-config-apple@npm:20.0.1":
-  version: 20.0.1
-  resolution: "@react-native-community/cli-config-apple@npm:20.0.1"
-  dependencies:
-    "@react-native-community/cli-tools": "npm:20.0.1"
-    chalk: "npm:^4.1.2"
-    execa: "npm:^5.0.0"
-    fast-glob: "npm:^3.3.2"
-  checksum: 10c0/4924ecb3f405f5da2ff2acc968232d451c8862a11e0d877ee898347ecc467e9664aee2cbab2df488250776b171acafde33212a7880bb4e2e0c35b5e82e24c5ea
-  languageName: node
-  linkType: hard
-
 "@react-native-community/cli-config-apple@npm:20.0.2":
   version: 20.0.2
   resolution: "@react-native-community/cli-config-apple@npm:20.0.2"
@@ -3497,19 +3485,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native-community/cli-platform-apple@npm:20.0.1":
-  version: 20.0.1
-  resolution: "@react-native-community/cli-platform-apple@npm:20.0.1"
-  dependencies:
-    "@react-native-community/cli-config-apple": "npm:20.0.1"
-    "@react-native-community/cli-tools": "npm:20.0.1"
-    chalk: "npm:^4.1.2"
-    execa: "npm:^5.0.0"
-    fast-xml-parser: "npm:^4.4.1"
-  checksum: 10c0/2ca9669339f616ba6a6d0df299cd0828fed3497b1d16414be0f92fa46b2395e7ab12c7c0a7bd7c66ce026a100225dde9ba133796813365d0f4dc31681a8a82e7
-  languageName: node
-  linkType: hard
-
 "@react-native-community/cli-platform-apple@npm:20.0.2":
   version: 20.0.2
   resolution: "@react-native-community/cli-platform-apple@npm:20.0.2"
@@ -3520,15 +3495,6 @@ __metadata:
     execa: "npm:^5.0.0"
     fast-xml-parser: "npm:^4.4.1"
   checksum: 10c0/9c832db0a88a48d65b4894e64169ed7fad3ec56c8ae3fa1830dedfb04838c066012af79b5847e44f065f4fb6a0f08092fd309186488ad25e7710b6efadecfafb
-  languageName: node
-  linkType: hard
-
-"@react-native-community/cli-platform-ios@npm:20.0.1":
-  version: 20.0.1
-  resolution: "@react-native-community/cli-platform-ios@npm:20.0.1"
-  dependencies:
-    "@react-native-community/cli-platform-apple": "npm:20.0.1"
-  checksum: 10c0/9989444c4490413104f5ca7de666f90a97a7b1901d9a301e36242ee80e5f5bdffd2899858c3a0476c6e46bf3b0bd17da87e76970b688bcea90ff6b02bf4a612c
   languageName: node
   linkType: hard
 
@@ -12181,7 +12147,7 @@ __metadata:
     "@hookform/resolvers": "npm:^5.2.1"
     "@react-native-community/cli": "npm:20.0.2"
     "@react-native-community/cli-platform-android": "npm:20.0.1"
-    "@react-native-community/cli-platform-ios": "npm:20.0.1"
+    "@react-native-community/cli-platform-ios": "npm:20.0.2"
     "@react-native/babel-preset": "npm:0.81.1"
     "@react-native/eslint-config": "npm:0.81.1"
     "@react-native/metro-config": "npm:0.81.1"
