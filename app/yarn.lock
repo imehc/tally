@@ -10824,13 +10824,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-mmkv@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "react-native-mmkv@npm:3.3.1"
+"react-native-mmkv@npm:^3.3.3":
+  version: 3.3.3
+  resolution: "react-native-mmkv@npm:3.3.3"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/828af03d2301ec4d7118dde2b765cbbd75bf6edbbc6613b5c0d93c18d79f471df8b3c2c8cb7df5ef2794bd06485e5ce3b97164d50175445b8cf30109f29c4718
+  checksum: 10c0/efd7f725674d686ea126a213bd8c4270e8e4e8f306917a1b846a9f7ddf652ad057c7d509a9292d7bbf6a58603d4ab5a18e0c3b0d1b00447df45eeac81cbbd1e1
   languageName: node
   linkType: hard
 
@@ -12154,7 +12154,7 @@ __metadata:
     react-native-bootsplash: "npm:^6.3.11"
     react-native-gesture-handler: "npm:^2.28.0"
     react-native-linear-gradient: "npm:^2.8.3"
-    react-native-mmkv: "npm:^3.3.1"
+    react-native-mmkv: "npm:^3.3.3"
     react-native-paper: "npm:^5.14.5"
     react-native-permissions: "npm:^5.4.2"
     react-native-reanimated: "npm:^4.1.0"
