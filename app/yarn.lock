@@ -3721,13 +3721,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/eslint-config@npm:0.82.0":
-  version: 0.82.0
-  resolution: "@react-native/eslint-config@npm:0.82.0"
+"@react-native/eslint-config@npm:0.82.1":
+  version: 0.82.1
+  resolution: "@react-native/eslint-config@npm:0.82.1"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/eslint-parser": "npm:^7.25.1"
-    "@react-native/eslint-plugin": "npm:0.82.0"
+    "@react-native/eslint-plugin": "npm:0.82.1"
     "@typescript-eslint/eslint-plugin": "npm:^8.36.0"
     "@typescript-eslint/parser": "npm:^8.36.0"
     eslint-config-prettier: "npm:^8.5.0"
@@ -3740,14 +3740,14 @@ __metadata:
   peerDependencies:
     eslint: ">=8"
     prettier: ">=2"
-  checksum: 10c0/09e3ba499884b7d0e9abdd1b0d25461eaa53a1846d542486e367ba644054ac7f8af1f35a19f0623aa33083ecc97ad573dce4b77c172429d82240155d1812542f
+  checksum: 10c0/d7f870cf1ff451d918ac424fb3db30ae599172ca068513e6c4ed4fb749965baf6ea3c9a28da53657a5996cbd2fc3b3ab0291a2ce5c8fddd1b0c05afb4ec9e9ad
   languageName: node
   linkType: hard
 
-"@react-native/eslint-plugin@npm:0.82.0":
-  version: 0.82.0
-  resolution: "@react-native/eslint-plugin@npm:0.82.0"
-  checksum: 10c0/a233de75e47e9b64e08ce0e3678bf3398625960c8ab58a5a6bfde9a87df979bb316c6ba3e61f92ae0e66d5780deb167ea10f5d7342f6b0c59174ce1dece75182
+"@react-native/eslint-plugin@npm:0.82.1":
+  version: 0.82.1
+  resolution: "@react-native/eslint-plugin@npm:0.82.1"
+  checksum: 10c0/afd5f0bee58d10d1ff745f190679708633d7fce381220fb32492fa93e011fc8608b46a854b816988cefb003b50735dc1a26cf2e49bfe468dbca636b602ed8259
   languageName: node
   linkType: hard
 
@@ -12106,7 +12106,7 @@ __metadata:
     "@react-native-community/cli-platform-android": "npm:20.0.2"
     "@react-native-community/cli-platform-ios": "npm:20.0.2"
     "@react-native/babel-preset": "npm:0.82.0"
-    "@react-native/eslint-config": "npm:0.82.0"
+    "@react-native/eslint-config": "npm:0.82.1"
     "@react-native/metro-config": "npm:0.82.0"
     "@react-native/typescript-config": "npm:0.82.0"
     "@react-navigation/bottom-tabs": "npm:^7.4.9"
