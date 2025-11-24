@@ -3918,26 +3918,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/elements@npm:^2.8.2":
-  version: 2.8.2
-  resolution: "@react-navigation/elements@npm:2.8.2"
-  dependencies:
-    color: "npm:^4.2.3"
-    use-latest-callback: "npm:^0.2.4"
-    use-sync-external-store: "npm:^1.5.0"
-  peerDependencies:
-    "@react-native-masked-view/masked-view": ">= 0.2.0"
-    "@react-navigation/native": ^7.1.20
-    react: ">= 18.2.0"
-    react-native: "*"
-    react-native-safe-area-context: ">= 4.0.0"
-  peerDependenciesMeta:
-    "@react-native-masked-view/masked-view":
-      optional: true
-  checksum: 10c0/0e5282f92f2946fd635c2a1c9b444d6d158663ad57669cb87e372587d2313df90cd092737305f999e6223aace75cb7829ef709b1198a8a6bc22aa40821a792e6
-  languageName: node
-  linkType: hard
-
 "@react-navigation/elements@npm:^2.8.3":
   version: 2.8.3
   resolution: "@react-navigation/elements@npm:2.8.3"
@@ -3958,21 +3938,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native-stack@npm:^7.6.3":
-  version: 7.6.3
-  resolution: "@react-navigation/native-stack@npm:7.6.3"
+"@react-navigation/native-stack@npm:^7.7.0":
+  version: 7.7.0
+  resolution: "@react-navigation/native-stack@npm:7.7.0"
   dependencies:
-    "@react-navigation/elements": "npm:^2.8.2"
+    "@react-navigation/elements": "npm:^2.8.3"
     color: "npm:^4.2.3"
     sf-symbols-typescript: "npm:^2.1.0"
     warn-once: "npm:^0.1.1"
   peerDependencies:
-    "@react-navigation/native": ^7.1.20
+    "@react-navigation/native": ^7.1.21
     react: ">= 18.2.0"
     react-native: "*"
     react-native-safe-area-context: ">= 4.0.0"
     react-native-screens: ">= 4.0.0"
-  checksum: 10c0/9ba1a7abe8335a80455bb83742c844ee8a26e88a413c4996b0b3b8ec53c9b33db63cf7f4ada89c65417f169dcd9e8c0c27943cd49a8a7c1b9b298d86091e1661
+  checksum: 10c0/23f44a6bf382718831cd983ff9298e5624ce9b3292c00252aee734129ec85f4f3bd2cec15c8e8a3857fc9d433a6c2549927115ba5514a2567f9b6deba81cfa18
   languageName: node
   linkType: hard
 
@@ -12211,7 +12191,7 @@ __metadata:
     "@react-native/typescript-config": "npm:0.82.1"
     "@react-navigation/bottom-tabs": "npm:^7.8.6"
     "@react-navigation/native": "npm:^7.1.20"
-    "@react-navigation/native-stack": "npm:^7.6.3"
+    "@react-navigation/native-stack": "npm:^7.7.0"
     "@tanstack/react-query": "npm:^5.90.10"
     "@types/react": "npm:^19.2.6"
     "@types/react-native-vector-icons": "npm:^6.4.18"
