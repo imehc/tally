@@ -25,7 +25,7 @@
     "react-hook-form": "^7.68.0",
     "react-native": "0.83.1",
     "react-native-bootsplash": "^6.3.11",
-    "react-native-gesture-handler": "^2.29.1",
+    "react-native-gesture-handler": "^2.30.0",
     "react-native-linear-gradient": "^2.8.3",
     "react-native-mmkv": "^4.1.0",
     "react-native-paper": "^5.14.5",
