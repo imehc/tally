@@ -4061,9 +4061,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/native@npm:^7.1.26":
-  version: 7.1.26
-  resolution: "@react-navigation/native@npm:7.1.26"
+"@react-navigation/native@npm:^7.1.27":
+  version: 7.1.27
+  resolution: "@react-navigation/native@npm:7.1.27"
   dependencies:
     "@react-navigation/core": "npm:^7.13.7"
     escape-string-regexp: "npm:^4.0.0"
@@ -4073,7 +4073,7 @@ __metadata:
   peerDependencies:
     react: ">= 18.2.0"
     react-native: "*"
-  checksum: 10c0/7aa1e3ff40b36fb13f615412465d48eaa115f95c9b4278c67c616f8aa3d86bab68656b2528827307dbdba1cd2f30b3614837a042cc19b4316baf78ec0ff3f4c8
+  checksum: 10c0/57ce15c61fe7c966b881704d3b31daa047333093f9484c4e4118ccc6878a20ec72d9a8884c6a79a7fce8b53d51481289871e6eb03a9ec27f14e8eb2aa0d96c37
   languageName: node
   linkType: hard
 
@@ -12267,7 +12267,7 @@ __metadata:
     "@react-native/metro-config": "npm:0.83.1"
     "@react-native/typescript-config": "npm:0.83.1"
     "@react-navigation/bottom-tabs": "npm:^7.9.1"
-    "@react-navigation/native": "npm:^7.1.26"
+    "@react-navigation/native": "npm:^7.1.27"
     "@react-navigation/native-stack": "npm:^7.9.1"
     "@tanstack/react-query": "npm:^5.90.16"
     "@types/react": "npm:^19.2.8"
