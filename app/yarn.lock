@@ -9993,16 +9993,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nativewind@npm:^4.2.1":
-  version: 4.2.1
-  resolution: "nativewind@npm:4.2.1"
+"nativewind@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "nativewind@npm:4.2.2"
   dependencies:
     comment-json: "npm:^4.2.5"
     debug: "npm:^4.3.7"
-    react-native-css-interop: "npm:0.2.1"
+    react-native-css-interop: "npm:0.2.2"
   peerDependencies:
     tailwindcss: ">3.3.0"
-  checksum: 10c0/83b60cbe843349fd241fe8af61b1547df06dcc91039e0ad3ea5ffdf05babaccf15a47e80f7e383d4be0c0211f0b0d172e8d3e9bc6165b6b86294c706a7f16e92
+  checksum: 10c0/3af8fc1951b634d8349b7527788fc90ac240c28af8dacb5c30701c39cfa3b9a6ded1017c6d3bdafafbe041cbc0e8f4b4103d97ce4bcae1a1c1e122cac493d6f9
   languageName: node
   linkType: hard
 
@@ -10812,9 +10812,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-css-interop@npm:0.2.1":
-  version: 0.2.1
-  resolution: "react-native-css-interop@npm:0.2.1"
+"react-native-css-interop@npm:0.2.2":
+  version: 0.2.2
+  resolution: "react-native-css-interop@npm:0.2.2"
   dependencies:
     "@babel/helper-module-imports": "npm:^7.22.15"
     "@babel/traverse": "npm:^7.23.0"
@@ -10832,7 +10832,7 @@ __metadata:
       optional: true
     react-native-svg:
       optional: true
-  checksum: 10c0/c3be3a785216ce430d32a78f52c76387b4fc38b53b9d66d4cf5e3973f1fe35c801f8f299e6b8c129be9c979ccd3274a35dccf4f8054f46cca3288a3ca77c7a4c
+  checksum: 10c0/94fbbf0b0ecc7623be72c01272a966bc5d8a09c21f1c3979c20afad4eeea4ad91e5549b6a579aaa9bffe1163a4c82b6bc7a6f2ba18c9f7644a14a24fbdcb9b1b
   languageName: node
   linkType: hard
 
@@ -12272,7 +12272,7 @@ __metadata:
     deepmerge: "npm:^4.3.1"
     eslint: "npm:^10.0.0"
     jest: "npm:^30.2.0"
-    nativewind: "npm:^4.2.1"
+    nativewind: "npm:^4.2.2"
     prettier: "npm:3.8.1"
     react: "npm:19.2.4"
     react-hook-form: "npm:^7.71.1"
