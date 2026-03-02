@@ -11072,17 +11072,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-permissions@npm:^5.4.4":
-  version: 5.4.4
-  resolution: "react-native-permissions@npm:5.4.4"
+"react-native-permissions@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "react-native-permissions@npm:5.5.0"
   peerDependencies:
-    react: ">=18.1.0"
-    react-native: ">=0.70.0"
-    react-native-windows: ">=0.70.0"
+    react: "*"
+    react-native: "*"
+    react-native-windows: "*"
   peerDependenciesMeta:
     react-native-windows:
       optional: true
-  checksum: 10c0/9a4fa223053db242a66c18303a525e7552e849876e927427485b0e799f46131ccbbd1ad85e6dfac146d12af942a77a95caa8649b9f4ebcfbb7f2ff6dd8fece04
+  checksum: 10c0/aa03a0ec202c41666f65ab0571e2a92d19ba6742f8de2041140ad728fa0f3937d43a365b1356f0f8861e151d1178ca443a9771bb65f240ccb21986fa9d7be41d
   languageName: node
   linkType: hard
 
@@ -12513,7 +12513,7 @@ __metadata:
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^4.1.2"
     react-native-paper: "npm:^5.15.0"
-    react-native-permissions: "npm:^5.4.4"
+    react-native-permissions: "npm:^5.5.0"
     react-native-reanimated: "npm:^4.2.2"
     react-native-safe-area-context: "npm:^5.7.0"
     react-native-screens: "npm:^4.24.0"
