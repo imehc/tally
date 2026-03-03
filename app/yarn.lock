@@ -4104,9 +4104,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-navigation/bottom-tabs@npm:^7.15.2":
-  version: 7.15.2
-  resolution: "@react-navigation/bottom-tabs@npm:7.15.2"
+"@react-navigation/bottom-tabs@npm:^7.15.3":
+  version: 7.15.3
+  resolution: "@react-navigation/bottom-tabs@npm:7.15.3"
   dependencies:
     "@react-navigation/elements": "npm:^2.9.8"
     color: "npm:^4.2.3"
@@ -4117,7 +4117,7 @@ __metadata:
     react-native: "*"
     react-native-safe-area-context: ">= 4.0.0"
     react-native-screens: ">= 4.0.0"
-  checksum: 10c0/45c058997c4b692ee14098e8b19748c96ba2086dbe799e846cfac31b8cdc97f8101d3520c4b77e47d0d59b8cebe16c0f05e2ff614a9bcc87ee7bb488cb31096c
+  checksum: 10c0/0009c2623e18a7ebebcb45553308b56be0cad7ea982d23534498201b603d3f1e55d6bbc370178f0566d6e4fef8f2c5e91264ecd7b32b0bca53eafc58979a9b1e
   languageName: node
   linkType: hard
 
@@ -12466,7 +12466,7 @@ __metadata:
     "@react-native/eslint-config": "npm:0.84.1"
     "@react-native/metro-config": "npm:0.84.1"
     "@react-native/typescript-config": "npm:0.84.1"
-    "@react-navigation/bottom-tabs": "npm:^7.15.2"
+    "@react-navigation/bottom-tabs": "npm:^7.15.3"
     "@react-navigation/native": "npm:^7.1.31"
     "@react-navigation/native-stack": "npm:^7.14.2"
     "@tanstack/react-query": "npm:^5.90.21"
