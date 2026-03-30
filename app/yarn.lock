@@ -10966,9 +10966,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-bootsplash@npm:^7.1.0":
-  version: 7.1.0
-  resolution: "react-native-bootsplash@npm:7.1.0"
+"react-native-bootsplash@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "react-native-bootsplash@npm:7.2.0"
   dependencies:
     "@expo/config-plugins": "npm:*"
     commander: "npm:^14.0.3"
@@ -10986,7 +10986,7 @@ __metadata:
     react-native: "*"
   bin:
     react-native-bootsplash: cli.js
-  checksum: 10c0/8ad4eabaa52f1feae9df56d1b812774434860348b6fa0f483c47b8d5d815fabf3a843b02eef0721a37f5989aef780a5718f5b6156736a9a2fee8aecf0582ebe7
+  checksum: 10c0/ef122b7ffaeb5326c6d5e580deeac630c8fa087e0d9f0f46df8cf714b64576cbfe17d72aa8521fda426d42fb71109296b03637d1e39c19db8d038989adc9b2d8
   languageName: node
   linkType: hard
 
@@ -12520,7 +12520,7 @@ __metadata:
     react: "npm:19.2.4"
     react-hook-form: "npm:^7.72.0"
     react-native: "npm:0.84.1"
-    react-native-bootsplash: "npm:^7.1.0"
+    react-native-bootsplash: "npm:^7.2.0"
     react-native-gesture-handler: "npm:^2.30.1"
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^4.3.0"
