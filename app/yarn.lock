@@ -11375,10 +11375,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^19.2.4":
-  version: 19.2.4
-  resolution: "react-is@npm:19.2.4"
-  checksum: 10c0/477a7cfc900f24194606e315fa353856a3a13487ea8eca841678817cad4daef64339ea0d1e84e58459fc75dbe0d9ba00bb0cc626db3d07e0cf31edc64cb4fa37
+"react-is@npm:^19.2.5":
+  version: 19.2.5
+  resolution: "react-is@npm:19.2.5"
+  checksum: 10c0/58c28ab2f7f868f9836c728fa164a16dcf20246ab84a3ae6a09e617b0e4d9bbb3acdddfdc40452f0134d27b121d3359227602a050c0be554cb20069cb52a67f4
   languageName: node
   linkType: hard
 
@@ -11666,15 +11666,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:19.2.4":
-  version: 19.2.4
-  resolution: "react-test-renderer@npm:19.2.4"
+"react-test-renderer@npm:19.2.5":
+  version: 19.2.5
+  resolution: "react-test-renderer@npm:19.2.5"
   dependencies:
-    react-is: "npm:^19.2.4"
+    react-is: "npm:^19.2.5"
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.4
-  checksum: 10c0/76f0a419a8ca7776ac6fae7c25056b9326a92a3d79971817e8ffd262d9121d1e87fde058b4fd6d33c365b1001cd6236d9053816dabed20afa62fbfe2a1a59f1a
+    react: ^19.2.5
+  checksum: 10c0/d135dd5e5cc4ed76680fc130e90a4459186faa860989996f3f17c24befc037a5170919744bbd710295a0a0082f3a411398483bb113b85e78a65dbe25c86326d8
   languageName: node
   linkType: hard
 
@@ -13028,7 +13028,7 @@ __metadata:
     react-native-toast-message: "npm:^2.3.3"
     react-native-vector-icons: "npm:^10.3.0"
     react-native-view-shot: "npm:^4.0.3"
-    react-test-renderer: "npm:19.2.4"
+    react-test-renderer: "npm:19.2.5"
     styled-components: "npm:^6.3.12"
     tailwindcss: "npm:^4.2.2"
     typescript: "npm:6.0.2"
