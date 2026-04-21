@@ -3818,16 +3818,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/babel-plugin-codegen@npm:0.85.1":
-  version: 0.85.1
-  resolution: "@react-native/babel-plugin-codegen@npm:0.85.1"
-  dependencies:
-    "@babel/traverse": "npm:^7.29.0"
-    "@react-native/codegen": "npm:0.85.1"
-  checksum: 10c0/285532a59bfca311dfebe6d8dfff1cdc5b4bbda3a5f324c00fc25729011ff035de4cc05358fa5ec0f3f207c130167e00bd09ff7dc493b0080c1e808968cdeeec
-  languageName: node
-  linkType: hard
-
 "@react-native/babel-plugin-codegen@npm:0.85.2":
   version: 0.85.2
   resolution: "@react-native/babel-plugin-codegen@npm:0.85.2"
@@ -3835,49 +3825,6 @@ __metadata:
     "@babel/traverse": "npm:^7.29.0"
     "@react-native/codegen": "npm:0.85.2"
   checksum: 10c0/40b04f16742bcef29107b0d519dc9fd2382cb3dc18b33bf240395a477bae8fe83a9a787e830dd136d465a7cd731473c276f47f9398c79b589262642f470cb42e
-  languageName: node
-  linkType: hard
-
-"@react-native/babel-preset@npm:0.85.1":
-  version: 0.85.1
-  resolution: "@react-native/babel-preset@npm:0.85.1"
-  dependencies:
-    "@babel/core": "npm:^7.25.2"
-    "@babel/plugin-proposal-export-default-from": "npm:^7.24.7"
-    "@babel/plugin-syntax-dynamic-import": "npm:^7.8.3"
-    "@babel/plugin-syntax-export-default-from": "npm:^7.24.7"
-    "@babel/plugin-syntax-nullish-coalescing-operator": "npm:^7.8.3"
-    "@babel/plugin-syntax-optional-chaining": "npm:^7.8.3"
-    "@babel/plugin-transform-async-generator-functions": "npm:^7.25.4"
-    "@babel/plugin-transform-async-to-generator": "npm:^7.24.7"
-    "@babel/plugin-transform-block-scoping": "npm:^7.25.0"
-    "@babel/plugin-transform-class-properties": "npm:^7.25.4"
-    "@babel/plugin-transform-classes": "npm:^7.25.4"
-    "@babel/plugin-transform-destructuring": "npm:^7.24.8"
-    "@babel/plugin-transform-flow-strip-types": "npm:^7.25.2"
-    "@babel/plugin-transform-for-of": "npm:^7.24.7"
-    "@babel/plugin-transform-modules-commonjs": "npm:^7.24.8"
-    "@babel/plugin-transform-named-capturing-groups-regex": "npm:^7.24.7"
-    "@babel/plugin-transform-nullish-coalescing-operator": "npm:^7.24.7"
-    "@babel/plugin-transform-optional-catch-binding": "npm:^7.24.7"
-    "@babel/plugin-transform-optional-chaining": "npm:^7.24.8"
-    "@babel/plugin-transform-private-methods": "npm:^7.24.7"
-    "@babel/plugin-transform-private-property-in-object": "npm:^7.24.7"
-    "@babel/plugin-transform-react-display-name": "npm:^7.24.7"
-    "@babel/plugin-transform-react-jsx": "npm:^7.25.2"
-    "@babel/plugin-transform-react-jsx-self": "npm:^7.24.7"
-    "@babel/plugin-transform-react-jsx-source": "npm:^7.24.7"
-    "@babel/plugin-transform-regenerator": "npm:^7.24.7"
-    "@babel/plugin-transform-runtime": "npm:^7.24.7"
-    "@babel/plugin-transform-typescript": "npm:^7.25.2"
-    "@babel/plugin-transform-unicode-regex": "npm:^7.24.7"
-    "@react-native/babel-plugin-codegen": "npm:0.85.1"
-    babel-plugin-syntax-hermes-parser: "npm:0.33.3"
-    babel-plugin-transform-flow-enums: "npm:^0.0.2"
-    react-refresh: "npm:^0.14.0"
-  peerDependencies:
-    "@babel/core": "*"
-  checksum: 10c0/0f310966bf1450241f00eba7b5c69f8d435e53bf6d2469213fbc58c22e37b3ee59aa4767f6db36a78c86f94abe4217441acfdca8f23ded98b7da18f12f8cb6db
   languageName: node
   linkType: hard
 
@@ -4019,13 +3966,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/eslint-config@npm:0.85.1":
-  version: 0.85.1
-  resolution: "@react-native/eslint-config@npm:0.85.1"
+"@react-native/eslint-config@npm:0.85.2":
+  version: 0.85.2
+  resolution: "@react-native/eslint-config@npm:0.85.2"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/eslint-parser": "npm:^7.25.1"
-    "@react-native/eslint-plugin": "npm:0.85.1"
+    "@react-native/eslint-plugin": "npm:0.85.2"
     "@typescript-eslint/eslint-plugin": "npm:^8.36.0"
     "@typescript-eslint/parser": "npm:^8.36.0"
     eslint-config-prettier: "npm:^8.5.0"
@@ -4038,14 +3985,14 @@ __metadata:
   peerDependencies:
     eslint: ^8.0.0 || ^9.0.0
     prettier: ">=2"
-  checksum: 10c0/61bd5970db1a4bef30e472e80de30bb2af92d157675fc879990cbb742bce8d1ff82c90b9d3fc6e0df7bdb268c7b2870dab9bf90d85f7dcecc263eac785658d36
+  checksum: 10c0/ad8f4e699650e81a4e8fe234aa74c5d9447747e68e83d0a635db44154e7b6ad6a7db4ffb07d2c7e0356d30cfd164f707fd5a94557f7582846de1e89e1877ae4e
   languageName: node
   linkType: hard
 
-"@react-native/eslint-plugin@npm:0.85.1":
-  version: 0.85.1
-  resolution: "@react-native/eslint-plugin@npm:0.85.1"
-  checksum: 10c0/3be6c849a99ca900faa88b88d02c3de23ca78b3d91cd7bbc9c72368b4e78abd5a75a7ffaafaaf4702118e86c8ff30027c93ad27c67af81992efec681d69deeb8
+"@react-native/eslint-plugin@npm:0.85.2":
+  version: 0.85.2
+  resolution: "@react-native/eslint-plugin@npm:0.85.2"
+  checksum: 10c0/86b7e5e5cd948f31312a0949979e8f6a0188ef42ca038c4e6949d0896e728c4fcf4469cce84d74384345ac5f911a5d6cf59849e2a1ab0c1d63849ab78633d3ef
   languageName: node
   linkType: hard
 
@@ -12756,7 +12703,7 @@ __metadata:
     "@react-native-community/cli-platform-android": "npm:20.1.3"
     "@react-native-community/cli-platform-ios": "npm:20.1.3"
     "@react-native/babel-preset": "npm:0.85.2"
-    "@react-native/eslint-config": "npm:0.85.1"
+    "@react-native/eslint-config": "npm:0.85.2"
     "@react-native/metro-config": "npm:0.85.2"
     "@react-native/typescript-config": "npm:0.85.1"
     "@react-navigation/bottom-tabs": "npm:^7.15.9"
