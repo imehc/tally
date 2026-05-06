@@ -3979,13 +3979,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/eslint-config@npm:0.85.2":
-  version: 0.85.2
-  resolution: "@react-native/eslint-config@npm:0.85.2"
+"@react-native/eslint-config@npm:0.85.3":
+  version: 0.85.3
+  resolution: "@react-native/eslint-config@npm:0.85.3"
   dependencies:
     "@babel/core": "npm:^7.25.2"
     "@babel/eslint-parser": "npm:^7.25.1"
-    "@react-native/eslint-plugin": "npm:0.85.2"
+    "@react-native/eslint-plugin": "npm:0.85.3"
     "@typescript-eslint/eslint-plugin": "npm:^8.36.0"
     "@typescript-eslint/parser": "npm:^8.36.0"
     eslint-config-prettier: "npm:^8.5.0"
@@ -3998,14 +3998,14 @@ __metadata:
   peerDependencies:
     eslint: ^8.0.0 || ^9.0.0
     prettier: ">=2"
-  checksum: 10c0/ad8f4e699650e81a4e8fe234aa74c5d9447747e68e83d0a635db44154e7b6ad6a7db4ffb07d2c7e0356d30cfd164f707fd5a94557f7582846de1e89e1877ae4e
+  checksum: 10c0/d33ca9019c156750efb696e8c068a83800ecc8dedff7effc24778ee35b45099f1d5533cd91acd4d2e3aeb252628a9f8bb8b5c3b1e55489ae5795b4f374d5d05d
   languageName: node
   linkType: hard
 
-"@react-native/eslint-plugin@npm:0.85.2":
-  version: 0.85.2
-  resolution: "@react-native/eslint-plugin@npm:0.85.2"
-  checksum: 10c0/86b7e5e5cd948f31312a0949979e8f6a0188ef42ca038c4e6949d0896e728c4fcf4469cce84d74384345ac5f911a5d6cf59849e2a1ab0c1d63849ab78633d3ef
+"@react-native/eslint-plugin@npm:0.85.3":
+  version: 0.85.3
+  resolution: "@react-native/eslint-plugin@npm:0.85.3"
+  checksum: 10c0/c5dd55b55f2f331b75f686dac03a01c72699f04bfa9502c6b482bdbdfd7b7b7d20d69bd4066f7623d96a2552cac8f3e36a53fe8e4d4abde9c9292b861f84a1ee
   languageName: node
   linkType: hard
 
@@ -12965,7 +12965,7 @@ __metadata:
     "@react-native-community/cli-platform-android": "npm:20.1.3"
     "@react-native-community/cli-platform-ios": "npm:20.1.3"
     "@react-native/babel-preset": "npm:0.85.3"
-    "@react-native/eslint-config": "npm:0.85.2"
+    "@react-native/eslint-config": "npm:0.85.3"
     "@react-native/metro-config": "npm:0.85.3"
     "@react-native/typescript-config": "npm:0.85.3"
     "@react-navigation/bottom-tabs": "npm:^7.15.11"
