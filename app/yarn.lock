@@ -4062,13 +4062,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/js-polyfills@npm:0.85.3":
-  version: 0.85.3
-  resolution: "@react-native/js-polyfills@npm:0.85.3"
-  checksum: 10c0/67c4ed8234cbeb6d5250b06901f352ddd5348f9aad88aac8a06dc884f42e0da22ff2e1ca8e06c7d03e1e659486bdb9d7682f34858ebf9398d7ae199ce02b3749
-  languageName: node
-  linkType: hard
-
 "@react-native/js-polyfills@npm:0.86.0":
   version: 0.86.0
   resolution: "@react-native/js-polyfills@npm:0.86.0"
@@ -4076,29 +4069,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/metro-babel-transformer@npm:0.85.3":
-  version: 0.85.3
-  resolution: "@react-native/metro-babel-transformer@npm:0.85.3"
+"@react-native/metro-babel-transformer@npm:0.86.0":
+  version: 0.86.0
+  resolution: "@react-native/metro-babel-transformer@npm:0.86.0"
   dependencies:
     "@babel/core": "npm:^7.25.2"
-    "@react-native/babel-preset": "npm:0.85.3"
-    hermes-parser: "npm:0.33.3"
+    "@react-native/babel-preset": "npm:0.86.0"
+    hermes-parser: "npm:0.36.0"
     nullthrows: "npm:^1.1.1"
   peerDependencies:
     "@babel/core": "*"
-  checksum: 10c0/e3e976b05d7cd7256eaed024ca4f50c29f2cd34df887566017ae14d5d918de1bfaeecfc9b6b83098ebcf7fd3b6b55bca344ee9e17c5ff8aa612d944f9704ec9f
+  checksum: 10c0/8b4ab63d32f28f3663204110d37c50a8dd82eef622d57fb236f3d05b69bdfc1fe277f7572e4cf9135790921922f35fe4aea5f7c183fe17cd2ead19ed8e1db5d1
   languageName: node
   linkType: hard
 
-"@react-native/metro-config@npm:0.85.3":
-  version: 0.85.3
-  resolution: "@react-native/metro-config@npm:0.85.3"
+"@react-native/metro-config@npm:0.86.0":
+  version: 0.86.0
+  resolution: "@react-native/metro-config@npm:0.86.0"
   dependencies:
-    "@react-native/js-polyfills": "npm:0.85.3"
-    "@react-native/metro-babel-transformer": "npm:0.85.3"
+    "@react-native/js-polyfills": "npm:0.86.0"
+    "@react-native/metro-babel-transformer": "npm:0.86.0"
     metro-config: "npm:^0.84.3"
     metro-runtime: "npm:^0.84.3"
-  checksum: 10c0/3f405497efa36050d8db85d4c2a019ec178489eea6e35213097f314fc76ff83209858da0a72373b5e1c00d82321fb97d5cb46e506ac79369a291783a94a65608
+  checksum: 10c0/92c043b8e4d959a3d8c0aa56940a9ff455c9de21bb6fe2a799fb5a847e45587d9783c3b55e3254f2b17fa71dfc66fff30ce0a70505e0d699dbbf2c76e0ff539c
   languageName: node
   linkType: hard
 
@@ -12806,7 +12799,7 @@ __metadata:
     "@react-native-community/cli-platform-ios": "npm:20.1.3"
     "@react-native/babel-preset": "npm:0.86.0"
     "@react-native/eslint-config": "npm:0.86.0"
-    "@react-native/metro-config": "npm:0.85.3"
+    "@react-native/metro-config": "npm:0.86.0"
     "@react-native/typescript-config": "npm:0.86.0"
     "@react-navigation/bottom-tabs": "npm:^7.17.1"
     "@react-navigation/native": "npm:^7.3.0"
