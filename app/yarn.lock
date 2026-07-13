@@ -11199,16 +11199,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-screens@npm:^4.25.2":
-  version: 4.25.2
-  resolution: "react-native-screens@npm:4.25.2"
+"react-native-screens@npm:^4.26.0":
+  version: 4.26.0
+  resolution: "react-native-screens@npm:4.26.0"
   dependencies:
     react-freeze: "npm:^1.0.0"
     warn-once: "npm:^0.1.0"
   peerDependencies:
     react: "*"
-    react-native: ">=0.82.0"
-  checksum: 10c0/b1f155830e57c36e8ca60831f4b22079cd311f0e36f7c4465ff4094f9dec18e66cef2321a4ff8944aac51ead437720585080f1f4b2956106099a9ea7d9745d00
+    react-native: ">=0.84.0"
+  checksum: 10c0/6abb462d71c06e91ee0237ae5281bb2e1a36411c69b1931a0d3aaac8adbf6662089eb3b5013878d69961493aac4b41b388c738e69624a5d6fe0d75f492d43a31
   languageName: node
   linkType: hard
 
@@ -12646,7 +12646,7 @@ __metadata:
     react-native-permissions: "npm:^5.6.0"
     react-native-reanimated: "npm:^4.5.1"
     react-native-safe-area-context: "npm:^5.8.0"
-    react-native-screens: "npm:^4.25.2"
+    react-native-screens: "npm:^4.26.0"
     react-native-svg: "npm:^15.15.5"
     react-native-svg-transformer: "npm:^1.5.3"
     react-native-toast-message: "npm:^2.4.0"
