@@ -11102,16 +11102,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-gesture-handler@npm:^3.0.2":
-  version: 3.0.2
-  resolution: "react-native-gesture-handler@npm:3.0.2"
+"react-native-gesture-handler@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "react-native-gesture-handler@npm:3.1.0"
   dependencies:
     "@types/react-test-renderer": "npm:^19.1.0"
     invariant: "npm:^2.2.4"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 10c0/06d2b1a621f73c148c4000692e55d5f2a44d44229cabc79829de0b0b3dbf3bcf4bc00e8635f82bd1062d7eac87f39ca5213eb1041e23a5543947e64773eaddfb
+  checksum: 10c0/3d5e93b7f490abb6eecfa7b292c15f14fcb89103f6adfb9a9f7a2216924ee3e860d9e68ee9973df5b42a53229174043a50b679443ff13a7bbd2bf1077c44258d
   languageName: node
   linkType: hard
 
@@ -12641,7 +12641,7 @@ __metadata:
     react-hook-form: "npm:^7.81.0"
     react-native: "npm:0.86.0"
     react-native-bootsplash: "npm:^7.3.2"
-    react-native-gesture-handler: "npm:^3.0.2"
+    react-native-gesture-handler: "npm:^3.1.0"
     react-native-linear-gradient: "npm:^2.8.3"
     react-native-mmkv: "npm:^4.3.2"
     react-native-paper: "npm:^5.15.3"
